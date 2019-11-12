@@ -1,0 +1,32 @@
+baseurl = "https://krbysh.net/"
+theme = "cocoa-eh"
+builddrafts = true
+canonifyurls = true
+contentdir = "content"
+languageCode = "en-US"
+layoutdir = "layouts"
+publishdir = "public"
+author = "krbysh"
+title = "krbysh.net"
+disqusshortname = ""
+pluralizelisttitles = false
+
+[permalinks]
+blog = "blog/:slug/"
+
+[params]
+dateform = "Jan 2, 2006"
+dateformfull = "Mon Jan 2 2006 15:04:05 MST"
+description = "krbysh.net"
+logofile = ""
+faviconfile = "img/logo.png"
+highlightjs = true
+progressively = true
+align_left = false
+lang = "en"
+github = "krbysh"
+email = "krbysh@krbysh.net"
+twitter = "krbysh"
+social_banner = "img/banner.png"
+posts_navigation = true
+small_banner_logo = false

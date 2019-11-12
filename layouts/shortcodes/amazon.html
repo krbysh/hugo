@@ -1,0 +1,24 @@
+{ $associateId := "krbysh0e-22" }}
+{{- $asin := .Get "asin" -}}
+{{- $type := .Get "type" -}}
+{{- $json := getJSON .Site.Params.AmazonProductJsonBaseURL $asin -}}
+{{- $item := index $json.AmazonItems.Items 0 -}}
+{{- $title := $item.ItemAttributes.Title -}}
+
+<div class="amazon-box">
+  {{ if eq $type "text" }}
+    <a href="{{ $item.DetailPageURL }}" target="_blank"> {{ $title }}</a>
+  {{ else if eq $type "image-small" }}
+    {{- $image := $item.SmallImage -}}
+    <img src="{{ $image.URL }}" alt="{{ $title }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></img>
+  {{ else if eq $type "image-medium" }}
+    {{- $image := $item.MediumImage -}}
+    <img src="{{ $image.URL }}" alt="{{ $title }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></img>
+  {{ else if eq $type "image-large" }}
+    {{- $image := $item.LargeImage -}}
+    <img src="{{ $image.URL }}" alt="{{ $title }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></img>
+  {{ else if eq $type "image" }}
+    {{- $image := $item.MediumImage -}}
+    <img src="{{ $image.URL }}" alt="{{ $title }}" width="{{ $image.Width }}" height="{{ $image.Height }}"></img>
+  {{ end }}
+</div>
