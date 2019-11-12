@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Post on krbysh.net</title>
+    <link>https://krbysh.net/post/</link>
+    <description>Recent content in Post on krbysh.net</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <lastBuildDate>Tue, 12 Nov 2019 21:12:48 +0900</lastBuildDate>
+    
+	<atom:link href="https://krbysh.net/post/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>MacOS Catalina 10.15 で au HWD12 を使う方法</title>
+      <link>https://krbysh.net/post/macos-catalina-hwd12/</link>
+      <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
+      <description>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
+まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
+Hilink products tool, support MAC 10.15
+この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。 dat ファイルを下記のように書き換える必要があった。
+HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat
+[INSTALL] service_name=USB STICK LTE setting tool service_desc=USB STICK LTE setting tool [PRODUCT_ID] pid=14db,1f01;14dc,1f01;14db,1f03 [OPENBR_TIME] wait_time=1 [OPEN_URL] domain=http://au.home/ url=http://192.168.1.1 auto_open_url=1  なお、[OPEN_URL] などの一部のパラメータは元々の HWD12 に合わせる形に変更した。 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると [OPEN_URL] で指定した URL が開く。 私の環境での IP address のため、修正が必要になる場合もある。 URL が開いた際に &amp;ldquo;再セットアップが必要です!</description>
+    </item>
+    
+    <item>
+      <title>結婚式招待状の宛名書き</title>
+      <link>https://krbysh.net/post/wedding-invitation/</link>
+      <pubDate>Sat, 02 Feb 2019 21:40:11 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/wedding-invitation/</guid>
+      <description>結婚式の招待状の宛名書きは、腕に自信がある方はそのまま書くと思うが、あまりうまくない場合は困る。
+ ホテルにそのまま筆耕をお願いする ホテル以外のところに筆耕をお願いする 自前でお手本を用意して模書(印刷)する  順に費用が安くなり、その分負担が増える。 2. は業者にお願いするか、個人にお願いするか、で ¥100/枚 も平気で変わるので情報収集する必要がある。 郵送で送ることによる汚れ等が不安だったのと個人に依頼するリスクを考えて、シルバー人材センターを利用した。 自治体が実施しているので、ある程度は安心が出来るのと、費用も一般的な業者よりは安かった。 私が依頼したシルバー人材センターは期日をお願いしたところ、快諾してくれて実際それを守ってくれた。 担当された方は元々ホテルで筆耕されていたようで、出来上がりも素晴らしかった。大満足。
+#お願いする前に見本は見せてくれた。
+妻は 3. を選んでいたが、負担を考えるとシルバー人材センターを利用するのが圧倒的にコスパが良いと感じた。</description>
+    </item>
+    
+    <item>
+      <title>ウェスティンホテル東京のケーキセット</title>
+      <link>https://krbysh.net/post/westintokyo-cake/</link>
+      <pubDate>Thu, 31 Jan 2019 19:16:02 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/westintokyo-cake/</guid>
+      <description>結婚披露宴の内装を決めるべく、ウェディングプランナーさんに相談して部屋を改めて確認させてもらった。 初回の見学時には装飾がされていなかったので、妻は初めて装飾されている部屋に入ることになる。 テーブルクロスの色もサンプルで見るのと実際に使われたものを見るのでは全然違う。 感覚が掴めたので、帰り際にケーキセットを食べて帰った。 アフタヌーンティーほどではないけど、何か食べるのならケーキセットが一番お得な気がする。    View this post on Instagram        ケーキセット(¥1,600) 美味しかった
+A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
+  美味しかったからアフタヌーンティーにも行ってみたいな :)</description>
+    </item>
+    
+  </channel>
+</rss>
