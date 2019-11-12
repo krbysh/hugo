@@ -14,9 +14,9 @@
 <meta property="og:site_name" content="krbysh.net" />
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://krbysh.net/post/macos-catalina-hwd12/" />
-<meta property="og:title" content="MacOS Catalina 10.15 で au HWD12 を使う方法" />
-<meta property="twitter:title" content="MacOS Catalina 10.15 で au HWD12 を使う方法">
+<meta property="og:url" content="https://krbysh.net/blog/" />
+<meta property="og:title" content="Blog" />
+<meta property="twitter:title" content="Blog">
 
     <meta property="og:image" content="https://krbysh.net/img/banner.png">
     <meta property="twitter:card" content="summary_large_image">
@@ -28,10 +28,10 @@
 <title>
 
 
-     krbysh.net - MacOS Catalina 10.15 で au HWD12 を使う方法 
+     krbysh.net - Blog 
 
 </title>
-<link rel="canonical" href="https://krbysh.net/post/macos-catalina-hwd12/">
+<link rel="canonical" href="https://krbysh.net/blog/">
 
 
 <style media="screen">
@@ -984,6 +984,8 @@ margin-left: -4%;
 
 
 
+  <link href="https://krbysh.net/blog/index.xml" rel="alternate" type="application/rss+xml" title="krbysh.net" />
+
 
 </head>
 
@@ -991,7 +993,7 @@ margin-left: -4%;
 <body>
 
 
-<div class="header column">
+<div class="header header-home column">
 
     <div class="container">
         
@@ -1000,10 +1002,10 @@ margin-left: -4%;
             <nav>
                 <ul>
                     
+                            <li><a href="https://krbysh.net/blog/">Blog</a></li>
+                    
                     
                         
-                            
-                            <li><a href="https://krbysh.net/post">post</a></li>
                             
                         
                     
@@ -1014,60 +1016,51 @@ margin-left: -4%;
     </div>
 </div>
 
-
-
 <div class="main column">
     <div class="container">
         <div class="content">
-            <div class="page-heading">
-
+            <div class="posts">
+                <div class="page-heading">Blog</div>
+                <ul>
+                    
+                        <li class="groupby">Nov, 2019</li>
+                        
+                            <li class="post-item">
+    <span class="meta">Nov 12, 2019</span>
     
-    MacOS Catalina 10.15 で au HWD12 を使う方法
+    <a href="https://krbysh.net/blog/macos-catalina-hwd12/"><span>MacOS Catalina 10.15 で au HWD12 を使う方法</span></a>
     
+</li>
 
-</div>
-
-            <div class="markdown">
-                
+                        
+                    
+                        <li class="groupby">Feb, 2019</li>
+                        
+                            <li class="post-item">
+    <span class="meta">Feb 2, 2019</span>
     
-    <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。
-au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
-au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。</p>
+    <a href="https://krbysh.net/blog/wedding-invitation/"><span>結婚式招待状の宛名書き</span></a>
+    
+</li>
 
-<p>まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。<br />
-<a href="https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201">Hilink products tool, support MAC 10.15</a><br />
-この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。
-dat ファイルを下記のように書き換える必要があった。<br />
-<code>HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat</code></p>
+                        
+                    
+                        <li class="groupby">Jan, 2019</li>
+                        
+                            <li class="post-item">
+    <span class="meta">Jan 31, 2019</span>
+    
+    <a href="https://krbysh.net/blog/westintokyo-cake/"><span>ウェスティンホテル東京のケーキセット</span></a>
+    
+</li>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>INSTALL<span style="color:#f92672">]</span>
-service_name<span style="color:#f92672">=</span>USB STICK LTE setting tool
-service_desc<span style="color:#f92672">=</span>USB STICK LTE setting tool
-
-<span style="color:#f92672">[</span>PRODUCT_ID<span style="color:#f92672">]</span>
-pid<span style="color:#f92672">=</span>14db,1f01;14dc,1f01;14db,1f03
-
-<span style="color:#f92672">[</span>OPENBR_TIME<span style="color:#f92672">]</span>
-wait_time<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
-
-<span style="color:#f92672">[</span>OPEN_URL<span style="color:#f92672">]</span>
-domain<span style="color:#f92672">=</span>http://au.home/
-url<span style="color:#f92672">=</span>http://192.168.1.1
-auto_open_url<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span></code></pre></div>
-
-<p>なお、<code>[OPEN_URL]</code> などの一部のパラメータは元々の HWD12 に合わせる形に変更した。
-書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると <code>[OPEN_URL]</code> で指定した URL が開く。
-私の環境での IP address のため、修正が必要になる場合もある。
-URL が開いた際に &ldquo;再セットアップが必要です!&rdquo; というメッセージが出るが、無視して &ldquo;ホームに戻る&rdquo; ことでこれまで通り接続することができる。</p>
-
-
+                        
+                    
+                </ul>
             </div>
         </div>
     </div>
 </div>
-
-
-
 <div class="footer column">
     <div class="container">
 

@@ -30,3 +30,6 @@ twitter = "krbysh"
 social_banner = "img/banner.png"
 posts_navigation = true
 small_banner_logo = false
+pygmentsCodefences = true
+pygmentsUseClasses = true
+pygmentsStyle = "monokai"

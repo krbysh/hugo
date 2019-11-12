@@ -2,6 +2,7 @@
 title: "MacOS Catalina 10.15 で au HWD12 を使う方法"
 date: 2019-11-12T21:12:48+09:00
 draft: false
+slug: "macos-catalina-hwd12"
 ---
 
 MacOS Catalina から 32bit アプリケーションが利用できなくなった。
@@ -14,7 +15,7 @@ au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対
 dat ファイルを下記のように書き換える必要があった。  
 `HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat`
 
-```shell
+<pre><code class="html">
 [INSTALL]
 service_name=USB STICK LTE setting tool
 service_desc=USB STICK LTE setting tool
@@ -29,7 +30,7 @@ wait_time=1
 domain=http://au.home/
 url=http://192.168.1.1
 auto_open_url=1
-```
+</code></pre>
 
 なお、`[OPEN_URL]` などの一部のパラメータは元々の HWD12 に合わせる形に変更した。
 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると `[OPEN_URL]` で指定した URL が開く。

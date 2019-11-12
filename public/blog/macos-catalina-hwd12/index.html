@@ -14,7 +14,7 @@
 <meta property="og:site_name" content="krbysh.net" />
 <meta property="og:locale" content="en-US" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://krbysh.net/post/macos-catalina-hwd12/" />
+<meta property="og:url" content="https://krbysh.net/blog/macos-catalina-hwd12/" />
 <meta property="og:title" content="MacOS Catalina 10.15 で au HWD12 を使う方法" />
 <meta property="twitter:title" content="MacOS Catalina 10.15 で au HWD12 を使う方法">
 
@@ -31,7 +31,7 @@
      krbysh.net - MacOS Catalina 10.15 で au HWD12 を使う方法 
 
 </title>
-<link rel="canonical" href="https://krbysh.net/post/macos-catalina-hwd12/">
+<link rel="canonical" href="https://krbysh.net/blog/macos-catalina-hwd12/">
 
 
 <style media="screen">
@@ -1000,10 +1000,10 @@ margin-left: -4%;
             <nav>
                 <ul>
                     
+                            <li><a href="https://krbysh.net/blog/">Blog</a></li>
+                    
                     
                         
-                            
-                            <li><a href="https://krbysh.net/post">post</a></li>
                             
                         
                     
@@ -1016,10 +1016,14 @@ margin-left: -4%;
 
 
 
-<div class="main column">
+
+
+<div class="main post non-narrow zero-top-spacing column">
     <div class="container">
         <div class="content">
-            <div class="page-heading">
+            <div class="front-matter">
+                <div class="title-container">
+                    <div class="page-heading">
 
     
     MacOS Catalina 10.15 で au HWD12 を使う方法
@@ -1027,6 +1031,28 @@ margin-left: -4%;
 
 </div>
 
+                </div>
+                <div class="meta">
+                    <div class="date" title="Tue Nov 12 2019 21:12:48 JST">Nov 12, 2019</div>
+                    
+                        
+                    
+                    
+                    <div class="reading-time middot">1 minute read</div>
+                    
+                    <div class="tags">
+                        <ul>
+                          
+                        </ul>
+                    </div>
+                    <div class="tags">
+                        <ul>
+                          
+                          
+                        </ul>
+                    </div>
+                </div>
+            </div>
             <div class="markdown">
                 
     
@@ -1040,20 +1066,22 @@ au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対
 dat ファイルを下記のように書き換える必要があった。<br />
 <code>HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat</code></p>
 
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash"><span style="color:#f92672">[</span>INSTALL<span style="color:#f92672">]</span>
-service_name<span style="color:#f92672">=</span>USB STICK LTE setting tool
-service_desc<span style="color:#f92672">=</span>USB STICK LTE setting tool
+<pre><code class="html">
+[INSTALL]
+service_name=USB STICK LTE setting tool
+service_desc=USB STICK LTE setting tool
 
-<span style="color:#f92672">[</span>PRODUCT_ID<span style="color:#f92672">]</span>
-pid<span style="color:#f92672">=</span>14db,1f01;14dc,1f01;14db,1f03
+[PRODUCT_ID]
+pid=14db,1f01;14dc,1f01;14db,1f03
 
-<span style="color:#f92672">[</span>OPENBR_TIME<span style="color:#f92672">]</span>
-wait_time<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span>
+[OPENBR_TIME]
+wait_time=1
 
-<span style="color:#f92672">[</span>OPEN_URL<span style="color:#f92672">]</span>
-domain<span style="color:#f92672">=</span>http://au.home/
-url<span style="color:#f92672">=</span>http://192.168.1.1
-auto_open_url<span style="color:#f92672">=</span><span style="color:#ae81ff">1</span></code></pre></div>
+[OPEN_URL]
+domain=http://au.home/
+url=http://192.168.1.1
+auto_open_url=1
+</code></pre>
 
 <p>なお、<code>[OPEN_URL]</code> などの一部のパラメータは元々の HWD12 に合わせる形に変更した。
 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると <code>[OPEN_URL]</code> で指定した URL が開く。
@@ -1062,6 +1090,25 @@ URL が開いた際に &ldquo;再セットアップが必要です!&rdquo; と�
 
 
             </div>
+            
+            
+            <br>
+            <div class="navigation">
+                
+                <div>
+                    <img class="icon" src="https://krbysh.net/img/back.svg" alt="back" />
+                    <a href="https://krbysh.net/blog/wedding-invitation/">結婚式招待状の宛名書き</a>
+                </div>
+                
+                <div style="width: 100%;"></div>
+                
+            </div>
+            
+            
+
+            
+
+            
         </div>
     </div>
 </div>
