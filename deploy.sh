@@ -18,5 +18,5 @@ git commit -m "$msg"
 # Push source and build repos.
 git push origin master
 sleep 5
-git fetch origin
+git subtree pull --prefix=public https://github.com/krbysh/hugo.git gh-pages
 git subtree push --prefix=public https://github.com/krbysh/hugo.git gh-pages
