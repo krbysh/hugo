@@ -9,36 +9,36 @@
     <meta name="HandheldFriendly" content="True" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="https://krbysh.net/favicon.ico" />
-    <link rel="canonical" href="https://krbysh.net/categories/life/" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="canonical" href="/categories/life/" />
 
     
     <meta name="description" content="" /> 
 
     
     <meta name="twitter:card" content="summary"/>
-    <meta name="twitter:image" content="https://krbysh.net/img/blog-cover.jpg"/>
+    <meta name="twitter:image" content="/img/blog-cover.jpg"/>
  
     <meta name="twitter:title" content="life"/>
     <meta name="twitter:description" content=""/>
-    <meta name="twitter:url" content="https://krbysh.net/categories/life/" />
+    <meta name="twitter:url" content="/categories/life/" />
     <meta name="twitter:site" content="@krbysh"/>
 
     <meta property="og:site_name" content="krbysh.net" />
     <meta property="og:title" content="life &middot; krbysh.net" />
-    <meta property="og:url" content="https://krbysh.net/categories/life/" />
+    <meta property="og:url" content="/categories/life/" />
     <meta property="article:publisher" content="https://www.facebook.com/krbysh" />
 
     <meta property="og:type" content="website" />
     <meta property="og:description" content="" />
 
-    <meta property="og:image" content="https://krbysh.net/img/blog-cover.jpg"/>
+    <meta property="og:image" content="/img/blog-cover.jpg"/>
 
     <meta name="generator" content="Hugo 0.59.1" />
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" type="text/css" href="https://krbysh.net/built/screen.css" /> 
-    <link rel="stylesheet" type="text/css" href="https://krbysh.net/css/casper-two.css" /> 
+    <link rel="stylesheet" type="text/css" href="/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="/css/casper-two.css" /> 
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
     
 
@@ -59,15 +59,15 @@
         
         
             <li class="" role="menuitem">
-              <a href="https://krbysh.net/">Home</a>
+              <a href="/">Home</a>
             </li>
         
             <li class="nav-current" role="menuitem">
-              <a href="https://krbysh.net/categories/life/">Life</a>
+              <a href="/categories/life/">Life</a>
             </li>
         
             <li class="" role="menuitem">
-              <a href="https://krbysh.net/categories/tech/">Tech</a>
+              <a href="/categories/tech/">Tech</a>
             </li>
         
       </ul></div>
@@ -108,13 +108,46 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://krbysh.net/post/wedding-invitation/">
-      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/6.jpg)"></div>
+    <a class="post-card-image-link" href="/post/macos-catalina-hwd12/">
+      <div class="post-card-image" style="background-image: url(/defimg/5.jpg)"></div>
     </a>    
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://krbysh.net/post/wedding-invitation/">
+      <a class="post-card-content-link" href="/post/macos-catalina-hwd12/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">MacOS Catalina 10.15 で HWD12 を使う</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
+まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
+Hilink products tool, support MAC 10.15
+この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。 dat ファイルを下記のように書き換える必要があった。
+HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat
+[INSTALL] service_name=USB STICK LTE setting tool service_desc=USB STICK LTE setting tool [PRODUCT_ID] pid=14db,1f01;14dc,1f01;14db,1f03 [OPENBR_TIME] wait_time=1 [OPEN_URL] domain=http://au.home/ url=http://192.168.1.1 auto_open_url=1  なお、[OPEN_URL] などの一部のパラメータは元々の HWD12 に合わせる形に変更した。 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると [OPEN_URL] で指定した URL が開く。 私の環境での IP address のため、修正が必要になる場合もある。 URL が開いた際に &ldquo;再セットアップが必要です! ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">krbysh</a></span>
+      </footer>
+    </div>
+</article>
+
+
+<article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="/post/wedding-invitation/">
+      <div class="post-card-image" style="background-image: url(/defimg/6.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="/post/wedding-invitation/">
           <header class="post-card-header">
               
               <h2 class="post-card-title">結婚式招待状の宛名書き</h2>
@@ -130,8 +163,8 @@
       </a>
 
       <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://krbysh.net/img/krbysh.jpg" alt="Author" />
-          <span class="post-card-author"><a href="https://krbysh.net/">krbysh</a></span>
+          <img class="author-profile-image" src="/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">krbysh</a></span>
       </footer>
     </div>
 </article>
@@ -139,13 +172,13 @@
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://krbysh.net/post/westintokyo-cake/">
-      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/4.jpg)"></div>
+    <a class="post-card-image-link" href="/post/westintokyo-cake/">
+      <div class="post-card-image" style="background-image: url(/defimg/5.jpg)"></div>
     </a>    
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://krbysh.net/post/westintokyo-cake/">
+      <a class="post-card-content-link" href="/post/westintokyo-cake/">
           <header class="post-card-header">
               
               <h2 class="post-card-title">ウェスティンホテル東京のケーキセット</h2>
@@ -160,8 +193,8 @@ A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
       </a>
 
       <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://krbysh.net/img/krbysh.jpg" alt="Author" />
-          <span class="post-card-author"><a href="https://krbysh.net/">krbysh</a></span>
+          <img class="author-profile-image" src="/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="/">krbysh</a></span>
       </footer>
     </div>
 </article>
@@ -180,11 +213,11 @@ A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
 <footer class="site-footer outer">
   <div class="site-footer-content inner">
     <section class="copyright" style="line-height: 1.3em;">
-      <a href="https://krbysh.net/">krbysh.net</a>  <br>
+      <a href="/">krbysh.net</a>  <br>
       
     </section>
     <nav class="site-footer-nav">
-        <a href="https://krbysh.net/">Latest Posts</a>
+        <a href="/">Latest Posts</a>
         <a href="https://www.facebook.com/krbysh" target="_blank" rel="noopener">Facebook</a>
         <a href="https://twitter.com/krbysh" target="_blank" rel="noopener">Twitter</a>
         <a href="https://github.com/krbysh" target="_blank" rel="noopener">Github</a>
@@ -196,7 +229,7 @@ A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
 
 </div><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
 <script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
-<script type="text/javascript" src="https://krbysh.net/js/jquery.fitvids.js"></script>
+<script type="text/javascript" src="/js/jquery.fitvids.js"></script>
 
 <script>hljs.initHighlightingOnLoad();</script>
 

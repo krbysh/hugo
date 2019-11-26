@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tech on krbysh.net</title>
-    <link>https://krbysh.net/categories/tech/</link>
+    <link>/categories/tech/</link>
     <description>Recent content in tech on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Tue, 12 Nov 2019 21:12:48 +0900</lastBuildDate>
     
-	<atom:link href="https://krbysh.net/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/tech/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>MacOS Catalina 10.15 で HWD12 を使う</title>
-      <link>https://krbysh.net/post/macos-catalina-hwd12/</link>
+      <link>/post/macos-catalina-hwd12/</link>
       <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
       
-      <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
+      <guid>/post/macos-catalina-hwd12/</guid>
       <description>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
 まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
 Hilink products tool, support MAC 10.15

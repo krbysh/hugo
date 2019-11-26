@@ -1,4 +1,4 @@
-baseurl = "https://krbysh.net/"
+baseurl = "/"
 theme = "casper-two"
 builddrafts = true
 canonifyurls = true
@@ -13,7 +13,7 @@ pluralizelisttitles = false
 paginate = 6
 
 [permalinks]
-blog = "blog/:slug/"
+post = "/post/:slug/"
 
 [params]
   title       = "krbysh.net"
