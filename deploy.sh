@@ -15,6 +15,8 @@ if [ $# -eq 1 ]
 fi
 git commit -m "$msg"
 
+# Fetch git
+git fetch
 # Push source and build repos.
 git push origin master
 sleep 5
