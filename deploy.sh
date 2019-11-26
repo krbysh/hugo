@@ -16,7 +16,7 @@ fi
 git commit -m "$msg"
 
 # Fetch git
-git fetch origin
+git pull origin/gh-pages
 # Push source and build repos.
 git push origin master
 sleep 5
