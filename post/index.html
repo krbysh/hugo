@@ -1,1161 +1,224 @@
 <!DOCTYPE html>
-<html lang="en-US">
-
+<html lang="en-US" />
 <head>
-<meta charset="utf-8">
-<meta name="HandheldFriendly" content="True">
-<meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="krbysh.net">
+    <meta http-equiv="Content-Type" content="text/html" charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 
+    <title>Post &middot; krbysh.net</title>
 
-    <meta property="twitter:site" content="@krbysh">
+    <meta name="HandheldFriendly" content="True" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<meta property="og:site_name" content="krbysh.net" />
-<meta property="og:locale" content="en-US" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://krbysh.net/post/" />
-<meta property="og:title" content="Post" />
-<meta property="twitter:title" content="Post">
+    <link rel="shortcut icon" href="https://www.krbysh.net/favicon.ico" />
+    <link rel="canonical" href="https://www.krbysh.net/post/" />
 
-    <meta property="og:image" content="https://krbysh.net/img/banner.png">
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:image" content="https://krbysh.net/img/banner.png">
+    
+    <meta name="description" content="" /> 
 
-<meta property="og:description" content="">
-<meta property="twitter:description" content="">
+    
+    <meta name="twitter:card" content="summary"/>
+    <meta name="twitter:image" content="https://www.krbysh.net/img/blog-cover.jpg"/>
+ 
+    <meta name="twitter:title" content="Post"/>
+    <meta name="twitter:description" content=""/>
+    <meta name="twitter:url" content="https://www.krbysh.net/post/" />
+    <meta name="twitter:site" content="@krbysh"/>
 
-<title>
+    <meta property="og:site_name" content="krbysh.net" />
+    <meta property="og:title" content="Post &middot; krbysh.net" />
+    <meta property="og:url" content="https://www.krbysh.net/post/" />
+    <meta property="article:publisher" content="https://www.facebook.com/krbysh" />
 
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="" />
 
-     krbysh.net - Post 
+    <meta property="og:image" content="https://www.krbysh.net/img/blog-cover.jpg"/>
 
-</title>
-<link rel="canonical" href="https://krbysh.net/post/">
+    <meta name="generator" content="Hugo 0.59.1" />
 
+    <!-- Stylesheets -->
+    <link rel="stylesheet" type="text/css" href="https://www.krbysh.net/built/screen.css" /> 
+    <link rel="stylesheet" type="text/css" href="https://www.krbysh.net/css/casper-two.css" /> 
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/default.min.css" />
+    
 
-<style media="screen">
-  @font-face {
-  font-family: 'Nexa Bold';
-  src: url('https://krbysh.net/fonts/Nexa Bold.otf');
-}
-
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section, div.column {
-  display: block;
-}
-body {
-  line-height: 1;
-}
-ol, ul {
-  list-style: none;
-}
-blockquote, q {
-  quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none;
-}
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-a,
-a:visited,
-a:focus,
-a:active {
-  text-decoration: none;
-}
-html {
-  height: 100%;
-  font-size: 16px;
-}
-body {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  justify-content: flex-start;
-  width: 100%;
-  min-height: 100%;
-  font-weight: 400;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  color: #111111;
-  line-height: 1.6;
-  text-rendering: optimizeLegibility !important;
-}
-.icon {
-  text-rendering: geometricPrecision !important;
-}
-section {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  width: 100%;
-}
-div.column {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  width: 100%;
-}
-.container {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  width: 100%;
-}
-div.header .container {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-}
-div.header .content {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-}
-div.header .container .logo {
-  
-  max-width: 100px;
-  
-  margin-left: -2em;
-}
-div.header .name {
-  padding-top: 20px;
-  font-size: 28px;
-  font-family: 'Nexa Bold', 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: -0.005rem;
-  
-  text-transform: uppercase;
-  
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #333333;
-}
-div.header nav {
-  margin-bottom: 16px;
-}
-div.header nav ul {
-  list-style: none;
-  text-align: center;
-  display: -webkit-inline-flex;
-  display: -moz-inline-flex;
-  display: -ms-inline-flexbox;
-  display: -ms-inline-flex;
-  display: inline-flex;
-}
-div.header nav ul li {
-  margin-left: 6px;
-  margin-right: 6px;
-}
-div.header nav ul li:first-child {
-  margin-left: 0;
-}
-div.header nav ul li:last-child {
-  margin-right: 0;
-}
-div.header nav ul a {
-  color: #555555;
-  font-weight: 400;
-  font-size: 14px;
-  text-transform: uppercase;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-div.header nav ul a:hover {
-  color: #111111;
-}
-div.footer .container {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-  flex-direction: column-reverse;
-  width: 100%;
-  text-align: center;
-}
-div.footer .container a {
-  font-size: 14px;
-  margin-left: 6px;
-  margin-right: 6px;
-  opacity: 0.6;
-  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-div.footer .container a:first-child {
-  margin-left: 0;
-}
-div.footer .container a:last-child {
-  margin-right: 0;
-}
-div.footer .container a:hover {
-  opacity: 0.8;
-}
-div.footer .container a .icon {
-  width: 16px;
-  height: 16px;
-}
-div.footer .container .copyright {
-  flex-grow: 0.5;
-  text-align: start;
-}
-div.footer .container .icons {
-  flex-grow: 0.5;
-  text-align: end;
-}
-div.main .container {
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  -webkit-justify-content: flex-start;
-  -moz-justify-content: flex-start;
-  -ms-justify-content: flex-start;
-  justify-content: flex-start;
-}
-div.main .content {
-  color: #111111;
-  font-size: 16px;
-}
-div.main .content .title-container {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  -ms-justify-content: space-between;
-  justify-content: space-between;
-}
-div.main .content .posts {
-  
-  
-}
-div.main .content .page-heading {
-  font-size: 20px;
-  font-weight: 700;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: -0.005rem;
-  text-transform: uppercase;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #333333;
-  margin-bottom: 16px;
-}
-div.main .content .front-matter .page-heading {
-  margin-bottom: 0;
-}
-div.main .content .front-matter .meta {
-  font-size: 14px;
-  color: #666666;
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  margin-bottom: 32px;
-}
-div.main .content .front-matter .date,
-div.main .content .front-matter .author,
-div.main .content .front-matter .tags,
-div.main .content .front-matter .word-count,
-div.main .content .front-matter .middot:before {
-  display: none;
-}
-div.main .content .front-matter .middot:before {
-  font-size: 6px;
-  margin: 0 6px;
-  vertical-align: middle;
-  content: "•";
-}
-div.main .content .front-matter .tags ul {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-}
-div.main .content .front-matter .tags ul li {
-  -webkit-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: opacity 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-div.main .content .front-matter .tags ul li:hover {
-  opacity: 0.7;
-}
-div.main .content .front-matter .tags ul li a {
-  color: #666666;
-}
-div.main .container.f04 {
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  justify-content: center;
-}
-div.main .container.f04 .content {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-}
-div.main .container.f04 .content .num {
-  margin: 30px 0px 30px 0;
-  font-weight: 400;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  font-size: 50px;
-}
-div.main .container.f04 .content .detail {
-  margin-bottom: 40px;
-}
-div.main .container .content .groupby {
-  margin-top: 1em;
-  padding-left: 0.5em;
-}
-div.main .container .content .post-item {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  display: list-item;
-  list-style: disc inside;
-}
-div.main .container .content .post-item .meta {
-  font-size: 14px;
-  color: #666666;
-  display: none;
-  min-width: 100px;
-}
-div.main .container .content .see-more {
-  font-style: italic;
-  float: right;
-  font-size: 0.9em;
-  margin-top: 2em;
-  color: #313537;
-}
-div.main .container .content .see-more:hover {
-  color: #666;
-}
-section {
-  padding: 0 16px;
-}
-div.column {
-  padding: 0 16px;
-}
-div.header {
-  padding-top: 10px;
-}
-div.header-home {
-  padding-top: 36px;
-}
-div.main {
-  padding-top: 32px;
-}
-div.main .container .content .post-item .meta {
-    display: block;
-}
-div.main .container .content .post-item {
-    display: flex;
-    list-style: none;
-}
-a {
-  color: #428bca;
-  -webkit-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -moz-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -ms-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-  -o-transition: color 0.1s cubic-bezier(0.47, 0, 0.75, 0.72);
-}
-a:hover {
-  color: #2a6496;
-}
-img {
-  max-width: 100%;
-}
-div.main .content {
-    width: 100%;
-}
-div.main .content .markdown {
-  font-size: 1.1em;
-  line-height: 1.75em;
-  color: #313537;
-  font-family: serif;
-  font-weight: 300;
-}
-div.main .content .markdown h1,
-div.main .content .markdown h2,
-div.main .content .markdown h3,
-div.main .content .markdown h4,
-div.main .content .markdown h5,
-div.main .content .markdown h6 {
-  font-size: 22px;
-  font-family: 'Helvetica Neue', 'Arial', sans-serif;
-  letter-spacing: -0.005rem;
-  font-weight: 700;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-  color: #333333;
-  text-transform: none;
-  margin-top: 1.75rem;
-}
-div.main .content .markdown h1 {
-  font-size: 1.75rem;
-  margin-bottom: 2rem;
-}
-div.main .content .markdown h2 {
-  font-size: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-div.main .content .markdown h3 {
-  font-size: 1em;
-  margin-bottom: 1rem;
-}
-div.main .content .markdown h4,
-div.main .content .markdown h5,
-div.main .content .markdown h6 {
-  font-size: 1rem;
-  margin-bottom: 1rem;
-  letter-spacing: none;
-}
-div.main .content .markdown code,
-div.main .content .markdown pre {
-  font-family: 'Menlo', monospace;
-  font-size: 0.98rem;
-  background-color: #f7f7f7;
-}
-div.main .content .markdown code {
-  /* enclosed by single backtick (`) */
-  padding: .15em .5em;
-  border-radius: 2px;
-}
-div.main .content .markdown pre {
-  /* Hugo specific: consider using the 'highlight' shortcode */
-  display: block;
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-  padding: 1rem;
-  line-height: 1.5em;
-  white-space: pre;
-  word-break: break-all;
-  word-wrap: break-word;
-}
-div.main .content .markdown pre code {
-  /* enclosed by 4 backticks (````) */
-  padding: 0;
-  font-size: 0.9rem;
-}
-div.main .content .markdown a code {
-  color: #428bca !important;
-}
-div.main .content .markdown a code:hover {
-  text-decoration: underline;
-}
-div.main .content .markdown p {
-  
-  text-align: justify;
-  
-  margin-top: 0;
-  margin-bottom: 1em;
-}
-div.main .content .markdown ul,
-div.main .content .markdown ol,
-div.main .content .markdown dl {
-  margin-top: 1rem;
-  margin-bottom: 2rem;
-}
-div.main .content .markdown dt {
-  font-weight: bold;
-}
-div.main .content .markdown dd {
-  margin-bottom: .5rem;
-}
-div.main .content .markdown ul {
-  list-style-type: disc;
-  list-style-position: outside;
-  margin-bottom: 1.25rem;
-}
-div.main .content .markdown ol {
-  list-style-type: decimal;
-  margin-bottom: 1.25rem;
-}
-div.main .content .markdown li {
-  margin-left: 2em;
-}
-div.main .content .markdown em {
-  font-style: italic;
-}
-div.main .content .markdown strong {
-  font-weight: 700;
-}
-div.main .content .markdown hr {
-  position: relative;
-  margin: 1.75rem 0;
-  border: 0;
-  border-top: 1px solid #808080;
-  border-top: 1px solid #999999;
-}
-div.main .content .markdown abbr {
-  font-size: 0.85rem;
-  font-weight: bold;
-  color: #666666;
-  text-transform: uppercase;
-}
-div.main .content .markdown abbr[title] {
-  cursor: help;
-  border-bottom: 1px dotted #808080;
-}
-div.main .content .markdown blockquote {
-  padding: .5rem 1rem;
-  margin: .8rem 0;
-  color: #7a7a7a;
-  border-left: .25rem solid #e5e5e5;
-}
-div.main .content .markdown blockquote p:last-child {
-  margin-bottom: 0;
-}
-div.main .content .markdown figure {
-  width: 100%;
-  background: #fff;
-  margin-bottom: 1em;
-}
-div.main .content .markdown figure img {
-  width: 100%;
-  height: auto;
-  max-width: 100%;
-  display: block;
-  position: static;
-  margin: auto;
-}
-div.main .content .markdown table {
-  margin-bottom: 1rem;
-  width: 100%;
-  border: 1px solid #e5e5e5;
-  border-collapse: collapse;
-}
-div.main .content .markdown td,
-div.main .content .markdown th {
-  padding: .25rem .5rem;
-  border: 1px solid #e5e5e5;
-}
-div.main .content .markdown tbody tr:nth-child(odd) td,
-div.main .content .markdown tbody tr:nth-child(odd) th {
-  background-color: #f7f7f7;
-}
-div.main .content .markdown .footnotes ol {
-  list-style-type: decimal;
-  margin-left: 16px;
-}
-div.main .content .markdown .footnotes li {
-  list-style-type: unset;
-}
-div.main .content .markdown .footnote-ref {
-  font-size: 0.7em;
-}
-div.main .content .navigation {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  -moz-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  padding: 2em;
-}
-div.main .content .navigation div {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  margin-top: 1em;
-}
-div.main .content .navigation .icon {
-  width: 16px;
-  height: 16px;
-}
-div.main .content .navigation a {
-  width: 250px;
-  margin: 0 1em;
-  text-align: center;
-  font-style: italic;
-  color: #313537;
-}
-div.main .content .share, div.main .content .share div {
-  display: -webkit-flex;
-  display: -moz-flex;
-  display: -ms-flexbox;
-  display: -ms-flex;
-  display: flex;
-  -webkit-flex-direction: row;
-  -moz-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  align-items: center;
-  justify-content: center;
-}
-div.main .content .share {
-  background-color: rgba(152, 152, 152, 0.07);
-  padding: 1em 0;
-}
-div.main .content .share a {
-  margin: 0 6px;
-}
-kbd {
-  padding: 0.1em 0.6em;
-  border: 1px solid #ccc;
-  font-size: 11px;
-  font-family: Arial,Helvetica,sans-serif;
-  background-color: #f7f7f7;
-  color: #333;
-  -moz-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  -webkit-box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  box-shadow: 0 1px 0px rgba(0, 0, 0, 0.2),0 0 0 2px #ffffff inset;
-  -moz-border-radius: 3px;
-  -webkit-border-radius: 3px;
-  border-radius: 3px;
-  display: inline-block;
-  margin: 0 0.1em;
-  text-shadow: 0 1px 0 #fff;
-  line-height: 1.4;
-  white-space: nowrap;
-}
-
-/* Fonts */
-
-
-.wf-raleway-n4-active body, 
-.wf-raleway-n4-active div.header nav ul a,
-.wf-raleway-n7-active div.main .content .page-heading,
-.wf-raleway-n2-active div.main .container.f04 .content .num,
-.wf-raleway-n7-active div.main .content .markdown h1,
-.wf-raleway-n7-active div.main .content .markdown h2,
-.wf-raleway-n7-active div.main .content .markdown h3,
-.wf-raleway-n7-active div.main .content .markdown h4,
-.wf-raleway-n7-active div.main .content .markdown h5,
-.wf-raleway-n7-active div.main .content .markdown h6 {
-      font-family: 'Raleway';
-}
-
-.wf-merriweather-n3-active div.main .content .markdown {
-      font-family: 'Merriweather';
-}
-
-.wf-ubuntu-mono-n4-active div.main .content .markdown code,
-.wf-ubuntu-mono-n4-active div.main .content .markdown pre {
-      font-family: 'Ubuntu Mono';
-}
-
-
-</style>
-<style media="(min-width: 600px)">
-  body {
--webkit-justify-content: center;
--moz-justify-content: center;
--ms-justify-content: center;
-justify-content: center;
-}
-.non-narrow.zero-top-spacing {
-padding-top: 0 !important;
-}
-section {
-padding: 0 16px;
-margin-left: 100px;
-margin-right: 100px;
-
-max-width: 750px;
-
-}
-div.column {
-padding: 0 16px;
-
-max-width: 750px;
-
-}
-div.header {
-background-color: transparent;
-}
-div.header .container {
--webkit-justify-content: flex-start;
--moz-justify-content: flex-start;
--ms-justify-content: flex-start;
-justify-content: flex-start;
-}
-div.header .container .logo {
-margin: 0;
-}
-div.header-home .container .logo {
-max-width: 216px;
-margin-left: 24px;
-}
-div.header-home .name-home {
-padding-top: 30px;
-font-size: 40px;
-}
-div.header-home nav ul a {
-font-size: 18px;
-}
-div.header .content {
--webkit-align-items: flex-start;
--moz-align-items: flex-start;
--ms-align-items: flex-start;
-align-items: flex-start;
-}
-div.header .name {
-color: #333333;
-}
-div.header nav {
-font-size: 14px;
-margin-bottom: 0;
-}
-div.header nav ul {
-text-align: left;
-}
-div.header nav ul a {
-color: #666666;
-}
-div.header nav ul a:hover {
-color: #333333;
-}
-div.footer {
-background-color: transparent;
-}
-div.footer .container {
-flex-direction: row;
-}
-div.footer .container a {
-margin-left: 3px;
-margin-right: 3px;
-color: #666666;
-}
-div.footer .container a:hover {
-color: #333333;
-}
-div.footer .container a .icon {
-font-size: 18px;
-}
-div.footer .container a .icon.larger {
-font-size: 20px;
-}
-div.main .content .front-matter .date,
-div.main .content .front-matter .author,
-div.main .content .front-matter .tags,
-div.main .content .front-matter .word-count,
-div.main .content .front-matter .middot:before {
-display: initial;
-}
-div.main .container.f04 {
--webkit-justify-content: flex-start;
--moz-justify-content: flex-start;
--ms-justify-content: flex-start;
-justify-content: flex-start;
-}
-div.main .container.f04 .content {
--webkit-align-items: flex-start;
--moz-align-items: flex-start;
--ms-align-items: flex-start;
-align-items: flex-start;
-}
-div.main .container.f04 .content .num {
-margin: 0 0 10px 0;
-font-size: 32px;
-}
-div.main .container.f04 .content .detail {
-margin-bottom: 30px;
-}
-.container {
-padding: 0 30px;
-}
-div.header {
-padding-top: 60px;
-padding-bottom: 60px;
-}
-div.footer {
-padding-top: 60px;
-padding-bottom: 60px;
-}
-div.main {
-padding-top: 0;
-}
-div.main .content {
-  
-  font-size: 16px;
-  
-}
-div.main .container .content .post-item {
-display: flex;
-list-style: none;
-padding-left: 1.5em;
-}
-div.main .container .content .post-item .meta {
-display: block;
-}
-div.main .content .markdown blockquote {
-padding-right: 5rem;
-padding-left: 1.25rem;
-}
-div.main .content .navigation {
--webkit-flex-direction: row;
--moz-flex-direction: row;
--ms-flex-direction: row;
-flex-direction: row;
-}
-div.main .content .navigation div {
-margin-top: 0em;
-}
-
-</style>
-<style media="(min-width: 769px)">
-  div.main .content .markdown figure {
-width: 110%;
-margin-left: -4%;
-}
-div.main .content .markdown img {
-max-width: 110%;
-width: 110%;
-margin-left: -4%;
-}
-div.main .content .markdown pre {
-width: 110%;
-margin-left: -4%;
-}
-
-</style>
-
-<noscript>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,700" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Merriweather:300,300i,700,700i" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700" rel="stylesheet">
-</noscript>
-
-
-  <style type="text/css" media="screen">
-    .hljs{display:block;background:white;padding:0.5em;color:#333333;overflow-x:auto}.hljs-comment,.hljs-meta{color:#969896}.hljs-string,.hljs-variable,.hljs-template-variable,.hljs-strong,.hljs-emphasis,.hljs-quote{color:#df5000}.hljs-keyword,.hljs-selector-tag,.hljs-type{color:#a71d5d}.hljs-literal,.hljs-symbol,.hljs-bullet,.hljs-attribute{color:#0086b3}.hljs-section,.hljs-name{color:#63a35c}.hljs-tag{color:#333333}.hljs-title,.hljs-attr,.hljs-selector-id,.hljs-selector-class,.hljs-selector-attr,.hljs-selector-pseudo{color:#795da3}.hljs-addition{color:#55a532;background-color:#eaffea}.hljs-deletion{color:#bd2c00;background-color:#ffecec}.hljs-link{text-decoration:underline}
-  </style>
-
-
-
-  <style type="text/css" media="screen">
-    .progressive{overflow:hidden;position:relative;background:#efefef}.progressive__img{width:100%;height:100%;position:absolute;-webkit-transform:translateZ(0);transform:translateZ(0)}.progressive--not-loaded{filter:blur(30px);-webkit-filter:blur(30px)}.progressive--is-loaded{filter:blur(20px);-webkit-filter:blur(20px);-webkit-animation:sharpen .5s both;animation:sharpen .5s both}@-webkit-keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}@keyframes sharpen{from{filter:blur(20px);-webkit-filter:blur(20px)}to{filter:blur(0);-webkit-filter:blur(0)}}
-  </style>
-
-
-
-
-
-
-
-
-
-<link rel="shortcut icon"
-
-    href="https://krbysh.net/img/logo.png"
-
->
-
-
-
-  <link href="https://krbysh.net/post/index.xml" rel="alternate" type="application/rss+xml" title="krbysh.net" />
-
+     
 
 </head>
 
 
-<body>
+<body class="home-template"><div class="site-wrapper">
 
-
-<div class="header header-home column">
-
-    <div class="container">
-        
-        <div class="content">
-            <a href="https://krbysh.net/"><div class="name"><h1>krbysh.net</h1></div></a>
-            <nav>
-                <ul>
-                    
-                    
-                        
-                            
-                            <li><a href="https://krbysh.net/post">post</a></li>
-                            
-                        
-                    
-                    
-                </ul>
-            </nav>
-        </div>
+<header class="site-header outer "  style="background-image: url(https://www.krbysh.net/img/blog-cover.jpg)"  >
+  <div class="inner">
+    <div class="site-header-content">
+      <h1 class="site-title"> krbysh.net  </h1>
+        <h2 class="site-description"> </h2>
     </div>
-</div>
 
-<div class="main column">
-    <div class="container">
-        <div class="content">
-            <div class="posts">
-                <div class="page-heading">Post</div>
-                <ul>
-                    
-                        <li class="groupby">Nov, 2019</li>
-                        
-                            <li class="post-item">
-    <span class="meta">Nov 12, 2019</span>
-    
-    <a href="https://krbysh.net/post/macos-catalina-hwd12/"><span>MacOS Catalina 10.15 で au HWD12 を使う方法</span></a>
-    
-</li>
+    <nav class="site-nav">
+      <div class="site-nav-left"><ul class="nav" role="menu">
+        
+        
+        
+            <li class="" role="menuitem">
+              <a href="https://www.krbysh.net/">Home</a>
+            </li>
+        
+      </ul></div>
 
-                        
-                    
-                        <li class="groupby">Feb, 2019</li>
-                        
-                            <li class="post-item">
-    <span class="meta">Feb 2, 2019</span>
-    
-    <a href="https://krbysh.net/post/wedding-invitation/"><span>結婚式招待状の宛名書き</span></a>
-    
-</li>
+      <div class="site-nav-right">
+        <div class="social-links">
+                    <a class="social-link social-link-fb" href="https://www.facebook.com/krbysh" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M19 6h5V0h-5c-3.86 0-7 3.14-7 7v3H8v6h4v16h6V16h5l1-6h-6V7c0-.542.458-1 1-1z"/></svg></a>
 
-                        
-                    
-                        <li class="groupby">Jan, 2019</li>
-                        
-                            <li class="post-item">
-    <span class="meta">Jan 31, 2019</span>
-    
-    <a href="https://krbysh.net/post/westintokyo-cake/"><span>ウェスティンホテル東京のケーキセット</span></a>
-    
-</li>
+                    <a class="social-link social-link-tw" href="https://twitter.com/krbysh" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><path d="M30.063 7.313c-.813 1.125-1.75 2.125-2.875 2.938v.75c0 1.563-.188 3.125-.688 4.625a15.088 15.088 0 0 1-2.063 4.438c-.875 1.438-2 2.688-3.25 3.813a15.015 15.015 0 0 1-4.625 2.563c-1.813.688-3.75 1-5.75 1-3.25 0-6.188-.875-8.875-2.625.438.063.875.125 1.375.125 2.688 0 5.063-.875 7.188-2.5-1.25 0-2.375-.375-3.375-1.125s-1.688-1.688-2.063-2.875c.438.063.813.125 1.125.125.5 0 1-.063 1.5-.25-1.313-.25-2.438-.938-3.313-1.938a5.673 5.673 0 0 1-1.313-3.688v-.063c.813.438 1.688.688 2.625.688a5.228 5.228 0 0 1-1.875-2c-.5-.875-.688-1.813-.688-2.75 0-1.063.25-2.063.75-2.938 1.438 1.75 3.188 3.188 5.25 4.25s4.313 1.688 6.688 1.813a5.579 5.579 0 0 1 1.5-5.438c1.125-1.125 2.5-1.688 4.125-1.688s3.063.625 4.188 1.813a11.48 11.48 0 0 0 3.688-1.375c-.438 1.375-1.313 2.438-2.563 3.188 1.125-.125 2.188-.438 3.313-.875z"/></svg></a>
 
-                        
+                    <a class="social-link" href="https://github.com/krbysh" target="_blank" rel="noopener"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/></svg></a>
+
                     
-                </ul>
-            </div>
-        </div>
+
+                    
+        </div>  
+            
+      </div>
+
+    </nav>  
+
+  </div>
+</header>
+
+<main id="site-main" class="site-main outer" role="main">
+  <div class="inner">
+    <div class="post-feed">
+      
+
+
+<article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://www.krbysh.net/post/macos-catalina-hwd12/">
+      <div class="post-card-image" style="background-image: url(https://www.krbysh.net/defimg/2.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://www.krbysh.net/post/macos-catalina-hwd12/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">MacOS Catalina 10.15 で HWD12 を使う</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
+まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
+Hilink products tool, support MAC 10.15
+この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。 dat ファイルを下記のように書き換える必要があった。
+HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat
+[INSTALL] service_name=USB STICK LTE setting tool service_desc=USB STICK LTE setting tool [PRODUCT_ID] pid=14db,1f01;14dc,1f01;14db,1f03 [OPENBR_TIME] wait_time=1 [OPEN_URL] domain=http://au.home/ url=http://192.168.1.1 auto_open_url=1  なお、[OPEN_URL] などの一部のパラメータは元々の HWD12 に合わせる形に変更した。 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると [OPEN_URL] で指定した URL が開く。 私の環境での IP address のため、修正が必要になる場合もある。 URL が開いた際に &ldquo;再セットアップが必要です! ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://www.krbysh.net/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="https://www.krbysh.net/">krbysh</a></span>
+      </footer>
     </div>
-</div>
-<div class="footer column">
-    <div class="container">
+</article>
 
-        
 
-        <div class="copyright">
+<article class="post-card post"> 
+    
+    <a class="post-card-image-link" href="https://www.krbysh.net/post/wedding-invitation/">
+      <div class="post-card-image" style="background-image: url(https://www.krbysh.net/defimg/4.jpg)"></div>
+    </a>    
+    
 
-        
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://www.krbysh.net/post/wedding-invitation/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">結婚式招待状の宛名書き</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>結婚式の招待状の宛名書きは、腕に自信がある方はそのまま書くと思うが、あまりうまくない場合は困る。
+ ホテルにそのまま筆耕をお願いする ホテル以外のところに筆耕をお願いする 自前でお手本を用意して模書(印刷)する  順に費用が安くなり、その分負担が増える。 2. は業者にお願いするか、個人にお願いするか、で ¥100/枚 も平気で変わるので情報収集する必要がある。 郵送で送ることによる汚れ等が不安だったのと個人に依頼するリスクを考えて、シルバー人材センターを利用した。 自治体が実施しているので、ある程度は安心が出来るのと、費用も一般的な業者よりは安かった。 私が依頼したシルバー人材センターは期日をお願いしたところ、快諾してくれて実際それを守ってくれた。 担当された方は元々ホテルで筆耕されていたようで、出来上がりも素晴らしかった。大満足。
+#お願いする前に見本は見せてくれた。
+妻は 3. を選んでいたが、負担を考えるとシルバー人材センターを利用するのが圧倒的にコスパが良いと感じた。 </p>
+              
+          </section>
+      </a>
 
-        </div>
-        <div class="icons">
-
-        
-
-        
-
-        
-
-        
-
-        
-
-        
-            <a href="https://github.com/krbysh" rel=me target="_blank">
-                <img class="icon" src="https://krbysh.net/img/github.svg" alt="github" />
-            </a>
-        
-
-        
-            <a href="https://twitter.com/krbysh" rel=me target="_blank">
-                <img class="icon" src="https://krbysh.net/img/twitter.svg" alt="twitter" />
-            </a>
-        
-
-        
-
-        
-
-        
-            <a href="mailto:krbysh@krbysh.net">
-                <img class="icon" src="https://krbysh.net/img/email.svg" alt="email" />
-            </a>
-        
-
-        
-            <a href="https://krbysh.net/index.xml">
-                <img class="icon" src="https://krbysh.net/img/rss.svg" alt="rss" />
-            </a>
-        
-
-        </div>
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://www.krbysh.net/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="https://www.krbysh.net/">krbysh</a></span>
+      </footer>
     </div>
-</div>
+</article>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
-<script>
-  WebFont.load({
-    google: {
-      families: ['Raleway:400,600,700', 'Merriweather:300,300i,700,700i', 'Ubuntu+Mono:400,700']
-    }
-  });
-</script>
-
-
-
-  <script src="https://krbysh.net/js/highlight.min.js" defer></script>
-  
-
-
-
-  <script src="https://krbysh.net/js/progressively.min.js" defer></script>
-
-
-
-
-
-
-
-
-<script>
-  window.onload = function() {
+<article class="post-card post"> 
     
-      hljs.initHighlighting();
+    <a class="post-card-image-link" href="https://www.krbysh.net/post/westintokyo-cake/">
+      <div class="post-card-image" style="background-image: url(https://www.krbysh.net/defimg/6.jpg)"></div>
+    </a>    
     
-    
-      progressively.init({delay: 30, throttle: 50});
-    
-    
-  };
-</script>
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://www.krbysh.net/post/westintokyo-cake/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">ウェスティンホテル東京のケーキセット</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>結婚披露宴の内装を決めるべく、ウェディングプランナーさんに相談して部屋を改めて確認させてもらった。 初回の見学時には装飾がされていなかったので、妻は初めて装飾されている部屋に入ることになる。 テーブルクロスの色もサンプルで見るのと実際に使われたものを見るのでは全然違う。 感覚が掴めたので、帰り際にケーキセットを食べて帰った。 アフタヌーンティーほどではないけど、何か食べるのならケーキセットが一番お得な気がする。    View this post on Instagram        ケーキセット(¥1,600) 美味しかった
+A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
+  美味しかったからアフタヌーンティーにも行ってみたいな :) </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://www.krbysh.net/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="https://www.krbysh.net/">krbysh</a></span>
+      </footer>
+    </div>
+</article>
 
 
+    </div>
+
+    <nav class="pagination" role="navigation">
+      
+      <span class="page-number"><span class="hide">Page 1 of 1</span>&nbsp;</span>
+      
+    </nav>
+  </div>
+</main>
+
+<footer class="site-footer outer">
+  <div class="site-footer-content inner">
+    <section class="copyright" style="line-height: 1.3em;">
+      <a href="https://www.krbysh.net/">krbysh.net</a>  <br>
+      
+    </section>
+    <nav class="site-footer-nav">
+        <a href="https://www.krbysh.net/">Latest Posts</a>
+        <a href="https://www.facebook.com/krbysh" target="_blank" rel="noopener">Facebook</a>
+        <a href="https://twitter.com/krbysh" target="_blank" rel="noopener">Twitter</a>
+        <a href="https://github.com/krbysh" target="_blank" rel="noopener">Github</a>
+        
+        
+    </nav>  
+  </div>
+</footer>
+
+</div><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="https://www.krbysh.net/js/jquery.fitvids.js"></script>
+
+<script>hljs.initHighlightingOnLoad();</script>
 
 
-</body>
-</html>
-
+</body></html>
