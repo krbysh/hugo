@@ -102,8 +102,41 @@
 
 <article class="post-card post"> 
     
+    <a class="post-card-image-link" href="https://krbysh.net/post/macos-catalina-hwd12/">
+      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/1.jpg)"></div>
+    </a>    
+    
+
+    <div class="post-card-content">
+      <a class="post-card-content-link" href="https://krbysh.net/post/macos-catalina-hwd12/">
+          <header class="post-card-header">
+              
+              <h2 class="post-card-title">MacOS Catalina 10.15 で HWD12 を使う</h2>
+          </header>
+          <section class="post-card-excerpt">
+              
+                <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
+まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
+Hilink products tool, support MAC 10.15
+この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。 dat ファイルを下記のように書き換える必要があった。
+HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat
+[INSTALL] service_name=USB STICK LTE setting tool service_desc=USB STICK LTE setting tool [PRODUCT_ID] pid=14db,1f01;14dc,1f01;14db,1f03 [OPENBR_TIME] wait_time=1 [OPEN_URL] domain=http://au.home/ url=http://192.168.1.1 auto_open_url=1  なお、[OPEN_URL] などの一部のパラメータは元々の HWD12 に合わせる形に変更した。 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると [OPEN_URL] で指定した URL が開く。 私の環境での IP address のため、修正が必要になる場合もある。 URL が開いた際に &ldquo;再セットアップが必要です! ...  </p>
+              
+          </section>
+      </a>
+
+      <footer class="post-card-meta">
+          <img class="author-profile-image" src="https://krbysh.net/img/krbysh.jpg" alt="Author" />
+          <span class="post-card-author"><a href="https://krbysh.net/">krbysh</a></span>
+      </footer>
+    </div>
+</article>
+ 
+
+<article class="post-card post"> 
+    
     <a class="post-card-image-link" href="https://krbysh.net/post/westintokyo-cake/">
-      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/5.jpg)"></div>
+      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/4.jpg)"></div>
     </a>    
     
 
@@ -132,56 +165,20 @@ A post shared by Yuki Kurebayashi (@krbysh) on Jan 25, 2019 at 10:41pm PST
 
 <article class="post-card post"> 
     
-    <a class="post-card-image-link" href="https://krbysh.net/post/wedding-invitation/">
-      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/3.jpg)"></div>
+    <a class="post-card-image-link" href="https://krbysh.net/post/">
+      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/4.jpg)"></div>
     </a>    
     
 
     <div class="post-card-content">
-      <a class="post-card-content-link" href="https://krbysh.net/post/wedding-invitation/">
+      <a class="post-card-content-link" href="https://krbysh.net/post/">
           <header class="post-card-header">
               
-              <h2 class="post-card-title">結婚式招待状の宛名書き</h2>
+              <h2 class="post-card-title">Post</h2>
           </header>
           <section class="post-card-excerpt">
               
-                <p>結婚式の招待状の宛名書きは、腕に自信がある方はそのまま書くと思うが、あまりうまくない場合は困る。
- ホテルにそのまま筆耕をお願いする ホテル以外のところに筆耕をお願いする 自前でお手本を用意して模書(印刷)する  順に費用が安くなり、その分負担が増える。 2. は業者にお願いするか、個人にお願いするか、で ¥100/枚 も平気で変わるので情報収集する必要がある。 郵送で送ることによる汚れ等が不安だったのと個人に依頼するリスクを考えて、シルバー人材センターを利用した。 自治体が実施しているので、ある程度は安心が出来るのと、費用も一般的な業者よりは安かった。 私が依頼したシルバー人材センターは期日をお願いしたところ、快諾してくれて実際それを守ってくれた。 担当された方は元々ホテルで筆耕されていたようで、出来上がりも素晴らしかった。大満足。
-#お願いする前に見本は見せてくれた。
-妻は 3. を選んでいたが、負担を考えるとシルバー人材センターを利用するのが圧倒的にコスパが良いと感じた。 </p>
-              
-          </section>
-      </a>
-
-      <footer class="post-card-meta">
-          <img class="author-profile-image" src="https://krbysh.net/img/krbysh.jpg" alt="Author" />
-          <span class="post-card-author"><a href="https://krbysh.net/">krbysh</a></span>
-      </footer>
-    </div>
-</article>
- 
-
-<article class="post-card post"> 
-    
-    <a class="post-card-image-link" href="https://krbysh.net/post/macos-catalina-hwd12/">
-      <div class="post-card-image" style="background-image: url(https://krbysh.net/defimg/5.jpg)"></div>
-    </a>    
-    
-
-    <div class="post-card-content">
-      <a class="post-card-content-link" href="https://krbysh.net/post/macos-catalina-hwd12/">
-          <header class="post-card-header">
-              
-              <h2 class="post-card-title">MacOS Catalina 10.15 で HWD12 を使う</h2>
-          </header>
-          <section class="post-card-excerpt">
-              
-                <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
-まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。
-Hilink products tool, support MAC 10.15
-この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。 dat ファイルを下記のように書き換える必要があった。
-HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat
-[INSTALL] service_name=USB STICK LTE setting tool service_desc=USB STICK LTE setting tool [PRODUCT_ID] pid=14db,1f01;14dc,1f01;14db,1f03 [OPENBR_TIME] wait_time=1 [OPEN_URL] domain=http://au.home/ url=http://192.168.1.1 auto_open_url=1  なお、[OPEN_URL] などの一部のパラメータは元々の HWD12 に合わせる形に変更した。 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると [OPEN_URL] で指定した URL が開く。 私の環境での IP address のため、修正が必要になる場合もある。 URL が開いた際に &ldquo;再セットアップが必要です! ...  </p>
+                <p> </p>
               
           </section>
       </a>
