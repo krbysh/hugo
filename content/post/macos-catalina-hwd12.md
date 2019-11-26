@@ -1,5 +1,5 @@
 ---
-title: "MacOS Catalina 10.15 で au HWD12 を使う方法"
+title: "MacOS Catalina 10.15 で HWD12 を使う"
 date: 2019-11-12T21:12:48+09:00
 draft: false
 slug: "macos-catalina-hwd12"

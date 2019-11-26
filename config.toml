@@ -1,5 +1,5 @@
-baseurl = "https://krbysh.net/"
-theme = "cocoa-eh"
+baseurl = "https://www.krbysh.net/"
+theme = "casper-two"
 builddrafts = true
 canonifyurls = true
 contentdir = "content"
@@ -10,26 +10,43 @@ author = "krbysh"
 title = "krbysh.net"
 disqusshortname = ""
 pluralizelisttitles = false
+paginate = 6
 
 [permalinks]
 blog = "blog/:slug/"
 
 [params]
-dateform = "Jan 2, 2006"
-dateformfull = "Mon Jan 2 2006 15:04:05 MST"
-description = "krbysh.net"
-logofile = ""
-faviconfile = "img/logo.png"
-highlightjs = true
-progressively = true
-align_left = false
-lang = "en"
-github = "krbysh"
-email = "krbysh@krbysh.net"
-twitter = "krbysh"
-social_banner = "img/banner.png"
-posts_navigation = true
-small_banner_logo = false
-pygmentsCodefences = true
-pygmentsUseClasses = true
-pygmentsStyle = "monokai"
+  title       = "krbysh.net"
+  subtitle    = ""
+
+  cover       = "img/blog-cover.jpg"
+  description = ""
+  metaDescription = ""
+  googleAnalytics = ""
+  customCSS = []
+  RSSLink = ""
+
+  twitterName = "krbysh"
+  fbName = "krbysh"
+  githubName = "krbysh"
+
+  logo = ""
+  orgName = "krbysh.net"
+  orgWebsite = "https://www.krbysh.net"
+  orgDescription = ""
+
+  author = "krbysh"
+  authorAvatar = "img/krbysh.jpg"
+  authorLocation = "Tokyo, JP"
+  authorWebsite = "https://www.krbysh.net"
+  authorDescription = ""
+
+  pageNotFoundTitle = "404 - Page not found"
+
+  #casper or caspertwo
+  singleViewStyle = "casper"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+  weight = 200
