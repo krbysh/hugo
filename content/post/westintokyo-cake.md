@@ -3,6 +3,7 @@ title: "ウェスティンホテル東京のケーキセット"
 date: 2019-01-31T19:16:02+09:00
 draft: false
 slug: "westintokyo-cake"
+categories: "life"
 ---
 
 結婚披露宴の内装を決めるべく、ウェディングプランナーさんに相談して部屋を改めて確認させてもらった。
