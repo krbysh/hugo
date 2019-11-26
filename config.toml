@@ -1,4 +1,4 @@
-baseurl = "https://www.krbysh.net/"
+baseurl = "https://krbysh.net/"
 theme = "casper-two"
 builddrafts = true
 canonifyurls = true
@@ -32,13 +32,13 @@ blog = "blog/:slug/"
 
   logo = ""
   orgName = "krbysh.net"
-  orgWebsite = "https://www.krbysh.net"
+  orgWebsite = "https://krbysh.net"
   orgDescription = ""
 
   author = "krbysh"
   authorAvatar = "img/krbysh.jpg"
   authorLocation = "Tokyo, JP"
-  authorWebsite = "https://www.krbysh.net"
+  authorWebsite = "https://krbysh.net"
   authorDescription = ""
 
   pageNotFoundTitle = "404 - Page not found"
