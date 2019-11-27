@@ -3,7 +3,7 @@ title: "結婚式招待状の宛名書き"
 date: 2019-02-02T21:40:11+09:00
 draft: false
 slug: "wedding-invitation"
-categories: "life"
+categories: [ "life" ]
 ---
 
 結婚式の招待状の宛名書きは、腕に自信がある方はそのまま書くと思うが、あまりうまくない場合は困る。  

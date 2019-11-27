@@ -51,12 +51,3 @@ post = "/post/:slug/"
   url = "/"
   weight = 200
 
-[[menu.main]]
-  name = "Life"
-  url = "/categories/life/"
-  weight = 100
-
-[[menu.main]]
-  name = "Tech"
-  url = "/categories/tech/"
-  weight = 99
