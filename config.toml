@@ -51,3 +51,12 @@ post = "/post/:slug/"
   url = "/"
   weight = 200
 
+[[menu.main]]
+  name = "Tag"
+  url = "/tags/"
+  weight = 100
+
+[[menu.main]]
+  name = "Categories"
+  url = "/categories/"
+  weight = 99
