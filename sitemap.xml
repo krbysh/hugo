@@ -3,12 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/tags/apple/</loc>
+    <lastmod>2019-11-12T21:12:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
+    <lastmod>2019-11-12T21:12:48+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/mac/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
@@ -23,6 +33,11 @@
   </url>
   
   <url>
+    <loc>/tags/</loc>
+    <lastmod>2019-11-12T21:12:48+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/categories/tech/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
@@ -33,17 +48,23 @@
   </url>
   
   <url>
+    <loc>/tags/wedding/</loc>
+    <lastmod>2019-02-02T21:40:11+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/post/wedding-invitation/</loc>
     <lastmod>2019-02-02T21:40:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/westintokyo-cake/</loc>
+    <loc>/tags/hotel/</loc>
     <lastmod>2019-01-31T19:16:02+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>/post/westintokyo-cake/</loc>
+    <lastmod>2019-01-31T19:16:02+09:00</lastmod>
   </url>
   
 </urlset>
