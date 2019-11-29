@@ -11,6 +11,7 @@ title = "krbysh.net"
 disqusshortname = ""
 pluralizelisttitles = false
 paginate = 6
+GoogleAnalytics = "UA-9346373-8"
 
 [permalinks]
 post = "/post/:slug/"
