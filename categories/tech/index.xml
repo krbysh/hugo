@@ -13,10 +13,10 @@
     
     <item>
       <title>MacOS Catalina 10.15 で HWD12 を使う</title>
-      <link>https://krbysh.net/macos-catalina-hwd12/</link>
+      <link>https://krbysh.net/post/macos-catalina-hwd12/</link>
       <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
       
-      <guid>https://krbysh.net/macos-catalina-hwd12/</guid>
+      <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
       <description>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良</description>
     </item>
     
