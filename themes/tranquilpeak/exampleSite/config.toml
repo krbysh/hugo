@@ -12,19 +12,18 @@
 # For developpers, if you modify this theme, put your images in `source/images` folder and
 # use grunt task `build` to synchronize assets
 
-baseURL = "https://krbysh.net/"
-languageCode = "ja-jp"
-defaultContentLanguage = "ja-jp"
-title = "krbysh.net"
+baseURL = "https://example.org/"
+languageCode = "en-us"
+defaultContentLanguage = "en-us"
+title = "Hugo tranquilpeak theme"
 theme = "hugo-tranquilpeak-theme"
-# disqusShortname = "krbysh"
-googleAnalytics = "UA-9346373-8"
+# disqusShortname = "hugo-tranquilpeak-theme"
+# googleAnalytics = "UA-123-45"
 paginate = 7
 canonifyurls = true
-hasCJKLanguage = true
 
 [permalinks]
-  post = "/post/:slug/"
+  post = "/:year/:month/:slug/"
 
 [taxonomies]
   tag = "tags"
@@ -32,12 +31,12 @@ hasCJKLanguage = true
   archive = "archives"
 
 [author]
-  name = "krbysh"
-  bio = ""
-  job = "Networking Engineer"
-  location = "Japan"
+  name = "Firstname Lastname"
+  bio = "Super bio with markdown support **COOL**"
+  job = "Your job title"
+  location = "France"
   # Your Gravatar email. Overwrite `author.picture` everywhere in the blog
-  gravatarEmail = "y.krbysh@gmail.com"
+  gravatarEmail = "thibaud.lepretre@gmail.com"
   # Your profile picture
   # Overwritten by your gravatar image if `author.gravatarEmail` is filled
   picture = "https://cdn1.iconfinder.com/data/icons/ninja-things-1/1772/ninja-simple-512.png"
@@ -65,20 +64,31 @@ hasCJKLanguage = true
   name = "Tags"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-tags\"></i>"
   url = "/tags"
-
+[[menu.main]]
+  weight = 4
+  identifier = "archives"
+  name = "Archives"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-archive\"></i>"
+  url = "/archives"
+[[menu.main]]
+  weight = 5
+  identifier = "about"
+  name = "About"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-question\"></i>"
+  url = "/#about"
 
 [[menu.links]]
   weight = 1
   identifier = "github"
   name = "GitHub"
   pre = "<i class=\"sidebar-button-icon fa fa-lg fa-github\"></i>"
-  url = "https://github.com/krbysh"
+  url = "https://github.com/kakawait"
 [[menu.links]]
   weight = 2
-  identifier = "twitter"
-  name = "Twitter"
-  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-twitter\"></i>"
-  url = "https://twitter.com/krbysh"
+  identifier = "stackoverflow"
+  name = "Stack Overflow"
+  pre = "<i class=\"sidebar-button-icon fa fa-lg fa-stack-overflow\"></i>"
+  url = "https://stackoverflow.com/users/636472/kakawait"
 
 [[menu.misc]]
   weight = 1
@@ -108,7 +118,7 @@ hasCJKLanguage = true
   # If false it will flat categories.
   hierarchicalCategories = true
 
-  # description = "Hugo tranquilpeak theme demo"
+  description = "Hugo tranquilpeak theme demo"
 
   # Customization
   # Define the behavior of the sidebar
@@ -148,7 +158,7 @@ hasCJKLanguage = true
   autoThumbnailImage = true
 
   # Your favicon path, default is "/favicon.png"
-  favicon = "/favicon.png"
+  # favicon = "/favicon.png"
 
   # Header configuration
   # The link at the right of the header is customizable
