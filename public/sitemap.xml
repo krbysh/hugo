@@ -3,68 +3,72 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/apple/</loc>
+    <loc>https://krbysh.net/tags/apple/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/</loc>
+    <loc>https://krbysh.net/categories/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
+    <loc>https://krbysh.net/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/mac/</loc>
+    <loc>https://krbysh.net/tags/mac/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/macos-catalina-hwd12/</loc>
+    <loc>https://krbysh.net/macos-catalina-hwd12/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/</loc>
+    <loc>https://krbysh.net/post/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/</loc>
+    <loc>https://krbysh.net/tags/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/tech/</loc>
+    <loc>https://krbysh.net/categories/tech/</loc>
     <lastmod>2019-11-12T21:12:48+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/categories/life/</loc>
+    <loc>https://krbysh.net/categories/life/</loc>
     <lastmod>2019-02-02T21:40:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/wedding/</loc>
+    <loc>https://krbysh.net/tags/wedding/</loc>
     <lastmod>2019-02-02T21:40:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/wedding-invitation/</loc>
+    <loc>https://krbysh.net/wedding-invitation/</loc>
     <lastmod>2019-02-02T21:40:11+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/hotel/</loc>
+    <loc>https://krbysh.net/tags/hotel/</loc>
     <lastmod>2019-01-31T19:16:02+09:00</lastmod>
   </url>
   
   <url>
-    <loc>/post/westintokyo-cake/</loc>
+    <loc>https://krbysh.net/westintokyo-cake/</loc>
     <lastmod>2019-01-31T19:16:02+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://krbysh.net/archives/</loc>
   </url>
   
 </urlset>
