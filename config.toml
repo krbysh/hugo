@@ -13,8 +13,8 @@
 # use grunt task `build` to synchronize assets
 
 baseURL = "https://krbysh.net/"
-languageCode = "ja-jp"
-defaultContentLanguage = "ja-jp"
+languageCode = "en-us"
+defaultContentLanguage = "en-us"
 title = "krbysh.net"
 theme = "hugo-tranquilpeak-theme"
 # disqusShortname = "krbysh"

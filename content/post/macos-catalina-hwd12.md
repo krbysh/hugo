@@ -11,6 +11,7 @@ MacOS Catalina から 32bit アプリケーションが利用できなくなっ�
 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
 
+<!--more-->
 まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。  
 [Hilink products tool, support MAC 10.15](https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201)  
 この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。
