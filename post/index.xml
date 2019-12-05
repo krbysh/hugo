@@ -5,11 +5,21 @@
     <link>https://krbysh.net/post/</link>
     <description>Recent content in Posts on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
-    <lastBuildDate>Tue, 12 Nov 2019 21:12:48 +0900</lastBuildDate>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Dec 2019 19:30:30 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>加湿器 Balmuda Rain を購入した</title>
+      <link>https://krbysh.net/post/balmuda-rain/</link>
+      <pubDate>Wed, 04 Dec 2019 19:30:30 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/balmuda-rain/</guid>
+      <description>&lt;p&gt;部屋の乾燥が気になりだして、早数ヶ月。
+妻の咳が日に日に酷くなってきたので加湿器を買うことに決めた。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>MacOS Catalina 10.15 で HWD12 を使う</title>
@@ -17,7 +27,9 @@
       <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
       
       <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
-      <description>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良</description>
+      <description>&lt;p&gt;MacOS Catalina から 32bit アプリケーションが利用できなくなった。
+au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
+au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -26,7 +38,7 @@
       <pubDate>Sat, 02 Feb 2019 21:40:11 +0900</pubDate>
       
       <guid>https://krbysh.net/post/wedding-invitation/</guid>
-      <description>結婚式の招待状の宛名書きは、腕に自信がある方はそのまま書くと思うが、あまりうまくない場合は困る。 ホテルにそのまま筆耕をお願いする ホテル以外の</description>
+      <description>&lt;p&gt;結婚式の紹介状の宛名書きにシルバー人材センターを利用した話。&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,7 +47,7 @@
       <pubDate>Thu, 31 Jan 2019 19:16:02 +0900</pubDate>
       
       <guid>https://krbysh.net/post/westintokyo-cake/</guid>
-      <description>結婚披露宴の内装を決めるべく、ウェディングプランナーさんに相談して部屋を改めて確認させてもらった。 初回の見学時には装飾がされていなかったので</description>
+      <description>&lt;p&gt;久しぶりにウェスティンホテル東京に足を運んだ。&lt;/p&gt;</description>
     </item>
     
   </channel>

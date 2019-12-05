@@ -5,7 +5,7 @@
     <link>https://krbysh.net/tags/apple/</link>
     <description>Recent content in Apple on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>ja-jp</language>
+    <language>en-us</language>
     <lastBuildDate>Tue, 12 Nov 2019 21:12:48 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/tags/apple/index.xml" rel="self" type="application/rss+xml" />
@@ -17,7 +17,9 @@
       <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
       
       <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
-      <description>MacOS Catalina から 32bit アプリケーションが利用できなくなった。 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。 au 側が対応してくれれば良</description>
+      <description>&lt;p&gt;MacOS Catalina から 32bit アプリケーションが利用できなくなった。
+au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
+au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。&lt;/p&gt;</description>
     </item>
     
   </channel>
