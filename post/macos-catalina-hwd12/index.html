@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.59.1 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.62.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="krbysh">
 <meta name="keywords" content="">
 <meta name="description" content="MacOS Catalina から 32bit アプリケーションが利用できなくなった。
@@ -208,6 +208,16 @@ if (!doNotTrack) {
     </a>
   </li>
 
+  <li class="sidebar-button">
+    
+      <a class="sidebar-button-link " href="https://krbysh.net/page/terms-of-use">
+    
+      <i class="sidebar-button-icon fa fa-lg fa-file-text"></i>
+      
+      <span class="sidebar-button-desc">Terms of Use</span>
+    </a>
+  </li>
+
 
     </ul>
   </div>
@@ -255,13 +265,11 @@ if (!doNotTrack) {
               <p>MacOS Catalina から 32bit アプリケーションが利用できなくなった。
 au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。</p>
-
-<p>まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。<br />
-<a href="https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201">Hilink products tool, support MAC 10.15</a><br />
+<p>まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。<br>
+<a href="https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201">Hilink products tool, support MAC 10.15</a><br>
 この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。
-dat ファイルを下記のように書き換える必要があった。<br />
+dat ファイルを下記のように書き換える必要があった。<br>
 <code>HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat</code></p>
-
 <pre><code>[INSTALL]
 service_name=USB STICK LTE setting tool
 service_desc=USB STICK LTE setting tool
@@ -276,9 +284,7 @@ wait_time=1
 domain=http://au.home/
 url=http://192.168.1.1
 auto_open_url=1
-</code></pre>
-
-<p>なお、<code>[OPEN_URL]</code> などの一部のパラメータは元々の HWD12 に合わせる形に変更した。
+</code></pre><p>なお、<code>[OPEN_URL]</code> などの一部のパラメータは元々の HWD12 に合わせる形に変更した。
 書き換えた上で、HiLink.app をインストールして、Mac を再起動後、HWD12 を接続すると <code>[OPEN_URL]</code> で指定した URL が開く。
 私の環境での IP address のため、修正が必要になる場合もある。
 URL が開いた際に &ldquo;再セットアップが必要です!&rdquo; というメッセージが出るが、無視して &ldquo;ホームに戻る&rdquo; ことでこれまで通り接続することができる。</p>
@@ -365,7 +371,7 @@ URL が開いた際に &ldquo;再セットアップが必要です!&rdquo; と�
         </article>
         <footer id="footer" class="main-content-wrap">
   <span class="copyrights">
-    &copy; 2019 krbysh. All Rights Reserved
+    &copy; 2020 krbysh. All Rights Reserved
   </span>
 </footer>
 
