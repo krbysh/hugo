@@ -6,10 +6,37 @@
     <description>Recent content in Tags on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 19:30:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 20:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Android</title>
+      <link>https://krbysh.net/tags/android/</link>
+      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Nox</title>
+      <link>https://krbysh.net/tags/nox/</link>
+      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/nox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://krbysh.net/tags/windows/</link>
+      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/windows/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Balmuda</title>

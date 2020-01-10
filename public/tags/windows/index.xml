@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tech on krbysh.net</title>
-    <link>https://krbysh.net/categories/tech/</link>
-    <description>Recent content in Tech on krbysh.net</description>
+    <title>Windows on krbysh.net</title>
+    <link>https://krbysh.net/tags/windows/</link>
+    <description>Recent content in Windows on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 10 Jan 2020 20:00:00 +0900</lastBuildDate>
     
-	<atom:link href="https://krbysh.net/categories/tech/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://krbysh.net/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -20,17 +20,6 @@
       <description>&lt;p&gt;スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
 私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>MacOS Catalina 10.15 で HWD12 を使う</title>
-      <link>https://krbysh.net/post/macos-catalina-hwd12/</link>
-      <pubDate>Tue, 12 Nov 2019 21:12:48 +0900</pubDate>
-      
-      <guid>https://krbysh.net/post/macos-catalina-hwd12/</guid>
-      <description>&lt;p&gt;MacOS Catalina から 32bit アプリケーションが利用できなくなった。
-au HWD12 のアプリケーションが 32bit のため、インストールおよび起動ができない。
-au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。&lt;/p&gt;</description>
     </item>
     
   </channel>

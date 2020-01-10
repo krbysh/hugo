@@ -6,10 +6,21 @@
     <description>Recent content in Posts on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 04 Dec 2019 19:30:30 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 10 Jan 2020 20:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Nox App Player を最適化する</title>
+      <link>https://krbysh.net/post/debloat-optimize-nox/</link>
+      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/debloat-optimize-nox/</guid>
+      <description>&lt;p&gt;スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
+私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>加湿器 Balmuda Rain を購入した</title>
