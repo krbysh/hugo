@@ -12,7 +12,16 @@ au HWD12 のアプリケーションが 32bit のため、インストールお�
 au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対応の様子なので、何とかできないか試行錯誤を行った。
 
 <!--more-->
-{{ partial "google_adsense.html" . }}
+<!-- loopback0000_main_Blog1_1x1_as -->
+<ins class="adsbygoogle"
+     style="display:block"
+     data-ad-client="ca-pub-5789665443108201"
+     data-ad-slot="6462969174"
+     data-ad-format="auto"
+     data-full-width-responsive="true"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 まずは、au HWD12 の元になっている Huawei E3276 の Catalina 用の 64bit アプリケーションをダウンロードする。  
 [Hilink products tool, support MAC 10.15](https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201)  
 この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。
