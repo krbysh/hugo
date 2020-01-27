@@ -12,17 +12,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。
 
 <!--more-->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- loopback0000_main_Blog1_1x1_as -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-5789665443108201"
-     data-ad-slot="6462969174"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+{{ partial "google_adsense.html" . }}
 ___
 [免責事項](/page/terms-of-use)に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
 また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
