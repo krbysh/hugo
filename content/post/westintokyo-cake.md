@@ -14,5 +14,5 @@ tags: [ "Wedding", "Hotel" ]
 テーブルクロスの色もサンプルで見るのと実際に使われたものを見るのでは全然違う。
 感覚が掴めたので、帰り際にケーキセットを食べて帰った。
 アフタヌーンティーほどではないけど、何か食べるのならケーキセットが一番お得な気がする。
-{{< instagram BtFoxM0hlyw hidecaption >}}
 美味しかったからアフタヌーンティーにも行ってみたいな :)
+{{< instagram BtFoxM0hlyw hidecaption >}}
