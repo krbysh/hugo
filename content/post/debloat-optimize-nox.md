@@ -26,7 +26,7 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 2. Android(Nox) の hosts ファイルの修正
 3. Windows の hosts ファイルの修正 および Windows Firewall の追加
 4. Nox の設定ファイルの修正
-
+{{% google-adsense %}}
 ##### 1. Android(Nox) の Launcher の変更
 
 まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、"Nova Launcher" を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。
@@ -35,7 +35,7 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 * Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する "Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
 * Nox にプリインストールされている `ファイルマネージャー` を起動し、`/system/app/Launcher` をフォルダーを開く。`launcher_x.x.x_en_signed.apk` というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。
 * Nox を再起動。後項 "Android(Nox) の hosts ファイルの修正" を実施した後でも可。
-
+{{% google-adsense %}}
 ##### 2. Android(Nox) の hosts ファイルの修正
 
 次に、Nox の hosts ファイルの修正を行うことで、Nox が不審なホストとの通信を無効化することができる。
@@ -140,7 +140,7 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 127.0.0.1 api.noxinfluencer.com
 {{< / highlight >}}
 * Nox を再起動。
-
+{{% google-adsense %}}
 ##### 3. Windows の hosts ファイルの修正 および Windows Firewall の追加
 
 続いて、Nox をインストールした Windows 側の hosts ファイルの修正と、Windows Firewall の追加を行う。ただし、新しいバージョンを利用したい場合にダウンロードもできなくなるので、注意が必要。新しいバージョンを利用する場合は、一時的に本項の設定を削除する。
@@ -153,7 +153,7 @@ netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=blo
 {{< / highlight >}}
 * `C:\Windows\System32\drivers\etc\hosts` ファイルをメモ帳等のエディタで開く。変更するために管理者権限で開く必要がある。
 * 前項 "Android(Nox) の hosts ファイルの修正" と同様の内容をコピペする。
-
+{{% google-adsense %}}
 ##### 4. Nox の設定ファイルの修正
 
 最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。
@@ -185,7 +185,7 @@ log4j.rootLogger=ERROR, Nox_log
 del /q/f %LOCALAPPDATA%\Nox\loading\*
 echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM
 {{< / highlight >}}
-
+{{% google-adsense %}}
 ___
 参考:  
 [Debloating Nox](https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29)  
