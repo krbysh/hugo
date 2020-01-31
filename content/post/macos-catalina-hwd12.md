@@ -17,8 +17,8 @@ au 側が対応してくれれば良いのだが、2019/11/12 現在まだ未対
 [Hilink products tool, support MAC 10.15](https://consumer-tkb.huawei.com/tkbapp/downloadWebsiteService?websiteId=1697201)  
 この HiLink.app をインストールすることで、ドライバー(kext)を導入するのだが、少なくとも私の環境では HWD12 は動かなかった。
 dat ファイルを下記のように書き換える必要があった。  
-`HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat`
-
+`HiLink.app/Contents/Resources/mbbserviceSetup.pkg/Contents/Resources/ArConfig.dat`  
+{{% google-adsense %}}
 ```
 [INSTALL]
 service_name=USB STICK LTE setting tool
