@@ -292,31 +292,22 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 <li>Android(Nox) の Launcher の変更</li>
 <li>Android(Nox) の hosts ファイルの修正</li>
 <li>Windows の hosts ファイルの修正 および Windows Firewall の追加</li>
-<li>Nox の設定ファイルの修正
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-5789665443108201"
-data-ad-slot="6462969174"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></li>
+<li>Nox の設定ファイルの修正</li>
 </ol>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h5 id="1-androidnox-の-launcher-の変更">1. Android(Nox) の Launcher の変更</h5>
 <p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、&ldquo;Nova Launcher&rdquo; を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
 <ul>
 <li>Nox を Root モードで起動させるため、Nox の設定メニューの <code>Startup items</code> の項目にある <code>Root</code> のチェックボックスを有効後、再起動(もしくは、後述する <code>conf.ini</code> ファイルを <code>root=true</code> に変更後、再起動)。</li>
 <li>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する &ldquo;Nova Launcher&rdquo; の場合、&ldquo;Nova の設定&rdquo; というアプリから設定が可能。</li>
 <li>Nox にプリインストールされている <code>ファイルマネージャー</code> を起動し、<code>/system/app/Launcher</code> をフォルダーを開く。<code>launcher_x.x.x_en_signed.apk</code> というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。</li>
-<li>Nox を再起動。後項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; を実施した後でも可。
-<ins class="adsbygoogle"
+<li>Nox を再起動。後項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; を実施した後でも可。</li>
+</ul>
+<p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
 data-ad-slot="6462969174"
 data-ad-format="auto"
-data-full-width-responsive="true"></ins></li>
-</ul>
+data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -420,14 +411,14 @@ data-full-width-responsive="true"></ins></li>
 127.0.0.1 pay.bignox.com
 127.0.0.1 jp.bignox.com
 127.0.0.1 api.noxinfluencer.com</code></pre></li>
-<li>Nox を再起動。
-<ins class="adsbygoogle"
+<li>Nox を再起動。</li>
+</ul>
+<p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
 data-ad-slot="6462969174"
 data-ad-format="auto"
-data-full-width-responsive="true"></ins></li>
-</ul>
+data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
@@ -439,17 +430,8 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">netsh advfirewall firewall add rule name=<span class="s2">&#34;</span><span class="s2">Nox Block Inbound</span><span class="s2">&#34;</span> dir=in action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255
 netsh advfirewall firewall add rule name=<span class="s2">&#34;</span><span class="s2">Nox Block Outbound</span><span class="s2">&#34;</span> dir=out action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255</code></pre></div></li>
 <li><code>C:\Windows\System32\drivers\etc\hosts</code> ファイルをメモ帳等のエディタで開く。変更するために管理者権限で開く必要がある。</li>
-<li>前項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; と同様の内容をコピペする。
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-5789665443108201"
-data-ad-slot="6462969174"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></li>
+<li>前項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; と同様の内容をコピペする。</li>
 </ul>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <h5 id="4-nox-の設定ファイルの修正">4. Nox の設定ファイルの修正</h5>
 <p>最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。</p>
 <ul>
@@ -473,17 +455,8 @@ pop_ads_refresh_time=9223372036854775807</code></pre></li>
                     log4j.appender.Nox_log.DatePattern='.'yyyy-MM</code></pre></li>
 <li><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して&quot;読み取り専用&quot;になっていれば問題ない。
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="k">del</span> /q/f <span class="nv">%LOCALAPPDATA%</span>\Nox\loading\*
-<span class="k">echo</span> Y<span class="p">|</span>Cacls <span class="nv">%LOCALAPPDATA%</span>\Nox\loading /T /D SYSTEM</code></pre></div>
-<ins class="adsbygoogle"
-style="display:block"
-data-ad-client="ca-pub-5789665443108201"
-data-ad-slot="6462969174"
-data-ad-format="auto"
-data-full-width-responsive="true"></ins></li>
+<span class="k">echo</span> Y<span class="p">|</span>Cacls <span class="nv">%LOCALAPPDATA%</span>\Nox\loading /T /D SYSTEM</code></pre></div></li>
 </ul>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
 <hr>
 <p>参考:<br>
 <a href="https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29">Debloating Nox</a><br>
