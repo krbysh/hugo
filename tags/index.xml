@@ -6,7 +6,7 @@
     <description>Recent content in Tags on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 10 Jan 2020 20:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 13 May 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>Android</title>
       <link>https://krbysh.net/tags/android/</link>
-      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
+      <pubDate>Wed, 13 May 2020 23:00:00 +0900</pubDate>
       
       <guid>https://krbysh.net/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Memu</title>
+      <link>https://krbysh.net/tags/memu/</link>
+      <pubDate>Wed, 13 May 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/memu/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://krbysh.net/tags/windows/</link>
+      <pubDate>Wed, 13 May 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/windows/</guid>
       <description></description>
     </item>
     
@@ -26,15 +44,6 @@
       <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
       
       <guid>https://krbysh.net/tags/nox/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Windows</title>
-      <link>https://krbysh.net/tags/windows/</link>
-      <pubDate>Fri, 10 Jan 2020 20:00:00 +0900</pubDate>
-      
-      <guid>https://krbysh.net/tags/windows/</guid>
       <description></description>
     </item>
     
