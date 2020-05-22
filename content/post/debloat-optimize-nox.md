@@ -191,6 +191,7 @@ del /q/f %LOCALAPPDATA%\Nox\loading\*
 echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM
 {{< / highlight >}}
 
+{{% google-adsense %}}
 ___
 参考:  
 [Debloating Nox](https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29)  
