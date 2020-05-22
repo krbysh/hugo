@@ -51,7 +51,6 @@ MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホ
 * また、プリインストールされている　MEmu のデフォルト App を削除、無効化するための Root App Remover 系の App をダウンロードする。今回 "Root App Deleter" を採用した。
 * なお、Launcher 以外にも IME 等を変更する場合は適宜 App をダウンロードする必要がある。
 
-{{% google-adsense %}}
 ##### Android(MEmu) の Launcher の変更
 
 * MEmu を Root モードで起動させるため、MEmu の設定メニュー `System Settinig` の `Others` の項目にある `Root Mode` を `Enabled` に変更。
