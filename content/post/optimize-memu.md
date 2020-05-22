@@ -5,7 +5,6 @@ draft: false
 slug: "optimize-memu"
 categories: [ "Tech" ]
 tags: [ "Memu", "Windows", "Android" ]
-#thumbnailImage: //example.com/image.jpg
 ---
 
 スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
