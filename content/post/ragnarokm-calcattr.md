@@ -344,4 +344,5 @@ ___
 
 ___  
 参考:  
-[[Gameplay] 100% Debuff Resistance with 250 all stat? it is possible?](https://www.reddit.com/r/RagnarokMobile/comments/dp2y9l/gameplay_100_debuff_resistance_with_250_all_stat/)
+[[Gameplay] 100% Debuff Resistance with 250 all stat? it is possible?](https://www.reddit.com/r/RagnarokMobile/comments/dp2y9l/gameplay_100_debuff_resistance_with_250_all_stat/)  
+[shalzuth/rom_files](https://github.com/shalzuth/rom_files)
