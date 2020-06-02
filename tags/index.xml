@@ -6,7 +6,7 @@
     <description>Recent content in Tags on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 13 May 2020 23:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 31 May 2020 23:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,9 +14,27 @@
     <item>
       <title>Android</title>
       <link>https://krbysh.net/tags/android/</link>
-      <pubDate>Wed, 13 May 2020 23:00:00 +0900</pubDate>
+      <pubDate>Sun, 31 May 2020 23:00:00 +0900</pubDate>
       
       <guid>https://krbysh.net/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>iOS</title>
+      <link>https://krbysh.net/tags/ios/</link>
+      <pubDate>Sun, 31 May 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/ios/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RagnarokM</title>
+      <link>https://krbysh.net/tags/ragnarokm/</link>
+      <pubDate>Sun, 31 May 2020 23:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/ragnarokm/</guid>
       <description></description>
     </item>
     

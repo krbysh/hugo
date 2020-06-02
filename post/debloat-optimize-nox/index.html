@@ -4,6 +4,14 @@
     <script data-ad-client="ca-pub-5789665443108201" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cookie-consent-box@2.3.1/dist/cookie-consent-box.min.css" />
     <script defer src="https://cdn.jsdelivr.net/npm/cookie-consent-box@2.3.1/dist/cookie-consent-box.min.js"></script>
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+          tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},
+          CommonHTML: {scale: 80},
+          "HTML-CSS": {availableFonts: [],undefinedFamily:'Open Sans'}
+      });
+    </script>
+    <script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"></script>
     
     
     <meta charset="UTF-8">
@@ -91,6 +99,10 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
     
     <link rel="stylesheet" href="https://krbysh.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
     
+    
+      
+        <link rel="stylesheet"  href="https://krbysh.net/css/mystyle.css">
+      
     
 
     
@@ -306,7 +318,7 @@ MEmu 利用者は、<a href="https://krbysh.net/post/optimize-memu/">MEmu Play �
 <p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、&ldquo;Nova Launcher&rdquo; を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
 <ul>
 <li>Nox を Root モードで起動させるため、Nox の設定メニューの <code>Startup items</code> の項目にある <code>Root</code> のチェックボックスを有効後、再起動(もしくは、後述する <code>conf.ini</code> ファイルを <code>root=true</code> に変更後、再起動)。</li>
-<li>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する &ldquo;Nova Launcher&rdquo; の場合、&ldquo;Nova の設定&rdquo; というアプリから設定が可能。</li>
+<li>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。&ldquo;Nova Launcher&rdquo; の場合、&ldquo;Nova の設定&rdquo; というアプリから設定が可能。</li>
 <li>Nox にプリインストールされている <code>ファイルマネージャー</code> を起動し、<code>/system/app/Launcher</code> をフォルダーを開く。<code>launcher_x.x.x_en_signed.apk</code> というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。</li>
 <li>Nox を再起動。後項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; を実施した後でも可。</li>
 </ul>
@@ -463,14 +475,14 @@ pop_ads_refresh_time=9223372036854775807</code></pre></li>
                     log4j.appender.Nox_log.DatePattern='.'yyyy-MM</code></pre></li>
 <li><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して&quot;読み取り専用&quot;になっていれば問題ない。
 <div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="k">del</span> /q/f <span class="nv">%LOCALAPPDATA%</span>\Nox\loading\*
-<span class="k">echo</span> Y<span class="p">|</span>Cacls <span class="nv">%LOCALAPPDATA%</span>\Nox\loading /T /D SYSTEM</code></pre></div></li>
-</ul>
-<p><ins class="adsbygoogle"
+<span class="k">echo</span> Y<span class="p">|</span>Cacls <span class="nv">%LOCALAPPDATA%</span>\Nox\loading /T /D SYSTEM</code></pre></div>
+<ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
 data-ad-slot="6462969174"
 data-ad-format="auto"
-data-full-width-responsive="true"></ins></p>
+data-full-width-responsive="true"></ins></li>
+</ul>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
