@@ -54,11 +54,10 @@ MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホ
 ##### Android(MEmu) の Launcher の変更
 
 * MEmu を Root モードで起動させるため、MEmu の設定メニュー `System Settinig` の `Others` の項目にある `Root Mode` を `Enabled` に変更。
-* MEmu が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する "Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
+* MEmu が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
 * `/system/priv-app/Launcher` をフォルダーを開く。`Launcher.apk` というファイルが存在しているので、削除、またはリネーム(拡張子の変更等)する。"Root App Deleter" の場合は、`Systems Apps` を選択し(モードは好きな方を選択)、`OS Kernel, No Touch` の項目に `MEmu Launcher` があるのでそれを選択して、`Disabled` を選択する。
 * `Unknown, No Advice` の項目にもプリインストールされている MEmu App があるので、必要に応じて前項を再度実施する。
 * MEmu を再起動。
-
 {{% google-adsense %}}
 
 ___  

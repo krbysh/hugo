@@ -35,7 +35,7 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、"Nova Launcher" を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。
 
 * Nox を Root モードで起動させるため、Nox の設定メニューの `Startup items` の項目にある `Root` のチェックボックスを有効後、再起動(もしくは、後述する `conf.ini` ファイルを `root=true` に変更後、再起動)。
-* Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する "Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
+* Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
 * Nox にプリインストールされている `ファイルマネージャー` を起動し、`/system/app/Launcher` をフォルダーを開く。`launcher_x.x.x_en_signed.apk` というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。
 * Nox を再起動。後項 "Android(Nox) の hosts ファイルの修正" を実施した後でも可。
 
@@ -190,7 +190,6 @@ log4j.rootLogger=ERROR, Nox_log
 del /q/f %LOCALAPPDATA%\Nox\loading\*
 echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM
 {{< / highlight >}}
-
 {{% google-adsense %}}
 ___
 参考:  
