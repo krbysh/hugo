@@ -342,6 +342,8 @@ ___
 
 [^1]: [経験値とステータス](https://ragnarokm.gungho.jp/member/help/vbnfjd00000009f3.html)  
 
+{{% google-adsense %}}
+
 ___  
 参考:  
 [[Gameplay] 100% Debuff Resistance with 250 all stat? it is possible?](https://www.reddit.com/r/RagnarokMobile/comments/dp2y9l/gameplay_100_debuff_resistance_with_250_all_stat/)  
