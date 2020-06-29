@@ -325,6 +325,7 @@ $(window).load(function() {
 </ul>
 <h5 id="確率ステータス比率効果時間ステータス比率">確率ステータス比率・効果時間ステータス比率</h5>
 <p>当該パラメータは、ステータスによる影響となる。ラグマス公式で言及されている<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>ステータスが状態異常の発生率および耐性に関与する部分である。状態異常によって参照するステータスや係数が異なる。そのため、Job と状態異常にも相性がある。<code>確率ステータス比率</code>の場合、前述の <code>チェインライトニング</code> のスタン確率を求める際、攻撃側は<code>Str</code>を参照するため、ウィザード系は他の Job と比較して多少数値が落ちる。<code>効果時間ステータス比率</code>の場合、後述する通り、防御側に関しては、最大値が設けられているため耐性目的のためにステータスを配分する場合は注意が必要となる。</p>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -334,6 +335,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <p><code>確率ステータス比率</code>関連ステータスおよび係数</p>
 <table>
 <thead>
@@ -628,6 +630,7 @@ data-full-width-responsive="true"></ins></p>
 <p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
 攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
 防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -637,6 +640,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <h5 id="凍結">凍結</h5>
 <p>確率ステータス比率 =<br>
 1 + Max(0.1, <code>Int</code> * 0.3 / 100) - Min(0.8, (<code>Int</code> * 0.3 + <code>Dex</code> * 0.3) / 100)</p>
@@ -681,6 +685,7 @@ data-full-width-responsive="true"></ins></p>
 <p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> のステータスを参照する。<br>
 攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
 防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -690,6 +695,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <h5 id="バインド">バインド</h5>
 <p>確率ステータス比率 =<br>
 1 + Max(0.1, <code>Agi</code> * 0.4 / 100) - Min(0.6, (<code>Vit</code> * 0.3 + <code>Str</code> * 0.3) / 100)</p>
@@ -734,6 +740,7 @@ data-full-width-responsive="true"></ins></p>
 <p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> のステータスを参照する。<br>
 攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
 防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -743,6 +750,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <h4 id="想定パターン">想定パターン</h4>
 <p>いくつかの想定パターンを用いて計算式を紹介する。</p>
 <p>状態異常確率の計算式は下記となる(再掲)。<br>
@@ -810,6 +818,7 @@ data-full-width-responsive="true"></ins></p>
 <code>アンブッシュ</code> のスタン確率が &ldquo;100%&rdquo; であっても、攻撃側の関連ステータスが低く、防御側の関連ステータスが高いため、スタン確率が低下する。<br>
 なお、<code>確率ステータス比率</code> の計算では、攻撃側が <code>STR</code> &ldquo;0&rdquo; であり、防御側が <code>AGI</code> および <code>VIT</code> &ldquo;200&rdquo; のため、それぞれ最小値 &ldquo;0.1&rdquo; と最大値 &ldquo;0.8&rdquo; が採用される。</p>
 <p>確率 = 1 * (1 + 0 - 0) * (1 + 0 - 0) * (1 + 0.1 - 0.8) = 0.3</p>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -819,6 +828,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <h4 id="まとめ">まとめ</h4>
 <ul>
 <li><code>固有状態異常耐性</code>が &ldquo;100%&rdquo; に達した場合でも<code>レイス★カード</code> 等によって<code>固有状態異常攻撃</code>が加算されている場合、状態異常になる場合がある。</li>
@@ -826,6 +836,7 @@ data-full-width-responsive="true"></ins></p>
 <li>ステータスで状態異常の確率や効果時間を変化させることができるが、最大値および最小値が設定されているので注意が必要となる。</li>
 <li><code>ナイトメアカード</code>や<code>マルクカード</code>などのカードは無効化する効果があるので、<code>固有状態異常攻撃</code>を加算したところで効果がない。</li>
 </ul>
+<!-- begin google-adsense shortcode //-->
 <p><ins class="adsbygoogle"
 style="display:block"
 data-ad-client="ca-pub-5789665443108201"
@@ -835,6 +846,7 @@ data-full-width-responsive="true"></ins></p>
 <script>
      (adsbygoogle = window.adsbygoogle || []).push({});
 </script>
+<!-- end google-adsense shortcode //-->
 <hr>
 <p>参考:<br>
 <a href="https://www.reddit.com/r/RagnarokMobile/comments/dp2y9l/gameplay_100_debuff_resistance_with_250_all_stat/">[Gameplay] 100% Debuff Resistance with 250 all stat? it is possible?</a><br>
@@ -875,7 +887,7 @@ data-full-width-responsive="true"></ins></p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://krbysh.net/post/ragnarokm-guild-facilities-mats/" data-tooltip="ラグマスにおけるギルド施設の必要材料">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -945,7 +957,7 @@ data-full-width-responsive="true"></ins></p>
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://krbysh.net/post/ragnarokm-guild-facilities-mats/" data-tooltip="ラグマスにおけるギルド施設の必要材料">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
