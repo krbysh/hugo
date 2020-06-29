@@ -1,7 +1,7 @@
 ---
 title: "ラグマスにおけるギルド施設の必要材料"
-date: 2020-06-28T23:00:00+09:00
-draft: true
+date: 2020-06-28T23:30:00+09:00
+draft: false
 slug: "ragnarokm-guild-facilities-mats"
 categories: [ "Game" ]
 tags: [ "RagnarokM", "Android", "iOS" ]
@@ -27,7 +27,7 @@ ___
 
 [[vending-machine]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == 不思議な自動販売機
 [cols="l,l,l,l",options="header,autowidth"]
@@ -52,7 +52,7 @@ ___
 
 [[black-cat-cafe]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == 黒猫カフェ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -130,7 +130,7 @@ ___
 
 [[bizarre-catt-litter-box]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == 不思議な猫用トイレ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -293,7 +293,7 @@ ___
 
 [[sewing-machine]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == マジカルミシン
 [cols="l,l",options="header,autowidth"]
@@ -459,7 +459,7 @@ ___
 
 [[legendary-smelter]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == 伝説の鍛冶屋
 
@@ -618,7 +618,7 @@ ___
 
 [[headwear-workshop]]
 
-{{% google-adsense %}}
+{{% google-adsense-safe %}}
 
 == 装飾神器工房
 [cols="l,l,l,l",options="header,autowidth"]
