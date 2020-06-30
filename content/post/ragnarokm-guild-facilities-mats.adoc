@@ -29,6 +29,8 @@ ___
 
 [[vending-machine]]
 
+{{ google-adsense-safe }}
+
 == 不思議な自動販売機
 [cols="l,l,l,l",options="header,autowidth"]
 |===
