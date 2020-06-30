@@ -39,7 +39,6 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 * Nox にプリインストールされている `ファイルマネージャー` を起動し、`/system/app/Launcher` をフォルダーを開く。`launcher_x.x.x_en_signed.apk` というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。
 * Nox を再起動。後項 "Android(Nox) の hosts ファイルの修正" を実施した後でも可。
 
-{{% google-adsense %}}
 ##### 2. Android(Nox) の hosts ファイルの修正
 
 次に、Nox の hosts ファイルの修正を行うことで、Nox が不審なホストとの通信を無効化することができる。
@@ -145,7 +144,6 @@ Nox を最適化(高速化)するには多少の段階を踏む必要がある�
 {{< / highlight >}}
 * Nox を再起動。
 
-{{% google-adsense %}}
 ##### 3. Windows の hosts ファイルの修正 および Windows Firewall の追加
 
 続いて、Nox をインストールした Windows 側の hosts ファイルの修正と、Windows Firewall の追加を行う。ただし、新しいバージョンを利用したい場合にダウンロードもできなくなるので、注意が必要。新しいバージョンを利用する場合は、一時的に本項の設定を削除する。
@@ -190,7 +188,6 @@ log4j.rootLogger=ERROR, Nox_log
 del /q/f %LOCALAPPDATA%\Nox\loading\*
 echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM
 {{< / highlight >}}
-{{% google-adsense %}}
 ___
 参考:  
 [Debloating Nox](https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29)  

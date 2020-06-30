@@ -42,8 +42,6 @@ MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホ
 1. App のダウンロード
 2. Android(MEmu) の Launcher の変更
 
-{{% google-adsense %}}
-
 ##### App のダウンロード
 
 * 事前準備として、App をダウンロードする必要がある。
@@ -58,8 +56,7 @@ MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホ
 * `/system/priv-app/Launcher` をフォルダーを開く。`Launcher.apk` というファイルが存在しているので、削除、またはリネーム(拡張子の変更等)する。"Root App Deleter" の場合は、`Systems Apps` を選択し(モードは好きな方を選択)、`OS Kernel, No Touch` の項目に `MEmu Launcher` があるのでそれを選択して、`Disabled` を選択する。
 * `Unknown, No Advice` の項目にもプリインストールされている MEmu App があるので、必要に応じて前項を再度実施する。
 * MEmu を再起動。
-{{% google-adsense %}}
-
+  
 ___  
 参考:  
 [Memu: How to completely remove the stock launcher](https://www.reddit.com/r/FFBraveExvius/comments/8ru1w4/memu_how_to_completely_remove_the_stock_launcher/)
