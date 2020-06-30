@@ -22,14 +22,19 @@ body, h1, h2, h3, h4, h5, h6 {
     color: #252525;
   }
 }
+table {
+  display: block;
+  overflow-x: scroll;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+table tbody {
+  width: 100%;
+  display:table;
+}
 td,th {
   text-align: center;
   border-style: solid;
   border-width: 0.1px;
-  font-size: 80%;
-}
-.frame-all table {
-  display: block;
-  overflow-x: scroll;
-  -webkit-overflow-scrolling: touch;
+  font-size: 70%;
 }
