@@ -28,7 +28,7 @@ td,th {
   border-width: 0.1px;
   font-size: 80%;
 }
-.tableblock table {
+.frame-all table {
   display: block;
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
