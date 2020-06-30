@@ -29,7 +29,7 @@ ___
 
 [[vending-machine]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == 不思議な自動販売機
 [cols="l,l,l,l",options="header,autowidth"]
@@ -54,7 +54,7 @@ ___
 
 [[black-cat-cafe]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == 黒猫カフェ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -132,7 +132,7 @@ ___
 
 [[bizarre-catt-litter-box]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == 不思議な猫用トイレ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -295,7 +295,7 @@ ___
 
 [[sewing-machine]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == マジカルミシン
 [cols="l,l",options="header,autowidth"]
@@ -461,7 +461,7 @@ ___
 
 [[legendary-smelter]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == 伝説の鍛冶屋
 
@@ -620,7 +620,7 @@ ___
 
 [[headwear-workshop]]
 
-{{% google-adsense-safe %}}}
+{{% google-adsense-safe %}}
 
 == 装飾神器工房
 [cols="l,l,l,l",options="header,autowidth"]
