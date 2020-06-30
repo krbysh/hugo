@@ -25,16 +25,6 @@ body, h1, h2, h3, h4, h5, h6 {
 .sectionbody div {
   overflow-x: auto;
 }
-table {
-  display: block;
-  overflow-x: scroll;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
-}
-table tbody {
-  width: 100%;
-  display:table;
-}
 td,th {
   text-align: center;
   border-style: solid;
