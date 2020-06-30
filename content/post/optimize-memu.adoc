@@ -1,0 +1,65 @@
+---
+title: "MEmu Play を最適化する"
+date: 2020-05-13T23:00:00+09:00
+draft: false
+slug: "optimize-memu"
+categories: [ "Tech" ]
+tags: [ "Memu", "Windows", "Android" ]
+---
+
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
+私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。  
+
+<!--more-->
+IMPORTANT: link:/page/terms-of-use[免責事項]に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+
+本記事は、MEmu 6.3.7 でのみ動作確認をしている。
+本記事投稿時の最新バージョン MEmu 7.1.6 や過去のバージョンの動作確認はしていない。
+しかし、調査した限りでは MEmu 6.5.1 以降ではデフォルトの Launcher を削除するとインスタンスが破損する仕様になっているとのこと。
+従って、本記事の適用を行う際は、MEmu 6.5.1 未満の最新バージョンである MEmu 6.3.7 を導入することになる。最新版と比較して機能面やセキュリティ面が劣るため、許容できない場合は本変更は適用できない。
+MEmu 6.3.7 は link:https://www.memuplay.com/blog/release-archive.html[Release Archive] より導入が可能。
+
+なお、MEmu 以外にも BlueStacks や Nox, LDPlayer 等といった Android エミュレータが多数存在する。遊びたいゲームに応じて選択するのが望ましい。
+複数のエミュレータを利用しているが、完璧なエミュレータにはまだ巡り会えていない。
+MEmu 6.3.7 はパフォーマンスが特段優れているわけではない、マウスホイールによるスクロールもできない、等の懸念点はいくらでもある。
+それでも下記要件を満たすため、現在は MEmu を選択しているが、単一のインスタンスで良い場合は他のエミュレータも選択することもある。機能面かつパフォーマンス面で言えば、Nox が優れている気がする。
+
+* 複数(6)のインスタンスが同時起動できること
+* 操作を記憶でき、再生できること
+* 複数のインスタンスで同期できること
+* 複数のインスタンスが安定していること
+* OpenGL ではなく DirectX で動作すること
+* インスタンス単位のリソース消費量が小さいこと
+
+Nox 利用者は、link:/post/debloat-optimize-nox/[Nox App Player を最適化する] 記事も併せて確認してほしい。  
+
+MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホストの通信制御は今回は行わないため、手順が少ない。
+
+. <<app-download,App のダウンロード>>
+. <<memu-launcher,Android(MEmu) の Launcher の変更>>
+
+[[app-download]]
+
+== App のダウンロード
+
+* 事前準備として、App をダウンロードする必要がある。
+* Memu のデフォルトの Launcher(Homepage) の代わりの任意の Launcher をダウンロードする。私は、"Nova Launcher" を採用した。
+* また、プリインストールされている　MEmu のデフォルト App を削除、無効化するための Root App Remover 系の App をダウンロードする。今回 "Root App Deleter" を採用した。
+* なお、Launcher 以外にも IME 等を変更する場合は適宜 App をダウンロードする必要がある。
+
+[[memu-launcher]]
+
+== Android(MEmu) の Launcher の変更
+
+* MEmu を Root モードで起動させるため、MEmu の設定メニュー `System Settinig` の `Others` の項目にある `Root Mode` を `Enabled` に変更。
+* MEmu が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。
+* `/system/priv-app/Launcher` をフォルダーを開く。`Launcher.apk` というファイルが存在しているので、削除、またはリネーム(拡張子の変更等)する。"Root App Deleter" の場合は、`Systems Apps` を選択し(モードは好きな方を選択)、`OS Kernel, No Touch` の項目に `MEmu Launcher` があるのでそれを選択して、`Disabled` を選択する。
+* `Unknown, No Advice` の項目にもプリインストールされている MEmu App があるので、必要に応じて前項を再度実施する。
+* MEmu を再起動。
+  
+___  
+参考: +
+link:https://www.reddit.com/r/FFBraveExvius/comments/8ru1w4/memu_how_to_completely_remove_the_stock_launcher/[Memu: How to completely remove the stock launcher] +
+link:https://www.reddit.com/r/FFBraveExvius/comments/d2n9v6/dont_update_to_memu_651_forced_launcher/[Don't update to MEmu 6.5.1 (forced launcher)]

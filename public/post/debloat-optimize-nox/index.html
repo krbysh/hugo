@@ -20,26 +20,34 @@
 <meta name="generator" content="Hugo 0.73.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="krbysh">
 <meta name="keywords" content="">
-<meta name="description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta name="description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
-私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。">
+私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。
+">
 
 
-<meta property="og:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta property="og:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
-私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。">
+私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。
+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Nox App Player を最適化する">
 <meta name="twitter:title" content="Nox App Player を最適化する">
 <meta property="og:url" content="https://krbysh.net/post/debloat-optimize-nox/">
 <meta property="twitter:url" content="https://krbysh.net/post/debloat-optimize-nox/">
 <meta property="og:site_name" content="krbysh.net">
-<meta property="og:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta property="og:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
-私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。">
-<meta name="twitter:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。
+">
+<meta name="twitter:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
-私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。">
+私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。
+">
 <meta property="og:locale" content="en-us">
 
   
@@ -146,6 +154,8 @@ if (!doNotTrack) {
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script async src="https://krbysh.net/js/prism.js"></script>
+  <script async src="https://krbysh.net/js/fix-adoc.js"></script>
+
 </header>
 
       <nav id="sidebar" data-behavior="5">
@@ -297,37 +307,91 @@ $(window).load(function() {
      });
 });
 </script>
-              <p>スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+              <div class="paragraph">
+<p>スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 Nox は Android エミュレータとして素晴らしい機能を持っている反面、広告やスパムの問題に直面する。
 私が Nox を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたり、ディスクの肥大化を遅らせることができる。</p>
-<hr>
-<p><a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
-また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。</p>
-<hr>
-<p>EDIT:
-MEmu 利用者は、<a href="https://krbysh.net/post/optimize-memu/">MEmu Play を最適化する</a> 記事も併せて確認してほしい。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>MEmu 利用者は、<a href="https://krbysh.net/post/optimize-memu/">MEmu Play を最適化する</a> 記事も併せて確認してほしい。</p>
+</div>
+<div class="paragraph">
 <p>本記事は、Nox 6.5.0 でのみ動作確認をしている。
 本記事投稿時の最新バージョン Nox 6.6.0 や過去のバージョンの動作確認はしていない。</p>
+</div>
+<div class="paragraph">
 <p>Nox を最適化(高速化)するには多少の段階を踏む必要がある。</p>
-<ol>
-<li>Android(Nox) の Launcher の変更</li>
-<li>Android(Nox) の hosts ファイルの修正</li>
-<li>Windows の hosts ファイルの修正 および Windows Firewall の追加</li>
-<li>Nox の設定ファイルの修正</li>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#nox-launcher">不思議な自動販売機Android(Nox) の Launcher の変更</a></p>
+</li>
+<li>
+<p><a href="#nox-host">Android(Nox) の hosts ファイルの修正</a></p>
+</li>
+<li>
+<p><a href="#windows-host">Windows の hosts ファイルの修正 および Windows Firewall の追加</a></p>
+</li>
+<li>
+<p><a href="#nox-files">Nox の設定ファイルの修正</a></p>
+</li>
 </ol>
-<h5 id="1-androidnox-の-launcher-の変更">1. Android(Nox) の Launcher の変更</h5>
-<p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、&ldquo;Nova Launcher&rdquo; を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
+</div>
+<div class="sect1">
+<h2 id="nox-launcher">1. Android(Nox) の Launcher の変更</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、"Nova Launcher" を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
+</div>
+<div class="ulist">
 <ul>
-<li>Nox を Root モードで起動させるため、Nox の設定メニューの <code>Startup items</code> の項目にある <code>Root</code> のチェックボックスを有効後、再起動(もしくは、後述する <code>conf.ini</code> ファイルを <code>root=true</code> に変更後、再起動)。</li>
-<li>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。&ldquo;Nova Launcher&rdquo; の場合、&ldquo;Nova の設定&rdquo; というアプリから設定が可能。</li>
-<li>Nox にプリインストールされている <code>ファイルマネージャー</code> を起動し、<code>/system/app/Launcher</code> をフォルダーを開く。<code>launcher_x.x.x_en_signed.apk</code> というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。</li>
-<li>Nox を再起動。後項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; を実施した後でも可。</li>
+<li>
+<p>Nox を Root モードで起動させるため、Nox の設定メニューの <code>Startup items</code> の項目にある <code>Root</code> のチェックボックスを有効後、再起動(もしくは、後述する <code>conf.ini</code> ファイルを <code>root=true</code> に変更後、再起動)。</p>
+</li>
+<li>
+<p>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。</p>
+</li>
+<li>
+<p>Nox にプリインストールされている <code>ファイルマネージャー</code> を起動し、<code>/system/app/Launcher</code> をフォルダーを開く。<code>launcher_x.x.x_en_signed.apk</code> というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。</p>
+</li>
+<li>
+<p>Nox を再起動。後項 "Android(Nox) の hosts ファイルの修正" を実施した後でも可。</p>
+</li>
 </ul>
-<h5 id="2-androidnox-の-hosts-ファイルの修正">2. Android(Nox) の hosts ファイルの修正</h5>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="nox-host">2. Android(Nox) の hosts ファイルの修正</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>次に、Nox の hosts ファイルの修正を行うことで、Nox が不審なホストとの通信を無効化することができる。</p>
+</div>
+<div class="ulist">
 <ul>
-<li>前項 &ldquo;Android(Nox) の Launcher の変更&rdquo; と同様に Root モードの Nox で、<code>ファイルマネージャー</code> を起動し、<code>/system/etc</code> フォルダーを開く。<code>hosts</code> というファイルが存在しているので、長押しして出てくるメニューから <code>プロパティ(Properties)</code> &gt; <code>権限(Permissions)</code> を選択し、 <code>グループ</code> の <code>書き込み権限(W)</code> にチェックを入れる。</li>
-<li>そのまま <code>hosts</code> ファイルを開き、下記内容をコピペする。
+<li>
+<p>前項 "Android(Nox) の Launcher の変更" と同様に Root モードの Nox で、<code>ファイルマネージャー</code> を起動し、<code>/system/etc</code> フォルダーを開く。<code>hosts</code> というファイルが存在しているので、長押しして出てくるメニューから <code>プロパティ(Properties)</code> &gt; <code>権限(Permissions)</code> を選択し、 <code>グループ</code> の <code>書き込み権限(W)</code> にチェックを入れる。</p>
+</li>
+<li>
+<p>そのまま <code>hosts</code> ファイルを開き、下記内容をコピペする。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <pre><code class="language-linenos=table" data-lang="linenos=table">127.0.0.1 api.bignox.com
 127.0.0.1 tracking.trnox.com
 127.0.0.1 bi.yeshen.com
@@ -422,24 +486,66 @@ MEmu 利用者は、<a href="https://krbysh.net/post/optimize-memu/">MEmu Play �
 127.0.0.1 open.bignox.com
 127.0.0.1 pay.bignox.com
 127.0.0.1 jp.bignox.com
-127.0.0.1 api.noxinfluencer.com</code></pre></li>
-<li>Nox を再起動。</li>
+127.0.0.1 api.noxinfluencer.com</code></pre>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Nox を再起動。</p>
+</li>
 </ul>
-<h5 id="3-windows-の-hosts-ファイルの修正-および-windows-firewall-の追加">3. Windows の hosts ファイルの修正 および Windows Firewall の追加</h5>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="windows-host">3. Windows の hosts ファイルの修正 および Windows Firewall の追加</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>続いて、Nox をインストールした Windows 側の hosts ファイルの修正と、Windows Firewall の追加を行う。ただし、新しいバージョンを利用したい場合にダウンロードもできなくなるので、注意が必要。新しいバージョンを利用する場合は、一時的に本項の設定を削除する。
 Anroid と同様に hosts ファイルの修正を行うことで、Nox が不審なホストとの通信を無効化することができる。また、念の為 Windows Firewall で Nox 関連の通信を遮断する。なお、Nox のネットワークがブリッジを採用している場合は、本項の効果がない可能性がある。前項の設定が反映されていれば不要。</p>
+</div>
+<div class="ulist">
 <ul>
-<li><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd">netsh advfirewall firewall add rule name=<span class="s2">&#34;Nox Block Inbound&#34;</span> dir=in action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255
-netsh advfirewall firewall add rule name=<span class="s2">&#34;Nox Block Outbound&#34;</span> dir=out action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255</code></pre></div></li>
-<li><code>C:\Windows\System32\drivers\etc\hosts</code> ファイルをメモ帳等のエディタで開く。変更するために管理者権限で開く必要がある。</li>
-<li>前項 &ldquo;Android(Nox) の hosts ファイルの修正&rdquo; と同様の内容をコピペする。</li>
+<li>
+<p><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。</p>
+</li>
 </ul>
-<h5 id="4-nox-の設定ファイルの修正">4. Nox の設定ファイルの修正</h5>
-<p>最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">netsh advfirewall firewall add rule name="Nox Block Inbound" dir=in action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255
+netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255</code></pre>
+</div>
+</div>
+<div class="ulist">
 <ul>
-<li><code>%LOCALAPPDATA%\Nox</code> フォルダにある <code>conf.ini</code> ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に <code>conf.ini</code> ファイルが存在する。私の環境では、<code>clone_Nox_x_conf.ini</code> という名前になる。</li>
-<li>下記内容に修正し、保存する。
+<li>
+<p><code>C:\Windows\System32\drivers\etc\hosts</code> ファイルをメモ帳等のエディタで開く。変更するために管理者権限で開く必要がある。</p>
+</li>
+<li>
+<p>前項 "Android(Nox) の hosts ファイルの修正" と同様の内容をコピペする。</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="nox-files">4. Nox の設定ファイルの修正</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>%LOCALAPPDATA%\Nox</code> フォルダにある <code>conf.ini</code> ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に <code>conf.ini</code> ファイルが存在する。私の環境では、<code>clone_Nox_x_conf.ini</code> という名前になる。</p>
+</li>
+<li>
+<p>下記内容に修正し、保存する。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <pre><code class="language-linenos=table" data-lang="linenos=table">[setting]
 ...
 collect_behavior_enable=false
@@ -449,21 +555,48 @@ root=false
 
 [popads]
 ...
-pop_ads_refresh_time=9223372036854775807</code></pre></li>
-<li>修正した <code>conf.ini</code> ファイルの <code>プロパティ</code> から <code>読み取り専用(R)</code> にチェックを入れる。</li>
-<li><code>%LOCALAPPDATA%\Nox</code> フォルダにある <code>Nox_log.conf</code> ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に <code>Nox_log.conf</code> ファイルが存在する。私の環境では、<code>clone_Nox_x_log.conf</code> という名前になる。</li>
-<li>下記内容に修正し、保存する。これは、ログレベルを変更することでログの量を減らし、ローテート間隔を日次から月次に変更する。
+pop_ads_refresh_time=9223372036854775807</code></pre>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>修正した <code>conf.ini</code> ファイルの <code>プロパティ</code> から <code>読み取り専用&#174;</code> にチェックを入れる。</p>
+</li>
+<li>
+<p><code>%LOCALAPPDATA%\Nox</code> フォルダにある <code>Nox_log.conf</code> ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に <code>Nox_log.conf</code> ファイルが存在する。私の環境では、<code>clone_Nox_x_log.conf</code> という名前になる。</p>
+</li>
+<li>
+<p>下記内容に修正し、保存する。これは、ログレベルを変更することでログの量を減らし、ローテート間隔を日次から月次に変更する。</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
 <pre><code class="language-linenos=table" data-lang="linenos=table">log4j.rootLogger=ERROR, Nox_log
 ...
-                    log4j.appender.Nox_log.DatePattern=&#39;.&#39;yyyy-MM</code></pre></li>
-<li><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して&quot;読み取り専用&quot;になっていれば問題ない。
-<div class="highlight"><pre class="chroma"><code class="language-cmd" data-lang="cmd"><span class="k">del</span> /q/f <span class="nv">%LOCALAPPDATA%</span>\Nox\loading\*
-<span class="k">echo</span> Y<span class="p">|</span>Cacls <span class="nv">%LOCALAPPDATA%</span>\Nox\loading /T /D SYSTEM</code></pre></div></li>
+    log4j.appender.Nox_log.
+    DatePattern=&#39;.&#39;yyyy-MM</code></pre>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して"読み取り専用"になっていれば問題ない。</p>
+</li>
 </ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-powershell" data-lang="powershell">del /q/f %LOCALAPPDATA%\Nox\loading\*
+echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM</code></pre>
+</div>
+</div>
 <hr>
+<div class="paragraph">
 <p>参考:<br>
 <a href="https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29">Debloating Nox</a><br>
 <a href="https://www.reddit.com/r/soccerspirits/comments/74flks/configuring_nox_app_player_to_remove_adware/">Configuring Nox App Player to remove adware, spyware and make it faster. (Ver. 5.0.0 - Windows)</a></p>
+</div>
+</div>
+</div>
               
             </div>
           </div>
