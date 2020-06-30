@@ -9,17 +9,13 @@ isCJKLanguage: true
 ---
 
 ラグマスにおける各ギルド施設の必要材料について Lv15(一部 Lv10)まで海外情報を基に調査したので、備忘録として記載する。
-なお、神器オベリスク等については、EP6 がラグマスに実装され次第、更新予定。
 
-<!--more-->  
-___
-link:/page/terms-of-use[免責事項]に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+<!--more-->
+
+IMPORTANT: link:/page/terms-of-use[免責事項]に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
 また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。 
 
-___
-
-各ギルド施設の必要材料については調査した。必要アイテム数については括弧で記載しているが、参照先にも記載がなかったものはそれに倣っている。+
-
+各ギルド施設の必要材料については調査した。必要アイテム数については括弧で記載しているが、参照先にも記載がなかったものはそれに倣っている。
 NOTE: 表については、RWD でないため、スマホの方は、画面を回転させるなどして閲覧してください。申し訳ございません。
 
 * <<vending-machine,不思議な自動販売機>>
@@ -28,10 +24,10 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 * <<sewing-machine,マジカルミシン>>
 * <<legendary-smelter,伝説の鍛冶屋>>
 * <<headwear-workshop,装飾神器工房>>
+* <<artifact-obelisk,神器オベリスク>>
+
 
 [[vending-machine]]
-
-{{% google-adsense-safe %}}
 
 == 不思議な自動販売機
 [cols="l,l,l,l",options="header,autowidth"]
@@ -55,8 +51,6 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 |===
 
 [[black-cat-cafe]]
-
-{{% google-adsense-safe %}}
 
 == 黒猫カフェ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -133,8 +127,6 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 |===
 
 [[bizarre-catt-litter-box]]
-
-{{% google-adsense-safe %}}
 
 == 不思議な猫用トイレ
 [cols="l,l,l,l,l,l",options="header,autowidth"]
@@ -296,8 +288,6 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 |===
 
 [[sewing-machine]]
-
-{{% google-adsense-safe %}}
 
 == マジカルミシン
 [cols="l,l",options="header,autowidth"]
@@ -463,8 +453,6 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 
 [[legendary-smelter]]
 
-{{% google-adsense-safe %}}
-
 == 伝説の鍛冶屋
 
 [cols="l,l,l,l",options="header,autowidth"]
@@ -622,8 +610,6 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 
 [[headwear-workshop]]
 
-{{% google-adsense-safe %}}
-
 == 装飾神器工房
 [cols="l,l,l,l",options="header,autowidth"]
 |===
@@ -735,6 +721,38 @@ NOTE: 表については、RWD でないため、スマホの方は、画面を�
 しましまソックス(23)
 
 |===
+
+[[artifact-obelisk]]
+
+== 神器オベリスク
+[cols="l,l,l,l",options="header,autowidth"]
+|===
+
+| Lv | Slot 1 | Slot 2  | Slot 3
+| 1 | ミスリル(4)
+|鉄(120)
+石炭(120)
+鋼鉄(120)
+|氷バラ(15)
+赤瑪瑙(15)
+犬の牙(15)
+| 2 | ミスリル(4)
+|石炭(120)
+鋼鉄(120)
+砂金(120)
+|赤瑪瑙(15)
+犬の牙(15)
+燃える炎(15)
+| 3 | ミスリル(4)
+|石炭(120)
+砂金(120)
+水銀(120)
+|犬の牙(15)
+燃える炎(15)
+黒い翼(15)
+
+|===
+
 ___  
 参考: +
 link:https://docs.google.com/spreadsheets/d/1eSpBEOgTyXRRjnTVrLxDUJ05Ut6zb4avO8yNZ1-DvKk/edit#gid=1580798483[Guild Facilities Mats] +
