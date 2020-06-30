@@ -22,14 +22,12 @@ body, h1, h2, h3, h4, h5, h6 {
     color: #252525;
   }
 }
-.sectionbody div {
+div.sectionbody{
   overflow-x: auto;
 }
-.frame-all table {
-  display: block;
-  overflow-x: scroll;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+td.content,td.icon{
+  text-align: left;
+  font-size: 100%;
 }
 td,th {
   text-align: center;
