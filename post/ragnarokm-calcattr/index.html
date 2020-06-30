@@ -20,18 +20,26 @@
 <meta name="generator" content="Hugo 0.73.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="krbysh">
 <meta name="keywords" content="">
-<meta name="description" content="ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。">
+<meta name="description" content="
+ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。
+">
 
 
-<meta property="og:description" content="ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。">
+<meta property="og:description" content="
+ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。
+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="ラグマスにおける状態異常の計算式">
 <meta name="twitter:title" content="ラグマスにおける状態異常の計算式">
 <meta property="og:url" content="https://krbysh.net/post/ragnarokm-calcattr/">
 <meta property="twitter:url" content="https://krbysh.net/post/ragnarokm-calcattr/">
 <meta property="og:site_name" content="krbysh.net">
-<meta property="og:description" content="ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。">
-<meta name="twitter:description" content="ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。">
+<meta property="og:description" content="
+ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。
+">
+<meta name="twitter:description" content="
+ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。
+">
 <meta property="og:locale" content="en-us">
 
   
@@ -138,6 +146,8 @@ if (!doNotTrack) {
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script async src="https://krbysh.net/js/prism.js"></script>
+  <script async src="https://krbysh.net/js/fix-adoc.js"></script>
+
 </header>
 
       <nav id="sidebar" data-behavior="5">
@@ -289,510 +299,827 @@ $(window).load(function() {
      });
 });
 </script>
-              <p>ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。</p>
-<hr>
-<p><a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
-また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。</p>
-<hr>
-<p>本記事は、Reddit で記載されていた内容に加え、追加調査した内容を踏まえて記載する。また、Ragnarok M: Eternal Love に関する情報であって、日本版のラグマスでは適用外の可能性もある。
-また、本計算式のパラメータ名は説明のために命名したものである。</p>
-<h4 id="状態異常の計算式">状態異常の計算式</h4>
-<p>状態異常確率の計算式は下記となる。<br>
-<code>状態異常確率</code> =<br>
+              <div class="paragraph">
+<p>ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>本記事は、Reddit で記載されていた内容に加え、追加調査した内容を踏まえて記載する。また、Ragnarok M: Eternal Love に関する情報であって、日本版のラグマスでは適用外の可能性もある。また、本計算式のパラメータ名は説明のために命名したものである。</p>
+</div>
+<div class="sect1">
+<h2 id="_状態異常の計算式">状態異常の計算式</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>状態異常確率の計算式は下記となる。</p>
+</div>
+<div class="paragraph">
+<p><code>状態異常確率</code> =
 <code>スキルの固有状態異常確率 * 固有状態異常比較 * 状態異常比較 * 確率ステータス比較</code></p>
-<p>状態異常効果時間の計算式は下記となる。<br>
-<code>状態異常効果時間</code> =<br>
+</div>
+<div class="paragraph">
+<p>状態異常効果時間の計算式は下記となる。</p>
+</div>
+<div class="paragraph">
+<p><code>状態異常効果時間</code> =
 <code>スキルの固有状態異常効果時間 * 固有状態異常比較 * 状態異常比較 * 効果時間ステータス比較</code></p>
-<h5 id="スキルの固有状態異常確率スキルの固有状態異常効果時間">スキルの固有状態異常確率・スキルの固有状態異常効果時間</h5>
-<p>当該パラメータは、各スキルに設定されている状態異常の確率・効果時間となり、ルーンなどの効果も含まれる。例えば、<code>チェインライトニング―震動</code>をすべて取得している場合、スキルの固有状態異常確率が &ldquo;1(100%)&rdquo; となり、スキルの固有状態異常効果時間が &ldquo;1秒&rdquo; となる。</p>
-<h5 id="固有状態異常比較">固有状態異常比較</h5>
-<p>当該パラメータは、<code>(1 + 固有状態異常攻撃 - 固有状態異常耐性)</code> で計算される。下記例の場合、&ldquo;0.75&rdquo; となる。</p>
+</div>
+<div class="sect2">
+<h3 id="_スキルの固有状態異常確率スキルの固有状態異常効果時間">スキルの固有状態異常確率・スキルの固有状態異常効果時間</h3>
+<div class="paragraph">
+<p>当該パラメータは、各スキルに設定されている状態異常の確率・効果時間となり、ルーンなどの効果も含まれる。例えば、<code>チェインライトニング―震動</code> をすべて取得している場合、スキルの固有状態異常確率が "1(100%)" となり、スキルの固有状態異常効果時間が "1秒" となる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_固有状態異常比較">固有状態異常比較</h3>
+<div class="paragraph">
+<p>当該パラメータは、<code>(1 + 固有状態異常攻撃 - 固有状態異常耐性)</code> で計算される。下記例の場合、"0.75" となる。</p>
+</div>
+<div class="ulist">
 <ul>
-<li>固有状態異常攻撃<br>
-当該パラメータは、スタンの場合はスタン状態異常攻撃となる。<code>レイス★カード</code>や日本未実装の <code>Christmas Reindeer Horn</code>などカードや装備で加算することができる。
-例えば、<code>レイス★カード</code> の場合、&ldquo;0.25(25%)&ldquo;となる。</li>
-<li>固有状態異常耐性<br>
-当該パラメータは、スタンの場合はスタン状態異常耐性となり、ゲーム内のステータス画面から確認できる。<code>プパカード</code>や<code>メテオプレート</code>などカードや装備で加算することができる。
-例えば、<code>メテオプレート</code>の場合、&ldquo;0.5(50%)&rdquo; となる。</li>
+<li>
+<p>固有状態異常攻撃</p>
+</li>
 </ul>
-<h5 id="状態異常比較">状態異常比較</h5>
-<p>当該パラメータは、<code>(1 + 状態異常攻撃 - 状態異常耐性)</code> で計算される。特別な場合を除いて、&ldquo;1&rdquo; となるため、基本的には無視できる。</p>
+</div>
+<div class="paragraph">
+<p>当該パラメータは、スタンの場合はスタン状態異常攻撃となる。<code>レイス★カード</code> や日本未実装の <code>Christmas Reindeer Horn</code> などカードや装備で加算することができる。
+例えば、<code>レイス★カード</code> の場合、"0.25(25%)"となる。</p>
+</div>
+<div class="ulist">
 <ul>
-<li>状態異常攻撃<br>
-当該パラメータは、汎用状態異常攻撃となる。しかしながら、少なくとも EP5 時点では加算することができるスキル、カードや装備がないとのこと。</li>
-<li>状態異常耐性<br>
-当該パラメータは、汎用状態異常耐性となる。しかしながら、少なくとも EP5 時点ではジェネティックの<code>ライフフュージョン―強化</code>のみ影響するとのこと。<code>ライフフュージョン―強化</code>使用時にステータス画面の状態異常耐性が変化がないのは、<code>固有状態異常耐性</code>ではなく、<code>汎用状態異常耐性</code>に影響するためである。</li>
+<li>
+<p>固有状態異常耐性</p>
+</li>
 </ul>
-<h5 id="確率ステータス比率効果時間ステータス比率">確率ステータス比率・効果時間ステータス比率</h5>
-<p>当該パラメータは、ステータスによる影響となる。ラグマス公式で言及されている<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup>ステータスが状態異常の発生率および耐性に関与する部分である。状態異常によって参照するステータスや係数が異なる。そのため、Job と状態異常にも相性がある。<code>確率ステータス比率</code>の場合、前述の <code>チェインライトニング</code> のスタン確率を求める際、攻撃側は<code>Str</code>を参照するため、ウィザード系は他の Job と比較して多少数値が落ちる。<code>効果時間ステータス比率</code>の場合、後述する通り、防御側に関しては、最大値が設けられているため耐性目的のためにステータスを配分する場合は注意が必要となる。</p>
-<p><code>確率ステータス比率</code>関連ステータスおよび係数</p>
-<table>
+</div>
+<div class="paragraph">
+<p>当該パラメータは、スタンの場合はスタン状態異常耐性となり、ゲーム内のステータス画面から確認できる。<code>プパカード</code> や <code>メテオプレート</code> などカードや装備で加算することができる。
+例えば、<code>メテオプレート</code> の場合、"0.5(50%)" となる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_状態異常比較">状態異常比較</h3>
+<div class="paragraph">
+<p>当該パラメータは、<code>(1 + 状態異常攻撃 - 状態異常耐性)</code> で計算される。特別な場合を除いて、"1" となるため、基本的には無視できる。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>状態異常攻撃</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>当該パラメータは、汎用状態異常攻撃となる。しかしながら、少なくとも EP5 時点では加算することができるスキル、カードや装備がないとのこと。</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>状態異常耐性</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>当該パラメータは、汎用状態異常耐性となる。しかしながら、少なくとも EP5 時点ではジェネティックの <code>ライフフュージョン―強化</code> のみ影響するとのこと。<code>ライフフュージョン―強化</code> 使用時にステータス画面の状態異常耐性が変化がないのは、<code>固有状態異常耐性</code> ではなく、<code>汎用状態異常耐性</code> に影響するためである。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_確率ステータス比率効果時間ステータス比率">確率ステータス比率・効果時間ステータス比率</h3>
+<div class="paragraph">
+<p>当該パラメータは、ステータスによる影響となる。ラグマス公式で言及されている<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>ステータスが状態異常の発生率および耐性に関与する部分である。状態異常によって参照するステータスや係数が異なる。そのため、Jobと状態異常にも相性がある。<code>確率ステータス比率</code> の場合、前述の <code>チェインライトニング</code> のスタン確率を求める際、攻撃側は <code>Str</code> を参照するため、ウィザード系は他のJobと比較して多少数値が落ちる。<code>効果時間ステータス比率</code> の場合、後述する通り、防御側に関しては、最大値が設けられているため耐性目的のためにステータスを配分する場合は注意が必要となる。</p>
+</div>
+<div class="paragraph">
+<p><code>確率ステータス比率</code> 関連ステータスおよび係数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
 <thead>
 <tr>
-<th></th>
-<th>STR</th>
-<th>AGI</th>
-<th>VIT</th>
-<th>INT</th>
-<th>DEX</th>
-<th>LUK</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">STR</th>
+<th class="tableblock halign-left valign-top">AGI</th>
+<th class="tableblock halign-left valign-top">VIT</th>
+<th class="tableblock halign-left valign-top">INT</th>
+<th class="tableblock halign-left valign-top">DEX</th>
+<th class="tableblock halign-left valign-top">LUK</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>毒</td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
-<td>攻(0.5)</td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>毒</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
 </tr>
 <tr>
-<td>出血</td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>攻(0.5)<br>防(0.3)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>出血</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)
+防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>発火</td>
-<td></td>
-<td>防(0.3)</td>
-<td>防(0.3)</td>
-<td>攻(0.5)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>発火</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>スタン</td>
-<td>攻(0.3)</td>
-<td>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>スタン</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>凍結</td>
-<td></td>
-<td></td>
-<td></td>
-<td>攻(0.3)<br>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>凍結</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.3)
+防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>石化</td>
-<td></td>
-<td></td>
-<td></td>
-<td>攻(0.3)<br>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>石化</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.3)
+防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>睡眠</td>
-<td></td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>攻(0.3)</td>
-<td>防(0.3)</td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>睡眠</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
 </tr>
 <tr>
-<td>恐怖</td>
-<td></td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>攻(0.5)</td>
-<td>防(0.3)</td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>恐怖</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
 </tr>
 <tr>
-<td>バインド</td>
-<td>防(0.3)</td>
-<td>攻(0.4)</td>
-<td>防(0.3)</td>
-<td></td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>バインド</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>沈黙</td>
-<td>防(0.3)</td>
-<td></td>
-<td>防(0.3)</td>
-<td></td>
-<td>攻(0.5)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>沈黙</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>呪い</td>
-<td>攻(0.5)</td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>呪い</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>暗闇</td>
-<td>攻(0.5)</td>
-<td></td>
-<td></td>
-<td>防(0.3)</td>
-<td>防(0.3)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>暗闇</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.5)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.3)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 </tbody>
 </table>
-<p><code>効果時間ステータス比率</code>関連ステータスおよび係数</p>
-<table>
+<div class="paragraph">
+<p><code>効果時間ステータス比率</code> 関連ステータスおよび係数</p>
+</div>
+<table class="tableblock frame-all grid-all fit-content">
+<colgroup>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+<col>
+</colgroup>
 <thead>
 <tr>
-<th></th>
-<th>STR</th>
-<th>AGI</th>
-<th>VIT</th>
-<th>INT</th>
-<th>DEX</th>
-<th>LUK</th>
+<th class="tableblock halign-left valign-top"></th>
+<th class="tableblock halign-left valign-top">STR</th>
+<th class="tableblock halign-left valign-top">AGI</th>
+<th class="tableblock halign-left valign-top">VIT</th>
+<th class="tableblock halign-left valign-top">INT</th>
+<th class="tableblock halign-left valign-top">DEX</th>
+<th class="tableblock halign-left valign-top">LUK</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>毒</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td></td>
-<td></td>
-<td>攻(0.6)</td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>毒</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
 </tr>
 <tr>
-<td>出血</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td>攻(0.6)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>出血</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>発火</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td>攻(0.6)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>発火</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>スタン</td>
-<td>攻(0.6)</td>
-<td></td>
-<td>防(0.4)</td>
-<td></td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>スタン</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>凍結</td>
-<td></td>
-<td></td>
-<td></td>
-<td>攻(0.6)<br>防(0.4)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>凍結</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)
+防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>石化</td>
-<td></td>
-<td></td>
-<td></td>
-<td>攻(0.6)<br>防(0.4)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>石化</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)
+防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>睡眠</td>
-<td></td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td>攻(0.6)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>睡眠</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>恐怖</td>
-<td></td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td>攻(0.6)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>恐怖</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>バインド</td>
-<td></td>
-<td>攻(0.6)</td>
-<td>防(0.4)</td>
-<td></td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>バインド</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>沈黙</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td></td>
-<td>攻(0.6)</td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>沈黙</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>呪い</td>
-<td>攻(0.6)</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>呪い</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 <tr>
-<td>暗闇</td>
-<td>攻(0.6)</td>
-<td></td>
-<td></td>
-<td>防(0.4)</td>
-<td></td>
-<td></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>暗闇</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>攻(0.6)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre>防(0.4)</pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
+<td class="tableblock halign-left valign-top"><div class="literal"><pre></pre></div></td>
 </tr>
 </tbody>
 </table>
 <hr>
-<p>詳細な各状態異常に関する <code>確率ステータス比率</code>および<code>効果時間ステータス比率</code>を記載するが、状態異常によって係数が異なる。</p>
-<h6 id="毒">毒</h6>
-<p>確率ステータス比率 =<br>
+<div class="paragraph">
+<p>詳細な各状態異常に関する <code>確率ステータス比率</code> および <code>効果時間ステータス比率</code> を記載するが、状態異常によって係数が異なる。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_毒">毒</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Luk</code> * 0.5 / 100) - Min(0.8, (<code>Vit</code> * 0.3 + <code>Int</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Luk</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Luk</code>、防御側は <code>Vit</code> および <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Luk</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Luk</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Luk</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="出血">出血</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Luk</code>、防御側は <code>Vit</code> および <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Luk</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Luk</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Luk</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_出血">出血</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Int</code> * 0.5 / 100) - Min(0.8, (<code>Vit</code> * 0.3 + <code>Int</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Int</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> および <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="発火">発火</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> および <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_発火">発火</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Int</code> * 0.5 / 100) - Min(0.8, (<code>Vit</code> * 0.3 + <code>Agi</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Int</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> および <code>Agi</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Agi</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="スタン">スタン</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> および <code>Agi</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Agi</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_スタン">スタン</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Str</code> * 0.3 / 100) - Min(0.8, (<code>Vit</code> * 0.3 + <code>Agi</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Str</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Vit</code> および <code>Agi</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Agi</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="凍結">凍結</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Vit</code> および <code>Agi</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Agi</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_凍結">凍結</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Int</code> * 0.3 / 100) - Min(0.8, (<code>Int</code> * 0.3 + <code>Dex</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Int</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="石化">石化</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_石化">石化</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Int</code> * 0.3 / 100) - Min(0.8, (<code>Int</code> * 0.3 + <code>Dex</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Int</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Int</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="睡眠">睡眠</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Int</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Int</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_睡眠">睡眠</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Dex</code> * 0.3 / 100) - Min(0.5, (<code>Int</code> * 0.3 + <code>Luk</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Dex</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> および <code>Luk</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Luk</code> の値によって増加する。最大値として &ldquo;0.5&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="恐怖">恐怖</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> および <code>Luk</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Luk</code> の値によって増加する。最大値として "0.5" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_恐怖">恐怖</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Dex</code> * 0.5 / 100) - Min(0.5, (<code>Int</code> * 0.3 + <code>Luk</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Dex</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> および <code>Luk</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Luk</code> の値によって増加する。最大値として &ldquo;0.5&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="バインド">バインド</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> および <code>Luk</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Luk</code> の値によって増加する。最大値として "0.5" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_バインド">バインド</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Agi</code> * 0.4 / 100) - Min(0.6, (<code>Vit</code> * 0.3 + <code>Str</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Agi</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Agi</code>、防御側は <code>Vit</code> および <code>Str</code> のステータスを参照する。<br>
-攻撃側は、<code>Agi</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Str</code> の値によって増加する。最大値として &ldquo;0.6&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Agi</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Agi</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="沈黙">沈黙</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Agi</code>、防御側は <code>Vit</code> および <code>Str</code> のステータスを参照する。
+攻撃側は、<code>Agi</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Str</code> の値によって増加する。最大値として "0.6" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Agi</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Agi</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_沈黙">沈黙</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Dex</code> * 0.5 / 100) - Min(0.6, (<code>Vit</code> * 0.3 + <code>Str</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Dex</code> * 0.6 / 100) - Min(0.8, (<code>Vit</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Vit</code> および <code>Str</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> および <code>Str</code> の値によって増加する。最大値として &ldquo;0.6&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Vit</code> のステータスを参照する。<br>
-攻撃側は、<code>Dex</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Vit</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="呪い">呪い</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Dex</code>、防御側は <code>Vit</code> および <code>Str</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Vit</code> および <code>Str</code> の値によって増加する。最大値として "0.6" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Dex</code>、防御側は <code>Vit</code> のステータスを参照する。
+攻撃側は、<code>Dex</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Vit</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_呪い">呪い</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Str</code> * 0.5 / 100) - Min(0.5, (<code>Int</code> * 0.3 + <code>Dex</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Str</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として &ldquo;0.5&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h5 id="暗闇">暗闇</h5>
-<p>確率ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として "0.5" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_暗闇">暗闇</h3>
+<div class="paragraph">
+<p>確率ステータス比率 =
 1 + Max(0.1, <code>Str</code> * 0.5 / 100) - Min(0.5, (<code>Int</code> * 0.3 + <code>Dex</code> * 0.3) / 100)</p>
-<p>効果時間ステータス比率 =<br>
+</div>
+<div class="paragraph">
+<p>効果時間ステータス比率 =
 1 + Max(0.3, <code>Str</code> * 0.6 / 100) - Min(0.8, (<code>Int</code> * 0.4) / 100)</p>
-<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.1&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として &ldquo;0.5&rdquo; が設定されている。</p>
-<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> のステータスを参照する。<br>
-攻撃側は、<code>Str</code> の値によって増加する。最小値として &ldquo;0.3&rdquo; が設定されている。<br>
-防御側は、<code>Int</code> の値によって増加する。最大値として &ldquo;0.8&rdquo; が設定されている。</p>
-<h4 id="想定パターン">想定パターン</h4>
+</div>
+<div class="paragraph">
+<p>確率に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> および <code>Dex</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.1" が設定されている。
+防御側は、<code>Int</code> および <code>Dex</code> の値によって増加する。最大値として "0.5" が設定されている。</p>
+</div>
+<div class="paragraph">
+<p>効果時間に関しては、攻撃側は <code>Str</code>、防御側は <code>Int</code> のステータスを参照する。
+攻撃側は、<code>Str</code> の値によって増加する。最小値として "0.3" が設定されている。
+防御側は、<code>Int</code> の値によって増加する。最大値として "0.8" が設定されている。</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_想定パターン">想定パターン</h2>
+<div class="sectionbody">
+<div class="paragraph">
 <p>いくつかの想定パターンを用いて計算式を紹介する。</p>
-<p>状態異常確率の計算式は下記となる(再掲)。<br>
-<code>状態異常確率</code> =<br>
+</div>
+<div class="paragraph">
+<p>状態異常確率の計算式は下記となる(再掲)。</p>
+</div>
+<div class="paragraph">
+<p><code>状態異常確率</code> =
 <code>スキルの固有状態異常確率 * 固有状態異常比較 * 状態異常比較 * 確率ステータス比較</code></p>
-<p>状態異常効果時間の計算式は下記となる(再掲)。<br>
-<code>状態異常効果時間</code> =<br>
+</div>
+<div class="paragraph">
+<p>状態異常効果時間の計算式は下記となる(再掲)。</p>
+</div>
+<div class="paragraph">
+<p><code>状態異常効果時間</code> =
 <code>スキルの固有状態異常効果時間 * 固有状態異常比較 * 状態異常比較 * 効果時間ステータス比較</code></p>
-<h5 id="100-耐性の有用性">100% 耐性の有用性</h5>
+</div>
+<div class="sect2">
+<h3 id="_100_耐性の有用性">100% 耐性の有用性</h3>
+<div class="ulist">
 <ul>
-<li>攻撃側
+<li>
+<p>攻撃側</p>
+<div class="ulist">
 <ul>
-<li><code>STR</code> &ldquo;200&rdquo;</li>
-<li><code>アンブッシュ</code>: スタン確率 &ldquo;1(100%)&rdquo;</li>
-</ul>
+<li>
+<p><code>STR</code> "200"</p>
 </li>
-<li>防御側
-<ul>
-<li><code>AGI</code> &ldquo;0&rdquo;</li>
-<li><code>VIT</code> &ldquo;0&rdquo;</li>
-<li><code>固有状態異常耐性</code>(スタン耐性) &ldquo;1(100%)&rdquo;</li>
-</ul>
+<li>
+<p><code>アンブッシュ</code>: スタン確率 "1(100%)"</p>
 </li>
 </ul>
-<p>このとき、スタンの確率は、&ldquo;0(0%)&rdquo; となる。<br>
-<code>固有状態異常比較</code> が &ldquo;0&rdquo; になるため、<code>アンブッシュ</code> のスタン確率が &ldquo;1(100%)&rdquo; であっても、攻撃側が <code>STR</code> &ldquo;200&rdquo; であっても効果がない。</p>
+</div>
+</li>
+<li>
+<p>防御側</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AGI</code> "0"</p>
+</li>
+<li>
+<p><code>VIT</code> "0"</p>
+</li>
+<li>
+<p><code>固有状態異常耐性</code>(スタン耐性) "1(100%)"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>このとき、スタンの確率は、"0(0%)" となる。
+<code>固有状態異常比較</code> が "0" になるため、<code>アンブッシュ</code> のスタン確率が "1(100%)" であっても、攻撃側が <code>STR</code> "200" であっても効果がない。</p>
+</div>
+<div class="paragraph">
 <p>確率 = 1 * (1 + 0 - 1) * (1 + 0 - 0) * (1 + 200 * 0.3 /100 - 0) = 0</p>
-<h5 id="レイスカードの有用性">レイス★カードの有用性</h5>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_レイスカードの有用性">レイス★カードの有用性</h3>
+<div class="ulist">
 <ul>
-<li>攻撃側
+<li>
+<p>攻撃側</p>
+<div class="ulist">
 <ul>
-<li><code>STR</code> &ldquo;200&rdquo;</li>
-<li><code>アンブッシュ</code>: スタン確率 &ldquo;1(100%)&rdquo;</li>
-</ul>
+<li>
+<p><code>STR</code> "200"</p>
 </li>
-<li>防御側
-<ul>
-<li><code>AGI</code> &ldquo;0&rdquo;</li>
-<li><code>VIT</code> &ldquo;0&rdquo;</li>
-<li><code>固有状態異常耐性</code>(スタン耐性) &ldquo;1(100%)&rdquo;</li>
-</ul>
+<li>
+<p><code>アンブッシュ</code>: スタン確率 "1(100%)"</p>
 </li>
 </ul>
-<p>このとき、スタンの確率は、&ldquo;0.4(40%)&rdquo; となる。<br>
-<code>レイス★カード</code>の効果で、<code>固有状態異常比較</code> が &ldquo;0&rdquo; にならないため、スタン確率が生じる。<br>
-また、攻撃側の関連ステータスの <code>STR</code> が &ldquo;200&rdquo; あるので、スタン確率が向上する。</p>
+</div>
+</li>
+<li>
+<p>防御側</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AGI</code> "0"</p>
+</li>
+<li>
+<p><code>VIT</code> "0"</p>
+</li>
+<li>
+<p><code>固有状態異常耐性</code>(スタン耐性) "1(100%)"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>このとき、スタンの確率は、"0.4(40%)" となる。
+<code>レイス★カード</code> の効果で、<code>固有状態異常比較</code> が "0" にならないため、スタン確率が生じる。
+また、攻撃側の関連ステータスの <code>STR</code> が "200" あるので、スタン確率が向上する。</p>
+</div>
+<div class="paragraph">
 <p>確率 = 1 * (1 + 0.25 - 1) * (1 + 0 - 0) * (1 + 200 * 0.3 /100 - 0) = 0.4</p>
-<h5 id="関連ステータスの有用性">関連ステータスの有用性</h5>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_関連ステータスの有用性">関連ステータスの有用性</h3>
+<div class="ulist">
 <ul>
-<li>攻撃側
+<li>
+<p>攻撃側</p>
+<div class="ulist">
 <ul>
-<li><code>STR</code> &ldquo;0&rdquo;</li>
-<li><code>アンブッシュ</code>: スタン確率 &ldquo;1(100%)&rdquo;</li>
-</ul>
+<li>
+<p><code>STR</code> "0"</p>
 </li>
-<li>防御側
-<ul>
-<li><code>AGI</code> &ldquo;200&rdquo;</li>
-<li><code>VIT</code> &ldquo;200&rdquo;</li>
-<li><code>固有状態異常耐性</code>(スタン耐性) &ldquo;0&rdquo;</li>
-</ul>
+<li>
+<p><code>アンブッシュ</code>: スタン確率 "1(100%)"</p>
 </li>
 </ul>
-<p>このとき、スタンの確率は、&ldquo;0.3(30%)&rdquo; となる。<br>
-<code>アンブッシュ</code> のスタン確率が &ldquo;100%&rdquo; であっても、攻撃側の関連ステータスが低く、防御側の関連ステータスが高いため、スタン確率が低下する。<br>
-なお、<code>確率ステータス比率</code> の計算では、攻撃側が <code>STR</code> &ldquo;0&rdquo; であり、防御側が <code>AGI</code> および <code>VIT</code> &ldquo;200&rdquo; のため、それぞれ最小値 &ldquo;0.1&rdquo; と最大値 &ldquo;0.8&rdquo; が採用される。</p>
+</div>
+</li>
+<li>
+<p>防御側</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>AGI</code> "200"</p>
+</li>
+<li>
+<p><code>VIT</code> "200"</p>
+</li>
+<li>
+<p><code>固有状態異常耐性</code>(スタン耐性) "0"</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>このとき、スタンの確率は、"0.3(30%)" となる。
+<code>アンブッシュ</code> のスタン確率が "100%" であっても、攻撃側の関連ステータスが低く、防御側の関連ステータスが高いため、スタン確率が低下する。
+なお、<code>確率ステータス比率</code> の計算では、攻撃側が <code>STR</code> "0" であり、防御側が <code>AGI</code> および <code>VIT</code> "200" のため、それぞれ最小値 "0.1" と最大値 "0.8" が採用される。</p>
+</div>
+<div class="paragraph">
 <p>確率 = 1 * (1 + 0 - 0) * (1 + 0 - 0) * (1 + 0.1 - 0.8) = 0.3</p>
-<h4 id="まとめ">まとめ</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_まとめ">まとめ</h2>
+<div class="sectionbody">
+<div class="ulist">
 <ul>
-<li><code>固有状態異常耐性</code>が &ldquo;100%&rdquo; に達した場合でも<code>レイス★カード</code> 等によって<code>固有状態異常攻撃</code>が加算されている場合、状態異常になる場合がある。</li>
-<li>ステータスで状態異常の確率や効果時間を変化させることができるが、その他の乗算パラメータで 0 になっている場合は効果がないので状態異常関連でステータスを上げる場合は注意が必要となる。</li>
-<li>ステータスで状態異常の確率や効果時間を変化させることができるが、最大値および最小値が設定されているので注意が必要となる。</li>
-<li><code>ナイトメアカード</code>や<code>マルクカード</code>などのカードは無効化する効果があるので、<code>固有状態異常攻撃</code>を加算したところで効果がない。</li>
+<li>
+<p><code>固有状態異常耐性</code> が "100%" に達した場合でも <code>レイス★カード</code> 等によって <code>固有状態異常攻撃</code> が加算されている場合、状態異常になる場合がある。</p>
+</li>
+<li>
+<p>ステータスで状態異常の確率や効果時間を変化させることができるが、その他の乗算パラメータで 0 になっている場合は効果がないので状態異常関連でステータスを上げる場合は注意が必要となる。</p>
+</li>
+<li>
+<p>ステータスで状態異常の確率や効果時間を変化させることができるが、最大値および最小値が設定されているので注意が必要となる。</p>
+</li>
+<li>
+<p><code>ナイトメアカード</code> や <code>マルクカード</code> などのカードは無効化する効果があるので、<code>固有状態異常攻撃</code> を加算したところで効果がない。</p>
+</li>
 </ul>
+</div>
 <hr>
+<div class="paragraph">
 <p>参考:<br>
 <a href="https://www.reddit.com/r/RagnarokMobile/comments/dp2y9l/gameplay_100_debuff_resistance_with_250_all_stat/">[Gameplay] 100% Debuff Resistance with 250 all stat? it is possible?</a><br>
 <a href="https://github.com/shalzuth/rom_files">shalzuth/rom_files</a></p>
-<section class="footnotes" role="doc-endnotes">
+</div>
+</div>
+</div>
+<div id="footnotes">
 <hr>
-<ol>
-<li id="fn:1" role="doc-endnote">
-<p><a href="https://ragnarokm.gungho.jp/member/help/vbnfjd00000009f3.html">経験値とステータス</a> <a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
-</li>
-</ol>
-</section>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. <a href="https://ragnarokm.gungho.jp/member/help/vbnfjd00000009f3.html">経験値とステータス</a>
+</div>
+</div>
               
             </div>
           </div>
@@ -821,7 +1148,7 @@ $(window).load(function() {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://krbysh.net/post/ragnarokm-guild-facilities-mats/" data-tooltip="ラグマスにおけるギルド施設の必要材料">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>
@@ -891,7 +1218,7 @@ $(window).load(function() {
           
             <li class="post-action">
               
-                <a class="post-action-btn btn btn--disabled">
+                <a class="post-action-btn btn btn--default tooltip--top" href="https://krbysh.net/post/ragnarokm-guild-facilities-mats/" data-tooltip="ラグマスにおけるギルド施設の必要材料">
               
                   <i class="fa fa-angle-left"></i>
                   <span class="hide-xs hide-sm text-small icon-ml">NEXT</span>

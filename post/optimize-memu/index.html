@@ -20,26 +20,34 @@
 <meta name="generator" content="Hugo 0.73.0 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="krbysh">
 <meta name="keywords" content="">
-<meta name="description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta name="description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
-私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。">
+私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。
+">
 
 
-<meta property="og:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta property="og:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
-私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。">
+私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。
+">
 <meta property="og:type" content="article">
 <meta property="og:title" content="MEmu Play を最適化する">
 <meta name="twitter:title" content="MEmu Play を最適化する">
 <meta property="og:url" content="https://krbysh.net/post/optimize-memu/">
 <meta property="twitter:url" content="https://krbysh.net/post/optimize-memu/">
 <meta property="og:site_name" content="krbysh.net">
-<meta property="og:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+<meta property="og:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
-私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。">
-<meta name="twitter:description" content="スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。
+">
+<meta name="twitter:description" content="
+スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
-私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。">
+私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。
+">
 <meta property="og:locale" content="en-us">
 
   
@@ -146,6 +154,8 @@ if (!doNotTrack) {
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   <script async src="https://krbysh.net/js/prism.js"></script>
+  <script async src="https://krbysh.net/js/fix-adoc.js"></script>
+
 </header>
 
       <nav id="sidebar" data-behavior="5">
@@ -297,55 +307,126 @@ $(window).load(function() {
      });
 });
 </script>
-              <p>スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
+              <div class="paragraph">
+<p>スマホゲームを大画面やコントローラで遊びたいので、Android エミュレータが重宝している。
 MEmu は Android エミュレータとして素晴らしい機能を持っている反面、広告の問題に直面する。
 私が MEmu を利用する際に行っている最適化(高速化)を紹介する。本変更を行うことでアプリの起動を速めたりすることができる。</p>
-<hr>
-<p><a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
-また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。</p>
-<hr>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Important</div>
+</td>
+<td class="content">
+<a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
 <p>本記事は、MEmu 6.3.7 でのみ動作確認をしている。
 本記事投稿時の最新バージョン MEmu 7.1.6 や過去のバージョンの動作確認はしていない。
 しかし、調査した限りでは MEmu 6.5.1 以降ではデフォルトの Launcher を削除するとインスタンスが破損する仕様になっているとのこと。
 従って、本記事の適用を行う際は、MEmu 6.5.1 未満の最新バージョンである MEmu 6.3.7 を導入することになる。最新版と比較して機能面やセキュリティ面が劣るため、許容できない場合は本変更は適用できない。
 MEmu 6.3.7 は <a href="https://www.memuplay.com/blog/release-archive.html">Release Archive</a> より導入が可能。</p>
+</div>
+<div class="paragraph">
 <p>なお、MEmu 以外にも BlueStacks や Nox, LDPlayer 等といった Android エミュレータが多数存在する。遊びたいゲームに応じて選択するのが望ましい。
 複数のエミュレータを利用しているが、完璧なエミュレータにはまだ巡り会えていない。
 MEmu 6.3.7 はパフォーマンスが特段優れているわけではない、マウスホイールによるスクロールもできない、等の懸念点はいくらでもある。
 それでも下記要件を満たすため、現在は MEmu を選択しているが、単一のインスタンスで良い場合は他のエミュレータも選択することもある。機能面かつパフォーマンス面で言えば、Nox が優れている気がする。</p>
+</div>
+<div class="ulist">
 <ul>
-<li>複数(6)のインスタンスが同時起動できること</li>
-<li>操作を記憶でき、再生できること</li>
-<li>複数のインスタンスで同期できること</li>
-<li>複数のインスタンスが安定していること</li>
-<li>OpenGL ではなく DirectX で動作すること</li>
-<li>インスタンス単位のリソース消費量が小さいこと</li>
+<li>
+<p>複数(6)のインスタンスが同時起動できること</p>
+</li>
+<li>
+<p>操作を記憶でき、再生できること</p>
+</li>
+<li>
+<p>複数のインスタンスで同期できること</p>
+</li>
+<li>
+<p>複数のインスタンスが安定していること</p>
+</li>
+<li>
+<p>OpenGL ではなく DirectX で動作すること</p>
+</li>
+<li>
+<p>インスタンス単位のリソース消費量が小さいこと</p>
+</li>
 </ul>
+</div>
+<div class="paragraph">
 <p>Nox 利用者は、<a href="https://krbysh.net/post/debloat-optimize-nox/">Nox App Player を最適化する</a> 記事も併せて確認してほしい。</p>
+</div>
+<div class="paragraph">
 <p>MEmu を最適化(高速化)するに Launcher の変更を行う。不審なホストの通信制御は今回は行わないため、手順が少ない。</p>
-<ol>
-<li>App のダウンロード</li>
-<li>Android(MEmu) の Launcher の変更</li>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#app-download">App のダウンロード</a></p>
+</li>
+<li>
+<p><a href="#memu-launcher">Android(MEmu) の Launcher の変更</a></p>
+</li>
 </ol>
-<h5 id="app-のダウンロード">App のダウンロード</h5>
+</div>
+<div class="sect1">
+<h2 id="app-download">App のダウンロード</h2>
+<div class="sectionbody">
+<div class="ulist">
 <ul>
-<li>事前準備として、App をダウンロードする必要がある。</li>
-<li>Memu のデフォルトの Launcher(Homepage) の代わりの任意の Launcher をダウンロードする。私は、&ldquo;Nova Launcher&rdquo; を採用した。</li>
-<li>また、プリインストールされている　MEmu のデフォルト App を削除、無効化するための Root App Remover 系の App をダウンロードする。今回 &ldquo;Root App Deleter&rdquo; を採用した。</li>
-<li>なお、Launcher 以外にも IME 等を変更する場合は適宜 App をダウンロードする必要がある。</li>
+<li>
+<p>事前準備として、App をダウンロードする必要がある。</p>
+</li>
+<li>
+<p>Memu のデフォルトの Launcher(Homepage) の代わりの任意の Launcher をダウンロードする。私は、"Nova Launcher" を採用した。</p>
+</li>
+<li>
+<p>また、プリインストールされている　MEmu のデフォルト App を削除、無効化するための Root App Remover 系の App をダウンロードする。今回 "Root App Deleter" を採用した。</p>
+</li>
+<li>
+<p>なお、Launcher 以外にも IME 等を変更する場合は適宜 App をダウンロードする必要がある。</p>
+</li>
 </ul>
-<h5 id="androidmemu-の-launcher-の変更">Android(MEmu) の Launcher の変更</h5>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="memu-launcher">Android(MEmu) の Launcher の変更</h2>
+<div class="sectionbody">
+<div class="ulist">
 <ul>
-<li>MEmu を Root モードで起動させるため、MEmu の設定メニュー <code>System Settinig</code> の <code>Others</code> の項目にある <code>Root Mode</code> を <code>Enabled</code> に変更。</li>
-<li>MEmu が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。&ldquo;Nova Launcher&rdquo; の場合、&ldquo;Nova の設定&rdquo; というアプリから設定が可能。</li>
-<li><code>/system/priv-app/Launcher</code> をフォルダーを開く。<code>Launcher.apk</code> というファイルが存在しているので、削除、またはリネーム(拡張子の変更等)する。&ldquo;Root App Deleter&rdquo; の場合は、<code>Systems Apps</code> を選択し(モードは好きな方を選択)、<code>OS Kernel, No Touch</code> の項目に <code>MEmu Launcher</code> があるのでそれを選択して、<code>Disabled</code> を選択する。</li>
-<li><code>Unknown, No Advice</code> の項目にもプリインストールされている MEmu App があるので、必要に応じて前項を再度実施する。</li>
-<li>MEmu を再起動。</li>
+<li>
+<p>MEmu を Root モードで起動させるため、MEmu の設定メニュー <code>System Settinig</code> の <code>Others</code> の項目にある <code>Root Mode</code> を <code>Enabled</code> に変更。</p>
+</li>
+<li>
+<p>MEmu が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。</p>
+</li>
+<li>
+<p><code>/system/priv-app/Launcher</code> をフォルダーを開く。<code>Launcher.apk</code> というファイルが存在しているので、削除、またはリネーム(拡張子の変更等)する。"Root App Deleter" の場合は、<code>Systems Apps</code> を選択し(モードは好きな方を選択)、<code>OS Kernel, No Touch</code> の項目に <code>MEmu Launcher</code> があるのでそれを選択して、<code>Disabled</code> を選択する。</p>
+</li>
+<li>
+<p><code>Unknown, No Advice</code> の項目にもプリインストールされている MEmu App があるので、必要に応じて前項を再度実施する。</p>
+</li>
+<li>
+<p>MEmu を再起動。</p>
+</li>
 </ul>
+</div>
 <hr>
+<div class="paragraph">
 <p>参考:<br>
-<a href="https://www.reddit.com/r/FFBraveExvius/comments/8ru1w4/memu_how_to_completely_remove_the_stock_launcher/">Memu: How to completely remove the stock launcher</a>
-<a href="https://www.reddit.com/r/FFBraveExvius/comments/d2n9v6/dont_update_to_memu_651_forced_launcher/">Don&rsquo;t update to MEmu 6.5.1 (forced launcher)</a></p>
+<a href="https://www.reddit.com/r/FFBraveExvius/comments/8ru1w4/memu_how_to_completely_remove_the_stock_launcher/">Memu: How to completely remove the stock launcher</a><br>
+<a href="https://www.reddit.com/r/FFBraveExvius/comments/d2n9v6/dont_update_to_memu_651_forced_launcher/">Don&#8217;t update to MEmu 6.5.1 (forced launcher)</a></p>
+</div>
+</div>
+</div>
               
             </div>
           </div>
