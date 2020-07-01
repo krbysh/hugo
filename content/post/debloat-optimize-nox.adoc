@@ -178,7 +178,7 @@ netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=blo
 最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。
 
 * `%LOCALAPPDATA%\Nox` フォルダにある `conf.ini` ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に `conf.ini` ファイルが存在する。私の環境では、`clone_Nox_x_conf.ini` という名前になる。
-* 下記内容に修正し、保存する。
+* 下記内容(修正箇所のみ抜粋)に修正し、保存する。
 
 [source,ini]
 ----
