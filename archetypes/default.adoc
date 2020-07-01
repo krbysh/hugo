@@ -7,3 +7,8 @@ categories: [ "" ]
 tags: [ "", "" ]
 isCJKLanguage: true
 ---
+:source-highlighter: rouge
+:rouge-style: pastie
+:icons: font
+:sectlinks:
+

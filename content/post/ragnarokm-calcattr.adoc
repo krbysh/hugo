@@ -6,6 +6,8 @@ slug: "ragnarokm-calcattr"
 categories: [ "Game" ]
 tags: [ "RagnarokM", "Android", "iOS" ]
 ---
+:icons: font
+:sectlinks:
 
 ラグマスにおける状態異常の計算式について調査したので、備忘録として記載する。
 

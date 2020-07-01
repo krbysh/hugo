@@ -1,0 +1,106 @@
+---
+title: "Hugo の Asciidoctor 原稿で脚注アイコンを表示する"
+date: 2020-07-01T19:00:00+09:00
+draft: false
+slug: "hugo-asciidoc-admonition-icon"
+categories: [ "Tech" ]
+tags: [ "Hugo", "AsciiDoc", "Asciidoctor" ]
+isCJKLanguage: true
+---
+:source-highlighter: rouge
+:rouge-style: pastie
+:icons: font
+:sectlinks:
+
+Hugo の AsciiDoc 原稿において `:icons: font` が効かず、脚注アイコンが表示されない問題を回避したので備忘録として記載する。
+
+<!--more-->
+本ブログは Hugo を利用している。最初は Markdown でレンダリングしていたが、Hugo は AsciiDoc もデフォルトでサポートしているため Markdown から AsciiDoc(tor) に途中から乗り換えた。
+Hugo で AsciiDoc を利用する方法は、先人たちの素晴らしい記事footnote:[link:http://diary.wshito.com/comp/cms/hugo-asciidoc/[Hugo で AsciiDoc 原稿を書く際の留意点]]footnote:[link:http://tech.innovation.co.jp/2018/11/27/Hugo-Ascii-Doc.html[Hugoを利用してブログ作成、AsciiDocで記事を書けるように挑戦してみた。]]があるのでそちらを参照して頂きたい。
+ 
+一般に `Asciidocttor` の場合、脚色アイコンを表示するには、`:icons: font` を指定する。しかしながら、 Hugo の場合、脚色アイコンを表示するための CSS がデフォルトでは読み込まれていないため追加する必要がある。
+
+link:https://asciidoctor.org/docs/user-manual/#admonition-icons[Asciidoctor User Manual] に倣い、CSS を追加する。
+`config.toml` で指定できる Custom CSS として読み込むのが手っ取り早い。なお、CSS で色味やサイズを調整している。私はデフォルトのアイコンをそのまま利用しているが、勿論、任意の Unicode 指定することで変更できる。
+
+私が利用している CSS を掲載する。
+[source,css,linenums]
+----
+.admonitionblock>table{
+  border-collapse:separate;
+  border:0;
+  background: #f7f8f8;
+  width:100%
+}
+.admonitionblock>table td.icon{
+  text-align:center;
+  width:50px
+}
+.admonitionblock>table td.icon img{
+  max-width:none
+}
+.admonitionblock>table td.icon .title{
+  text-transform:uppercase
+}
+.admonitionblock>table td.content{
+  text-align: left;
+  font-size: 100%;
+  border-left:1px solid #ddddd8;
+}
+.admonitionblock>table td.content>:last-child>:last-child{
+  margin-bottom:0
+}
+.admonitionblock td.icon [class^="fa icon-"]{
+  font-size:2.5em;
+  text-shadow:1px 1px 2px rgba(0,0,0,.5);
+  cursor:default
+}
+.admonitionblock td.icon .icon-note::before{
+  content:"\f05a";
+  color:#19407c
+}
+.admonitionblock td.icon .icon-tip::before{
+  content:"\f0eb";
+  text-shadow:1px 1px 2px rgba(155,155,0,.8);
+  color:#111
+}
+.admonitionblock td.icon .icon-warning::before{
+  content:"\f071";
+  color:#bf6900
+}
+.admonitionblock td.icon .icon-caution::before{
+  content:"\f06d";
+  color:#bf3400
+}
+.admonitionblock td.icon .icon-important::before{
+  content:"\f06a";
+  color:#bf0000
+}
+----
+
+CSS を読み込んだのでいつも通りの Asciidoctor のように利用することが出来る。
+例えば、`:icons: font` を指定して下記のような Asciidoc 原稿を作成する。
+
+[source,markdown,linenums]
+----
+---
+title: "ほげ"
+date: 2099-07-01T00:00:00+09:00
+draft: false
+slug: "hoge"
+categories: [ "fuga" ]
+tags: [ "fugafuga", "hogehoge" ]
+isCJKLanguage: true
+---
+
+:icons: font
+
+NOTE: これは補足です。
+
+----
+
+これは下記のようにレンダリングされる。
+
+NOTE: これは補足です。
+
+脚注アイコンが表示されているのが確認できる。

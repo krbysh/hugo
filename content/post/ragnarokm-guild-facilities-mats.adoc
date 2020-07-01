@@ -7,6 +7,8 @@ categories: [ "Game" ]
 tags: [ "RagnarokM", "Android", "iOS" ]
 isCJKLanguage: true
 ---
+:icons: font
+:sectlinks:
 
 ラグマスにおける各ギルド施設の必要材料について Lv15(一部例外有)まで海外情報を基に調査したので、備忘録として記載する。
 
