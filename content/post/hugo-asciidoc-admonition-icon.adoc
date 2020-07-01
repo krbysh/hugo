@@ -12,7 +12,7 @@ isCJKLanguage: true
 :icons: font
 :sectlinks:
 
-Hugo の AsciiDoc 原稿において `:icons: font` が効かず、脚注アイコンが表示されない問題を回避したので備忘録として記載する。
+Hugo の Asciidoctor 原稿において `:icons: font` が効かず、脚注アイコンが表示されない問題を回避したので備忘録として記載する。
 
 <!--more-->
 本ブログは Hugo を利用している。最初は Markdown でレンダリングしていたが、Hugo は AsciiDoc もデフォルトでサポートしているため Markdown から AsciiDoc(tor) に途中から乗り換えた。
@@ -85,7 +85,7 @@ CSS を読み込んだのでいつも通りの Asciidoctor のように利用す
 ----
 ---
 title: "ほげ"
-date: 2099-07-01T00:00:00+09:00
+date: 2020-07-01T00:00:00+09:00
 draft: false
 slug: "hoge"
 categories: [ "fuga" ]
