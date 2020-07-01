@@ -1,6 +1,6 @@
 ---
 title: "Hugo の Asciidoctor 原稿で脚注アイコンを表示する"
-date: 2020-07-01T19:00:00+09:00
+date: 2020-07-01T00:00:00+09:00
 draft: false
 slug: "hugo-asciidoc-admonition-icon"
 categories: [ "Tech" ]
