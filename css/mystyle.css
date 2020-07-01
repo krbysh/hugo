@@ -25,181 +25,234 @@ body, h1, h2, h3, h4, h5, h6 {
 div.sectionbody{
   overflow-x: auto;
 }
-td.content,td.icon{
-  text-align: left;
-  font-size: 100%;
+.tableblock>tbody td {
+  text-align: center;
+  border-style: solid;
+  border-width: 0.1px;
+  font-size: 70%;
 }
-td,th {
+.tableblock>thead th {
   text-align: center;
   border-style: solid;
   border-width: 0.1px;
   font-size: 70%;
 }
 
-/* fix-adoc.js
-*/
-.admonitionblock td.icon .icon-note::before {
-  content: "\f05a";
-  color: #19407c;
+/* AsciiDoctor*/
+.admonitionblock>table{
+  border-collapse:separate;
+  border:0;
+  background: #f7f8f8;
+  width:100%
 }
-.admonitionblock td.icon .icon-warning::before {
-  content: "\f071";
-  color: #f38200;
+.admonitionblock>table td.icon{
+  text-align:center;
+  width:50px
 }
-.admonitionblock td.icon .icon-important::before {
-  content: "\f06a";
-  color: #f42500;
+.admonitionblock>table td.icon img{
+  max-width:none
 }
-.admonitionblock td.icon .icon-caution::before {
-  content: "\f071";
-  color: #f38200;
+.admonitionblock>table td.icon .title{
+  text-transform:uppercase
 }
-.admonitionblock td.icon .icon-note::before {
-  content: "\f05a";
+.admonitionblock>table td.content{
+  text-align: left;
+  font-size: 100%;
+  border-left:1px solid #ddddd8;
+}
+.admonitionblock>table td.content>:last-child>:last-child{
+  margin-bottom:0
+}
+.admonitionblock td.icon [class^="fa icon-"]{
+  font-size:2.5em;
+  text-shadow:1px 1px 2px rgba(0,0,0,.5);
+  cursor:default
+}
+.admonitionblock td.icon .icon-note::before{
+  content:"\f05a";
+  color:#19407c
+}
+.admonitionblock td.icon .icon-tip::before{
+  content:"\f0eb";
+  text-shadow:1px 1px 2px rgba(155,155,0,.8);
+  color:#111
+}
+.admonitionblock td.icon .icon-warning::before{
+  content:"\f071";
+  color:#bf6900
+}
+.admonitionblock td.icon .icon-caution::before{
+  content:"\f06d";
+  color:#bf3400
+}
+.admonitionblock td.icon .icon-important::before{
+  content:"\f06a";
+  color:#bf0000
+}
+
+.conum[data-value]{display:inline-block;
+color:#fff!important;
+background-color:rgba(100,100,0,.8);
+-webkit-border-radius:100px;
+border-radius:100px;
+text-align:center;
+font-size:.75em;
+width:1.67em;
+height:1.67em;
+line-height:1.67em;
+font-style:normal;
+font-weight:bold}
+.conum[data-value] *{color:#fff!important}
+.conum[data-value]+b{display:none}
+.conum[data-value]::after{content:attr(data-value)}
+pre .conum[data-value]{position:relative;
+top:-.125em}
+b.conum *{color:inherit!important}
+.conum:not([data-value]):empty{display:none}
+
+.highlight table td { padding: 5px; }
+.highlight table pre { margin: 0; }
+.highlight .c, .highlight .ch, .highlight .cd, .highlight .cm, .highlight .cpf, .highlight .c1 {
+  color: #888888;
+}
+.highlight .cp {
+  color: #cc0000;
+  font-weight: bold;
+}
+.highlight .cs {
+  color: #cc0000;
+  background-color: #fff0f0;
+  font-weight: bold;
+}
+.highlight .err {
+  color: #a61717;
+  background-color: #e3d2d2;
+}
+.highlight .gr {
+  color: #aa0000;
+}
+.highlight .gh {
+  color: #333333;
+}
+.highlight .gu {
+  color: #666666;
+}
+.highlight .gd {
   color: #000000;
+  background-color: #ffdddd;
 }
-
-/* PrismJS 1.20.0
-https://prismjs.com/download.html#themes=prism&languages=markup+css+clike+javascript+bash+basic+c+csharp+docker+git+go+nginx+perl+powershell+python+ruby+rust+tcl+visual-basic+xml-doc+yaml&plugins=keep-markup */
-/**
- * prism.js default theme for JavaScript, CSS and HTML
- * Based on dabblet (http://dabblet.com)
- * @author Lea Verou
- */
-
- code[class*="language-"],
- pre[class*="language-"] {
-   color: black;
-   background: none;
-   text-shadow: 0 1px white;
-   font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
-   font-size: 1em;
-   text-align: left;
-   white-space: pre;
-   word-spacing: normal;
-   word-break: normal;
-   word-wrap: normal;
-   line-height: 1.5;
- 
-   -moz-tab-size: 4;
-   -o-tab-size: 4;
-   tab-size: 4;
- 
-   -webkit-hyphens: none;
-   -moz-hyphens: none;
-   -ms-hyphens: none;
-   hyphens: none;
- }
- 
- pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
- code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
-   text-shadow: none;
-   background: #b3d4fc;
- }
- 
- pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
- code[class*="language-"]::selection, code[class*="language-"] ::selection {
-   text-shadow: none;
-   background: #b3d4fc;
- }
- 
- @media print {
-   code[class*="language-"],
-   pre[class*="language-"] {
-     text-shadow: none;
-   }
- }
- 
- /* Code blocks */
- pre[class*="language-"] {
-   padding: 1em;
-   margin: .5em 0;
-   overflow: auto;
- }
- 
- :not(pre) > code[class*="language-"],
- pre[class*="language-"] {
-   background: #f5f2f0;
- }
- 
- /* Inline code */
- :not(pre) > code[class*="language-"] {
-   padding: .1em;
-   border-radius: .3em;
-   white-space: normal;
- }
- 
- .token.comment,
- .token.prolog,
- .token.doctype,
- .token.cdata {
-   color: slategray;
- }
- 
- .token.punctuation {
-   color: #999;
- }
- 
- .token.namespace {
-   opacity: .7;
- }
- 
- .token.property,
- .token.tag,
- .token.boolean,
- .token.number,
- .token.constant,
- .token.symbol,
- .token.deleted {
-   color: #905;
- }
- 
- .token.selector,
- .token.attr-name,
- .token.string,
- .token.char,
- .token.builtin,
- .token.inserted {
-   color: #690;
- }
- 
- .token.operator,
- .token.entity,
- .token.url,
- .language-css .token.string,
- .style .token.string {
-   color: #9a6e3a;
-   /* This background color was intended by the author of this theme. */
-   background: hsla(0, 0%, 100%, .5);
- }
- 
- .token.atrule,
- .token.attr-value,
- .token.keyword {
-   color: #07a;
- }
- 
- .token.function,
- .token.class-name {
-   color: #DD4A68;
- }
- 
- .token.regex,
- .token.important,
- .token.variable {
-   color: #e90;
- }
- 
- .token.important,
- .token.bold {
-   font-weight: bold;
- }
- .token.italic {
-   font-style: italic;
- }
- 
- .token.entity {
-   cursor: help;
- }
- 
- 
+.highlight .gi {
+  color: #000000;
+  background-color: #ddffdd;
+}
+.highlight .ge {
+  font-style: italic;
+}
+.highlight .gs {
+  font-weight: bold;
+}
+.highlight .gl {
+  color: #888888;
+}
+.highlight .go {
+  color: #888888;
+}
+.highlight .gp {
+  color: #555555;
+}
+.highlight .gt {
+  color: #aa0000;
+}
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kr, .highlight .kv {
+  color: #008800;
+  font-weight: bold;
+}
+.highlight .kp {
+  color: #008800;
+}
+.highlight .kt {
+  color: #888888;
+  font-weight: bold;
+}
+.highlight .m, .highlight .mb, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .il, .highlight .mo, .highlight .mx {
+  color: #0000dd;
+  font-weight: bold;
+}
+.highlight .s, .highlight .sa, .highlight .sb, .highlight .sc, .highlight .dl, .highlight .sd, .highlight .s2, .highlight .sh, .highlight .s1 {
+  color: #dd2200;
+  background-color: #fff0f0;
+}
+.highlight .se {
+  color: #0044dd;
+  background-color: #fff0f0;
+}
+.highlight .si {
+  color: #3333bb;
+  background-color: #fff0f0;
+}
+.highlight .sx {
+  color: #22bb22;
+  background-color: #f0fff0;
+}
+.highlight .sr {
+  color: #008800;
+}
+.highlight .ss {
+  color: #aa6600;
+  background-color: #fff0f0;
+}
+.highlight .na {
+  color: #336699;
+}
+.highlight .nb, .highlight .bp {
+  color: #003388;
+}
+.highlight .nc {
+  color: #bb0066;
+  font-weight: bold;
+}
+.highlight .no {
+  color: #003366;
+  font-weight: bold;
+}
+.highlight .nd {
+  color: #555555;
+}
+.highlight .ne {
+  color: #bb0066;
+  font-weight: bold;
+}
+.highlight .nf, .highlight .fm {
+  color: #0066bb;
+  font-weight: bold;
+}
+.highlight .nl {
+  color: #336699;
+}
+.highlight .nn {
+  color: #bb0066;
+  font-weight: bold;
+}
+.highlight .py {
+  color: #336699;
+  font-weight: bold;
+}
+.highlight .nt {
+  color: #bb0066;
+  font-weight: bold;
+}
+.highlight .nv, .highlight .vc, .highlight .vm {
+  color: #336699;
+}
+.highlight .vg {
+  color: #dd7700;
+}
+.highlight .vi {
+  color: #3333bb;
+}
+.highlight .ow {
+  color: #008800;
+}
+.highlight .w {
+  color: #bbbbbb;
+}

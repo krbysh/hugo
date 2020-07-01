@@ -103,6 +103,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/jquery.fancybox.min.css" integrity="sha256-vuXZ9LGmmwtjqFX1F+EKin1ThZMub58gKULUyf0qECk=" crossorigin="anonymous" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.4/helpers/jquery.fancybox-thumbs.min.css" integrity="sha256-SEa4XYAHihTcEP1f5gARTB2K26Uk8PsndQYHQC1f4jU=" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
     
     <link rel="stylesheet" href="https://krbysh.net/css/style-twzjdbqhmnnacqs0pwwdzcdbt8yhv8giawvjqjmyfoqnvazl0dalmnhdkvp7.min.css" />
@@ -153,8 +154,6 @@ if (!doNotTrack) {
     </a>
   
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  <script async src="https://krbysh.net/js/prism.js"></script>
-  <script async src="https://krbysh.net/js/fix-adoc.js"></script>
 
 </header>
 
@@ -314,7 +313,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 <table>
 <tr>
 <td class="icon">
-<div class="title">Important</div>
+<i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
 <a href="https://krbysh.net/page/terms-of-use">免責事項</a>に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
@@ -350,7 +349,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 </ol>
 </div>
 <div class="sect1">
-<h2 id="nox-launcher">1. Android(Nox) の Launcher の変更</h2>
+<h2 id="nox-launcher"><a class="link" href="#nox-launcher">1. Android(Nox) の Launcher の変更</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、"Nova Launcher" を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
@@ -374,7 +373,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 </div>
 </div>
 <div class="sect1">
-<h2 id="nox-host">2. Android(Nox) の hosts ファイルの修正</h2>
+<h2 id="nox-host"><a class="link" href="#nox-host">2. Android(Nox) の hosts ファイルの修正</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>次に、Nox の hosts ファイルの修正を行うことで、Nox が不審なホストとの通信を無効化することができる。</p>
@@ -389,8 +388,104 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<pre><code class="language-linenos=table" data-lang="linenos=table">127.0.0.1 api.bignox.com
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="plaintext"><table class="linenotable"><tbody><tr><td class="linenos gl"><pre class="lineno"> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+</pre></td><td class="code"><pre>127.0.0.1 api.bignox.com
 127.0.0.1 tracking.trnox.com
 127.0.0.1 bi.yeshen.com
 127.0.0.1 launcher.us.yeshen.com
@@ -484,7 +579,9 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 127.0.0.1 open.bignox.com
 127.0.0.1 pay.bignox.com
 127.0.0.1 jp.bignox.com
-127.0.0.1 api.noxinfluencer.com</code></pre>
+127.0.0.1 api.noxinfluencer.com
+</pre></td></tr></tbody></table></code></pre>
+</div>
 </div>
 <div class="ulist">
 <ul>
@@ -496,7 +593,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 </div>
 </div>
 <div class="sect1">
-<h2 id="windows-host">3. Windows の hosts ファイルの修正 および Windows Firewall の追加</h2>
+<h2 id="windows-host"><a class="link" href="#windows-host">3. Windows の hosts ファイルの修正 および Windows Firewall の追加</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>続いて、Nox をインストールした Windows 側の hosts ファイルの修正と、Windows Firewall の追加を行う。ただし、新しいバージョンを利用したい場合にダウンロードもできなくなるので、注意が必要。新しいバージョンを利用する場合は、一時的に本項の設定を削除する。
@@ -511,8 +608,8 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-powershell" data-lang="powershell">netsh advfirewall firewall add rule name="Nox Block Inbound" dir=in action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255
-netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=block remoteip=220.181.0.0-220.181.255.255,183.128.0.0-183.143.255.255,182.92.0.0-182.92.255.255,101.200.0.0-101.201.255.255,211.151.0.0-211.151.255.255,198.11.128.0-198.11.191.255,124.160.0.0-124.160.255.255,140.205.0.0-140.205.255.255,110.173.192.0-110.173.223.255,121.52.224.0-121.52.255.255,178.162.216.0-178.162.219.255</code></pre>
+<pre class="rouge highlight"><code data-lang="powershell"><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"Nox Block Inbound"</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="nf">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span><span class="w">
+</span><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"Nox Block Outbound"</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="nf">out</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -528,7 +625,7 @@ netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=blo
 </div>
 </div>
 <div class="sect1">
-<h2 id="nox-files">4. Nox の設定ファイルの修正</h2>
+<h2 id="nox-files"><a class="link" href="#nox-files">4. Nox の設定ファイルの修正</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>最後に、Nox の設定ファイルの修正を行う。これにより、Nox の設定ファイルを修正することで広告の削除やポップアップ間隔を変更する。また、Root モードでの起動を無効にする。加えて、設定ファイルを読み取り専用に変更することで、Nox が設定を元に戻すのを防止する。</p>
@@ -543,17 +640,19 @@ netsh advfirewall firewall add rule name="Nox Block Outbound" dir=out action=blo
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<pre><code class="language-linenos=table" data-lang="linenos=table">[setting]
-...
-collect_behavior_enable=false
-collect_behavior_interveral=9223372036854775807
-...
-root=false
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ini"><span class="nn">[setting]</span>
 
-[popads]
-...
-pop_ads_refresh_time=9223372036854775807</code></pre>
+<span class="py">collect_behavior_enable</span><span class="p">=</span><span class="s">false</span>
+<span class="py">collect_behavior_interveral</span><span class="p">=</span><span class="s">9223372036854775807</span>
+
+<span class="py">root</span><span class="p">=</span><span class="s">false</span>
+
+<span class="nn">[popads]</span>
+
+<span class="py">pop_ads_refresh_time</span><span class="p">=</span><span class="s">9223372036854775807</span></code></pre>
+</div>
 </div>
 <div class="ulist">
 <ul>
@@ -568,11 +667,13 @@ pop_ads_refresh_time=9223372036854775807</code></pre>
 </li>
 </ul>
 </div>
-<div class="paragraph">
-<pre><code class="language-linenos=table" data-lang="linenos=table">log4j.rootLogger=ERROR, Nox_log
-...
-    log4j.appender.Nox_log.
-    DatePattern=&#39;.&#39;yyyy-MM</code></pre>
+<div class="listingblock">
+<div class="content">
+<pre class="rouge highlight"><code data-lang="ini"><span class="py">log4j.rootLogger</span><span class="p">=</span><span class="s">ERROR, Nox_log</span>
+
+    <span class="err">log4j.appender.Nox_log.</span>
+    <span class="py">DatePattern</span><span class="p">=</span><span class="s">'.'yyyy-MM</span></code></pre>
+</div>
 </div>
 <div class="ulist">
 <ul>
@@ -583,8 +684,8 @@ pop_ads_refresh_time=9223372036854775807</code></pre>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-powershell" data-lang="powershell">del /q/f %LOCALAPPDATA%\Nox\loading\*
-echo Y|Cacls %LOCALAPPDATA%\Nox\loading /T /D SYSTEM</code></pre>
+<pre class="rouge highlight"><code data-lang="powershell"><span class="nf">del</span><span class="w"> </span><span class="nx">/q/f</span><span class="w"> </span><span class="o">%</span><span class="nx">LOCALAPPDATA</span><span class="o">%</span><span class="nx">\Nox\loading\</span><span class="o">*</span><span class="w">
+</span><span class="nf">echo</span><span class="w"> </span><span class="nx">Y</span><span class="o">|</span><span class="nf">Cacls</span><span class="w"> </span><span class="o">%</span><span class="nx">LOCALAPPDATA</span><span class="o">%</span><span class="nx">\Nox\loading</span><span class="w"> </span><span class="nx">/T</span><span class="w"> </span><span class="nx">/D</span><span class="w"> </span><span class="nx">SYSTEM</span></code></pre>
 </div>
 </div>
 <hr>
