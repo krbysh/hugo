@@ -6,10 +6,37 @@
     <description>Recent content in Tags on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 28 Jun 2020 23:30:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AsciiDoc</title>
+      <link>https://krbysh.net/tags/asciidoc/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/asciidoc/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Asciidoctor</title>
+      <link>https://krbysh.net/tags/asciidoctor/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/asciidoctor/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Hugo</title>
+      <link>https://krbysh.net/tags/hugo/</link>
+      <pubDate>Wed, 01 Jul 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/tags/hugo/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>Android</title>
