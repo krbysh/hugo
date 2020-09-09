@@ -17,6 +17,8 @@ Hugo の Asciidoctor 原稿において `:icons: font` が効かず、脚注ア�
 <!--more-->
 本ブログは Hugo を利用している。最初は Markdown でレンダリングしていたが、Hugo は AsciiDoc もデフォルトでサポートしているため Markdown から AsciiDoc(tor) に途中から乗り換えた。
 Hugo で AsciiDoc を利用する方法は、先人たちの素晴らしい記事footnote:[link:http://diary.wshito.com/comp/cms/hugo-asciidoc/[Hugo で AsciiDoc 原稿を書く際の留意点]]footnote:[link:http://tech.innovation.co.jp/2018/11/27/Hugo-Ascii-Doc.html[Hugoを利用してブログ作成、AsciiDocで記事を書けるように挑戦してみた。]]があるのでそちらを参照して頂きたい。
+
+{{< amazon asin="B01DB3G1VO" title="ドキュメント作成システム構築ガイド[GitHub、RedPen、Asciidoctor、CIによる モダンライティング]" >}}
  
 一般に `Asciidoctor` の場合、脚色アイコンを表示するには、`:icons: font` を指定する。しかしながら、 Hugo の場合、脚色アイコンを表示するための CSS がデフォルトでは読み込まれていないため追加する必要がある。
 
