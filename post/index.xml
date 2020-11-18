@@ -6,10 +6,21 @@
     <description>Recent content in Posts on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 01 Jul 2020 00:00:00 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 18 Nov 2020 00:00:00 +0900</lastBuildDate>
     
 	<atom:link href="https://krbysh.net/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>行徳 の ローストポーク専門店マルコ が美味しい</title>
+      <link>https://krbysh.net/post/gyotoku-marco/</link>
+      <pubDate>Wed, 18 Nov 2020 00:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/post/gyotoku-marco/</guid>
+      <description>&lt;div class=&#34;paragraph&#34;&gt;
+&lt;p&gt;行徳の ローストポーク専門店マルコ が美味しい。&lt;/p&gt;
+&lt;/div&gt;</description>
+    </item>
     
     <item>
       <title>Hugo の Asciidoctor 原稿で脚注アイコンを表示する</title>
