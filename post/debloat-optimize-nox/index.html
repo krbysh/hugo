@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="generator" content="Hugo 0.73.0 with theme Tranquilpeak 0.4.7-BETA">
+<meta name="generator" content="Hugo 0.78.2 with theme Tranquilpeak 0.4.7-BETA">
 <meta name="author" content="krbysh">
 <meta name="keywords" content="">
 <meta name="description" content="
@@ -311,7 +311,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 </div>
 <div class="admonitionblock important">
 <table>
-<tr>
+<tbody><tr>
 <td class="icon">
 <i class="fa icon-important" title="Important"></i>
 </td>
@@ -320,7 +320,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。
 </td>
 </tr>
-</table>
+</tbody></table>
 </div>
 <div class="paragraph">
 <p>MEmu 利用者は、<a href="https://krbysh.net/post/optimize-memu/">MEmu Play を最適化する</a> 記事も併せて確認してほしい。</p>
@@ -352,7 +352,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 <h2 id="nox-launcher"><a class="link" href="#nox-launcher">1. Android(Nox) の Launcher の変更</a></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、"Nova Launcher" を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
+<p>まず、Nox のデフォルトの Launcher を任意の Launcher の変更する。私は、&#34;Nova Launcher&#34; を採用した。これは各所で紹介されているため、実施済みの場合は後項以降を実施。</p>
 </div>
 <div class="ulist">
 <ul>
@@ -360,13 +360,13 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 <p>Nox を Root モードで起動させるため、Nox の設定メニューの <code>Startup items</code> の項目にある <code>Root</code> のチェックボックスを有効後、再起動(もしくは、後述する <code>conf.ini</code> ファイルを <code>root=true</code> に変更後、再起動)。</p>
 </li>
 <li>
-<p>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。"Nova Launcher" の場合、"Nova の設定" というアプリから設定が可能。</p>
+<p>Nox が起動後、Google Play ストアから任意の Launcher をインストールし、デフォルトの Launcher に変更する。&#34;Nova Launcher&#34; の場合、&#34;Nova の設定&#34; というアプリから設定が可能。</p>
 </li>
 <li>
 <p>Nox にプリインストールされている <code>ファイルマネージャー</code> を起動し、<code>/system/app/Launcher</code> をフォルダーを開く。<code>launcher_x.x.x_en_signed.apk</code> というファイルが存在しているので、長押しして出てくるメニューから削除、またはリネーム(拡張子の変更等)する。</p>
 </li>
 <li>
-<p>Nox を再起動。後項 "Android(Nox) の hosts ファイルの修正" を実施した後でも可。</p>
+<p>Nox を再起動。後項 &#34;Android(Nox) の hosts ファイルの修正&#34; を実施した後でも可。</p>
 </li>
 </ul>
 </div>
@@ -381,7 +381,7 @@ Nox は Android エミュレータとして素晴らしい機能を持ってい�
 <div class="ulist">
 <ul>
 <li>
-<p>前項 "Android(Nox) の Launcher の変更" と同様に Root モードの Nox で、<code>ファイルマネージャー</code> を起動し、<code>/system/etc</code> フォルダーを開く。<code>hosts</code> というファイルが存在しているので、長押しして出てくるメニューから <code>プロパティ(Properties)</code> &gt; <code>権限(Permissions)</code> を選択し、 <code>グループ</code> の <code>書き込み権限(W)</code> にチェックを入れる。</p>
+<p>前項 &#34;Android(Nox) の Launcher の変更&#34; と同様に Root モードの Nox で、<code>ファイルマネージャー</code> を起動し、<code>/system/etc</code> フォルダーを開く。<code>hosts</code> というファイルが存在しているので、長押しして出てくるメニューから <code>プロパティ(Properties)</code> &gt; <code>権限(Permissions)</code> を選択し、 <code>グループ</code> の <code>書き込み権限(W)</code> にチェックを入れる。</p>
 </li>
 <li>
 <p>そのまま <code>hosts</code> ファイルを開き、下記内容をコピペする。</p>
@@ -608,8 +608,8 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="rouge highlight"><code data-lang="powershell"><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"Nox Block Inbound"</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="nf">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span><span class="w">
-</span><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">"Nox Block Outbound"</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="nf">out</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span></code></pre>
+<pre class="rouge highlight"><code data-lang="powershell"><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">&#34;Nox Block Inbound&#34;</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="kr">in</span><span class="w"> </span><span class="nf">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span><span class="w">
+</span><span class="nf">netsh</span><span class="w"> </span><span class="nx">advfirewall</span><span class="w"> </span><span class="nx">firewall</span><span class="w"> </span><span class="nx">add</span><span class="w"> </span><span class="nx">rule</span><span class="w"> </span><span class="nx">name</span><span class="o">=</span><span class="s2">&#34;Nox Block Outbound&#34;</span><span class="w"> </span><span class="nf">dir</span><span class="o">=</span><span class="nf">out</span><span class="w"> </span><span class="nx">action</span><span class="o">=</span><span class="nf">block</span><span class="w"> </span><span class="nx">remoteip</span><span class="o">=</span><span class="mf">220.181.0.0</span><span class="nt">-220</span><span class="mf">.181.255.255</span><span class="p">,</span><span class="mf">183.128.0.0</span><span class="nt">-183</span><span class="mf">.143.255.255</span><span class="p">,</span><span class="mf">182.92.0.0</span><span class="nt">-182</span><span class="mf">.92.255.255</span><span class="p">,</span><span class="mf">101.200.0.0</span><span class="nt">-101</span><span class="mf">.201.255.255</span><span class="p">,</span><span class="mf">211.151.0.0</span><span class="nt">-211</span><span class="mf">.151.255.255</span><span class="p">,</span><span class="mf">198.11.128.0</span><span class="nt">-198</span><span class="mf">.11.191.255</span><span class="p">,</span><span class="mf">124.160.0.0</span><span class="nt">-124</span><span class="mf">.160.255.255</span><span class="p">,</span><span class="mf">140.205.0.0</span><span class="nt">-140</span><span class="mf">.205.255.255</span><span class="p">,</span><span class="mf">110.173.192.0</span><span class="nt">-110</span><span class="mf">.173.223.255</span><span class="p">,</span><span class="mf">121.52.224.0</span><span class="nt">-121</span><span class="mf">.52.255.255</span><span class="p">,</span><span class="mf">178.162.216.0</span><span class="nt">-178</span><span class="mf">.162.219.255</span></code></pre>
 </div>
 </div>
 <div class="ulist">
@@ -618,7 +618,7 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 <p><code>C:\Windows\System32\drivers\etc\hosts</code> ファイルをメモ帳等のエディタで開く。変更するために管理者権限で開く必要がある。</p>
 </li>
 <li>
-<p>前項 "Android(Nox) の hosts ファイルの修正" と同様の内容をコピペする。</p>
+<p>前項 &#34;Android(Nox) の hosts ファイルの修正&#34; と同様の内容をコピペする。</p>
 </li>
 </ul>
 </div>
@@ -657,7 +657,7 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 <div class="ulist">
 <ul>
 <li>
-<p>修正した <code>conf.ini</code> ファイルの <code>プロパティ</code> から <code>読み取り専用&#174;</code> にチェックを入れる。</p>
+<p>修正した <code>conf.ini</code> ファイルの <code>プロパティ</code> から <code>読み取り専用®</code> にチェックを入れる。</p>
 </li>
 <li>
 <p><code>%LOCALAPPDATA%\Nox</code> フォルダにある <code>Nox_log.conf</code> ファイルをメモ帳等のエディタで開く。マルチインスタンス環境(やクローンをしている場合)は、各インスタンス毎に <code>Nox_log.conf</code> ファイルが存在する。私の環境では、<code>clone_Nox_x_log.conf</code> という名前になる。</p>
@@ -672,13 +672,13 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 <pre class="rouge highlight"><code data-lang="ini"><span class="py">log4j.rootLogger</span><span class="p">=</span><span class="s">ERROR, Nox_log</span>
 
     <span class="err">log4j.appender.Nox_log.</span>
-    <span class="py">DatePattern</span><span class="p">=</span><span class="s">'.'yyyy-MM</span></code></pre>
+    <span class="py">DatePattern</span><span class="p">=</span><span class="s">&#39;.&#39;yyyy-MM</span></code></pre>
 </div>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して"読み取り専用"になっていれば問題ない。</p>
+<p><code>コマンドプロンプト</code> を管理者権限で開き、下記内容をコピペする。これは、ローディング画面の広告を削除し、コマンドで当該ディレクトリおよびサブディレクトリを読み取り専用に変更する。”アクセスが拒否されました。”と出力される場合もあるが、当該ディレクトリのプロパティを確認して&#34;読み取り専用&#34;になっていれば問題ない。</p>
 </li>
 </ul>
 </div>
@@ -688,10 +688,10 @@ Anroid と同様に hosts ファイルの修正を行うことで、Nox が不�
 </span><span class="nf">echo</span><span class="w"> </span><span class="nx">Y</span><span class="o">|</span><span class="nf">Cacls</span><span class="w"> </span><span class="o">%</span><span class="nx">LOCALAPPDATA</span><span class="o">%</span><span class="nx">\Nox\loading</span><span class="w"> </span><span class="nx">/T</span><span class="w"> </span><span class="nx">/D</span><span class="w"> </span><span class="nx">SYSTEM</span></code></pre>
 </div>
 </div>
-<hr>
+<hr/>
 <div class="paragraph">
-<p>参考:<br>
-<a href="https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29">Debloating Nox</a><br>
+<p>参考:<br/>
+<a href="https://gist.github.com/Log1x/12d330ef7685d6fbc611d1d57efb5c29">Debloating Nox</a><br/>
 <a href="https://www.reddit.com/r/soccerspirits/comments/74flks/configuring_nox_app_player_to_remove_adware/">Configuring Nox App Player to remove adware, spyware and make it faster. (Ver. 5.0.0 - Windows)</a></p>
 </div>
 </div>
