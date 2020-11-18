@@ -16,6 +16,7 @@ isCJKLanguage: true
 
 
 <!--more-->
+{{< google-maps-location height="300" location="ローストポーク専門店 マルコ" >}}
 
 2017 年末にオープンしたテイクアウト専門店。
 場所が少しわかりにくいが、西友新浜店の裏手にあるお店。

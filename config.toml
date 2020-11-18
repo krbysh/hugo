@@ -161,6 +161,9 @@ pygmentsUseClasses=true
   # AmazonAffiliate
   amazonJpAffiliate = "krbysh03e-22"
 
+  # googleMapApi
+  googleMapsAPIKey = "AIzaSyA0e_npNK_D0zgywoit2shcJVk6qDBijO0"
+
   # Header configuration
   # The link at the right of the header is customizable
   # You can add a link (as an icon) at the right of the header instead of the author's gravatar image or author's picture.
