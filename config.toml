@@ -23,6 +23,7 @@ paginate = 7
 canonifyurls = true
 hasCJKLanguage = true
 pygmentsUseClasses=true
+ignoreErrors = ["error-remote-getjson"]
 
 [permalinks]
   post = "/post/:slug/"
