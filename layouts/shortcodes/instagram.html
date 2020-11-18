@@ -1,0 +1,10 @@
+{{- $pc := .Page.Site.Config.Privacy.Instagram -}}
+{{- if not $pc.Disable -}}
+{{- if $pc.Simple -}}
+{{ template "_internal/shortcodes/instagram_simple.html" . }}
+{{- else -}}
+{{ $id := .Get 0 }}
+{{ $hideCaption := cond (eq (.Get 1) "hidecaption") "1" "0" }}
+{{ with getJSON "https://graph.facebook.com/v8.0/instagram_oembed/?url=https://instagram.com/p/" $id "/&hidecaption=1&access_token=1309888502682358|b37ae61b000c9fc01f80786710dd1fcc" }}{{ .html | safeHTML }}{{ end }}
+{{- end -}}
+{{- end -}}
