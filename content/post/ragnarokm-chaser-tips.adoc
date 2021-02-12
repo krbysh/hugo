@@ -1,0 +1,82 @@
+---
+title: "ラグマスにおけるチェイサー関連のネタ"
+date: 2021-02-11T23:00:00+09:00
+draft: false
+slug: "ragnarokm-chaser-tips"
+categories: [ "Game" ]
+tags: [ "RagnarokM", "Android", "iOS" ]
+---
+:icons: font
+:sectlinks:
+
+ラグマスにおけるチェイサー関連のネタについて調査したので、備忘録として記載する。
+一部グリッチ扱いになっているものもある。
+
+<!--more-->
+
+IMPORTANT: link:/page/terms-of-use[免責事項]に記載の通り、可能な限り正確な情報を掲載するよう努めていますが、誤情報が入り込んだり、情報が陳腐化することもあります。必ずしも正確性を保証するものではありません。また合法性や安全性なども保証しません。
+また、掲載された内容によって生じた損害等の一切の責任を負いかねますので、ご了承ください。 
+
+本記事は、海外 Discord で記載されていた内容に加え、追加調査した内容を踏まえて記載する。また、Ragnarok M: Eternal Love に関する情報であって、日本版のラグマスでは適用外の可能性もある。
+
+== 脱衣スキル の計算式
+
+[source,c,linenums]
+----
+local skilllv_1 = srcUser:GetLernedSkillLevel(494)
+local skilllv_2 = srcUser:GetLernedSkillLevel(495)
+local skilllv_3 = srcUser:GetLernedSkillLevel(496)
+
+local Luk = srcUser:GetProperty("Luk")
+local Dex = srcUser:GetProperty("Dex")
+local Vit2 = targetUser:GetProperty("Vit")
+local Rate2 = math.floor(Vit2 / 8)
+local GemValue = srcUser:GetGemValue(91033)
+local GemDam = GemValue / 1000
+local Rate = math.min(skilllv_1 * 3 + skilllv_2 * 3 + skilllv_3 * 3 + pojia + pojia_1 + pojia_8 + (Luk + Dex) / 5, 90) + GemDam - math.min(Rate2, 50)
+ 
+local pojia = 0
+if Weapon == 40746 or Weapon == 140746 then --- 錐 の効果
+  if RefineLv >= 5 and RefineLv < 10 then
+    pojia = 5
+  elseif RefineLv >= 10 and RefineLv < 15 then
+    pojia = 10
+  elseif RefineLv == 15 then
+    pojia = 20
+  end
+end
+if srcUser:HasBuffID(90001893) and RefineLv > 5 then --- 錐IV の効果
+  pojia = pojia + (RefineLv - 5) * 1
+end
+local Weapon_1 = srcUser:GetEquipedID(7)
+local pojia_1 = 0
+if Weapon_1 == 40743 or Weapon_1 == 140743 then --- アイボリーナイフ の効果
+  pojia_1 = 3
+end
+local pojia_8 = 0
+if srcUser:HasBuffID(90001643) and RefineLv >= 8 then --- アイボリーナイフIV の効果
+  pojia_8 = 3
+end
+----
+
+日本の葱 Discrod にも投稿したものと同等だが、要約すると下記になる。
+
+成功率は、スキルレベル + `錐` 補正 + 使用者の (`Dex`+`Luk`)/5 で計算されるが、上限が 90% に設定されている。`イクイップリムーブ` ルーンで上限を最大 120%(+30%) まで向上させることが可能。
+一方、`Rate2` は、対象の `Vit`/8 で計算されるが、こちらはの上限は 50% に設定されている。最終的な成功率 `Rate` は `Rate2` を減算した結果になる。
+RG が比較的脱衣し難いのは、対象の `Vit` によって減算されてしまうためである。最大の 50% 軽減を得るには、`Vit` 400 が必要になるものの、RG に脱衣を成功させるためには `錐` を担ぐかある程度の `Dex` と `Luk` が要求されている。
+
+`アイボリーナイフ` は、`錐` と比較して使用している人口が少ないと推察されるため割愛する。
+
+== クローズコンファイン 状態でのハイド
+
+一般に `ハイド` を使用すると `クローズコンファイン` 状態が解除されるが、`エリートの戦闘準備` 経由で `ハイド` を使用した場合には `クローズコンファイン` は解除されずに、`ハイド` 状態になることが出来る。お互いにその場所にスタックするが、`ハイド` を使用すれば解除可能。なお、海外では、グリッチ扱いになっている様子。
+
+== 無限ディサピア
+
+EP7 において、盾の魔力注入が追加され、`ライフマジックシールド` が `Arcane Codex` になる。+15 `Arcane Codex` と `うさぎスリッパ` を組み合わせることによって CD -15% を得ることができる。また、アース神の石碑 `ディサピア - クールタイム` で CD -60% なので、装備と組み合わせると合計 -75% となる。`ディサピア` 自体の CD は 30 秒のため、30 * 0.25 = 7.5 秒の CD となる。一方、`ディサピア` は `シャドウロスト` ルーンの効果で効果時間を追加で最大 +2 秒得ることが出来るため、効果時間は最大で 7 秒となる。CD 0.5 秒は残ってしまうものの、単体でも **実質**、無限 `ディサピア` が可能になる。これに `サフラギウム - 讃歌` などの効果を得ることで 無限 `ディサピア` が可能になる。
+
+== 小鳥の卵殻 の効果引き継ぎ
+
+`小鳥の卵殻` を装備した状態で `武器修理合金` を使用すると、頭装備を切り替えても、装備破壊を受けなくなる `小鳥の卵殻` の効果が継続する。なお、マップを切り替えるまでこの効果は継続する様子。当然、グリッチ扱いになっている。
+
+{{< youtube 0FyOQAW3R5Q >}}
