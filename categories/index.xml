@@ -6,22 +6,22 @@
     <description>Recent content in Categories on krbysh.net</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 11 Feb 2021 23:00:00 +0900</lastBuildDate><atom:link href="https://krbysh.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 21 Apr 2021 00:00:00 +0900</lastBuildDate><atom:link href="https://krbysh.net/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Food</title>
+      <link>https://krbysh.net/categories/food/</link>
+      <pubDate>Wed, 21 Apr 2021 00:00:00 +0900</pubDate>
+      
+      <guid>https://krbysh.net/categories/food/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Game</title>
       <link>https://krbysh.net/categories/game/</link>
       <pubDate>Thu, 11 Feb 2021 23:00:00 +0900</pubDate>
       
       <guid>https://krbysh.net/categories/game/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Food</title>
-      <link>https://krbysh.net/categories/food/</link>
-      <pubDate>Wed, 18 Nov 2020 00:00:00 +0900</pubDate>
-      
-      <guid>https://krbysh.net/categories/food/</guid>
       <description></description>
     </item>
     
