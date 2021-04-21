@@ -1,7 +1,7 @@
 ---
 title: "行徳 の 焼肉 栄 が美味しい"
 date: 2021-04-21T00:00:00+09:00
-draft: true
+draft: false
 slug: "gyotoku-sakae"
 categories: [ "Food" ]
 tags: [ "Gyotoku", "Ichikawa", "Chiba" ]
