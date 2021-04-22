@@ -12,7 +12,7 @@ isCJKLanguage: true
 :icons: font
 :sectlinks:
 
-行徳の ローストポーク専門店マルコ が美味しい。
+行徳 の 焼肉 栄 が美味しい。
 
 
 <!--more-->
